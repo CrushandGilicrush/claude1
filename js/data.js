@@ -1,7 +1,7 @@
 /* Contenido del juego: textos, estancias, objetos y finales. Aquí se edita la narrativa. */
 const Datos = {
   codigo: '885',
-  imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
+  imagenSala: "https://mueblessanfrancisco.es/blog/wp-content/uploads/2026/07/alfombra-estilo-oriental-salon-sofa-beige-butacas-verdes.webp",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg' },
   intro: [
     ['narrativo', 'Despierta... Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.'],
