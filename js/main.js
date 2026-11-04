@@ -18,7 +18,7 @@ const Juego = (() => {
     mostrarSala();
   }
 
-  function examinar(arg) {
+    function examinar(arg) {
     const nombre = sinArticulo(arg);
     if (!nombre) return UI.log('¿Qué quieres examinar?');
     /* Busca el objeto como palabra completa dentro de la frase: «mueble antiguo» → «mueble». */
@@ -34,7 +34,6 @@ const Juego = (() => {
     if (clave === 'caldera') return Ordenes.examinarCaldera();
     UI.log(desc);
   }
-
   function abrir(arg) {
     const pc = /ordenador|pc/.test(arg), movil = /movil/.test(arg);
     if (!pc && !movil) return UI.log('No puedes abrir eso.');
