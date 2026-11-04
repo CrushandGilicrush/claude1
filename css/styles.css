@@ -14,4 +14,4 @@ body { background-color: #05080c; color: #cbd5e1; font-family: 'Fira Code', mono
 ::-webkit-scrollbar-track { background: #080b10; }
 ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
 /* Visor ampliado (p. ej. el tablero de ajedrez) */
-.visor-grande { height: 20rem !important; }
+.visor-grande { height: 15rem !important; }
