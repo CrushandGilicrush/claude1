@@ -7,7 +7,7 @@ const Juego = (() => {
   function mostrarSala() {
     const s = Datos.estancias[estado.estancia];
     estado.dispositivo = null;
-    UI.vista(s.nombre, Datos.imagenSala);
+    UI.vista(s.nombre, s.imagen || Datos.imagenSala, false, false, false);
     UI.log(`Te encuentras en <b>${s.nombre}</b>. ${s.desc}`);
   }
 
@@ -18,11 +18,14 @@ const Juego = (() => {
     mostrarSala();
   }
 
-    function examinar(arg) {
+  function examinar(arg) {
     const nombre = sinArticulo(arg);
     if (!nombre) return UI.log('¿Qué quieres examinar?');
     /* Busca el objeto como palabra completa dentro de la frase: «mueble antiguo» → «mueble». */
-    const objetos = Datos.objetos[estado.estancia];
+    /* Objetos de la estancia + los que llevas encima (p. ej. el libro). */
+    const propios = {};
+    estado.inventario.forEach(i => { for (const e in Datos.objetos) if (Datos.objetos[e][i] !== undefined) propios[i] = Datos.objetos[e][i]; });
+    const objetos = Object.assign({}, propios, Datos.objetos[estado.estancia]);
     const frase = ' ' + nombre + ' ';
     const hallado = [...Object.keys(objetos), ...Object.keys(Datos.alias)]
       .filter(k => frase.includes(' ' + k + ' ')).sort((a, b) => b.length - a.length)[0];
@@ -30,10 +33,18 @@ const Juego = (() => {
     const desc = objetos[clave];
     if (desc === undefined) return UI.log('No ves nada parecido por aquí.');
     if (clave === 'tablero') return Ajedrez.examinar();
+    const img = Datos.imagenesObjetos[clave];
+    if (img) {
+      estado.dispositivo = 'vista';
+      UI.vista(clave.charAt(0).toUpperCase() + clave.slice(1), img, false, true);
+    }
+    const pista = () => { if (img) UI.log('Escribe «cerrar» para volver a ver la estancia.'); };
     if (clave === 'nevera') return Ordenes.examinarNevera();
-    if (clave === 'caldera') return Ordenes.examinarCaldera();
+    if (clave === 'caldera') { Ordenes.examinarCaldera(); return pista(); }
     UI.log(desc);
+    pista();
   }
+
   function abrir(arg) {
     const pc = /ordenador|pc/.test(arg), movil = /movil/.test(arg);
     if (!pc && !movil) return UI.log('No puedes abrir eso.');

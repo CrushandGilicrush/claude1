@@ -32,12 +32,12 @@ const UI = (() => {
   }
   function cerrarLectura() { $('lectura').classList.add('hidden'); $('command-input').focus(); }
 
-  function vista(titulo, imagen, bloqueado = false, grande = false) {
+  function vista(titulo, imagen, bloqueado = false, grande = false, contener = true) {
     $('visor').classList.toggle('visor-grande', grande);
     $('room-title').innerText = titulo;
     $('room-bg').style.backgroundImage = `url('${imagen}')`;
-    $('room-bg').classList.toggle('bg-contain', imagen !== Datos.imagenSala);
-    $('room-bg').classList.toggle('bg-no-repeat', imagen !== Datos.imagenSala);
+    $('room-bg').classList.toggle('bg-contain', contener);
+    $('room-bg').classList.toggle('bg-no-repeat', contener);
     $('bloqueo').classList.toggle('hidden', !bloqueado);
   }
 
