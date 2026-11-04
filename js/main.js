@@ -74,7 +74,7 @@ const Juego = (() => {
 
   function leer(arg) {
     if (!/libro|perversion|emily/.test(arg)) return UI.log('No hay nada que leer ahí.');
-    if (!estado.inventario.includes('libro') && estado.estancia !== 'salon') return UI.log('No ves ningún libro por aquí.');
+        if (!estado.inventario.includes('libro') && estado.estancia !== 'salon') return UI.log('No ves ningún libro por aquí.');
     UI.lectura(Relato.titulo, Relato.texto);
   }
 
