@@ -62,6 +62,22 @@ const Juego = (() => {
     UI.bloquearEntrada();
   }
 
+  function coger(arg) {
+    const o = Datos.cogibles.find(c => c.nombres.test(arg));
+    if (!o) return UI.log('No puedes coger eso.');
+    if (estado.inventario.includes(o.item)) return UI.log(o.yaTienes);
+    if (o.estancia !== estado.estancia) return UI.log(`No ves ningún ${o.item} por aquí.`);
+    estado.inventario.push(o.item);
+    UI.inventario(estado.inventario);
+    UI.log(o.texto);
+  }
+
+  function leer(arg) {
+    if (!/libro|perversion|emily/.test(arg)) return UI.log('No hay nada que leer ahí.');
+    if (!estado.inventario.includes('libro') && estado.estancia !== 'salon') return UI.log('No ves ningún libro por aquí.');
+    UI.lectura(Relato.titulo, Relato.texto);
+  }
+
   /* Comandos de texto: globales o ligados a una estancia y un objeto. */
   function comandoTexto(verbo, arg) {
     const c = Datos.comandosTexto.find(c => c.verbos.includes(verbo) && (!c.objetos || c.objetos.includes(sinArticulo(arg))));
@@ -71,7 +87,7 @@ const Juego = (() => {
   }
 
   function ayuda() {
-    UI.log('Comandos: «ir a [estancia]», «examinar [objeto]», «abrir móvil», «abrir ordenador», «cerrar», «hacer foto [objeto]», «enviar foto», «llamar a la policía».');
+    UI.log('Comandos: «ir a [estancia]», «examinar [objeto]», «abrir móvil», «abrir ordenador», «cerrar», «coger [objeto]», «leer [objeto]», «hacer foto [objeto]», «enviar foto», «llamar a la policía».');
   }
 
   function ejecutar(entrada) {
@@ -86,6 +102,8 @@ const Juego = (() => {
     const arg = resto.join(' ');
     if (verbo === 'ir') return ir(arg);
     if (verbo === 'examinar' || verbo === 'ver') return examinar(arg);
+    if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
+    if (verbo === 'leer' || verbo === 'lee') return leer(sinArticulo(arg));
     if (verbo === 'abrir' || verbo === 'encender') return abrir(arg);
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
     if (/^llam/.test(verbo)) return llamar(cmd);
@@ -104,6 +122,8 @@ const Juego = (() => {
     const lanzar = () => { const v = input.value; input.value = ''; ejecutar(v); };
     input.addEventListener('keypress', ev => { if (ev.key === 'Enter') lanzar(); });
     UI.$('btn-ejecutar').addEventListener('click', lanzar);
+    UI.$('lectura-cerrar').addEventListener('click', UI.cerrarLectura);
+    document.addEventListener('keydown', ev => { if (ev.key === 'Escape') UI.cerrarLectura(); });
   }
 
   window.addEventListener('load', iniciar);

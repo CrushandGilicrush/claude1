@@ -17,14 +17,14 @@ const Datos = {
   },
   /* Descripciones provisionales de «examinar»: reescribir a gusto. */
   objetos: {
-    salon: { sofa: 'Un sofá mullido, con una manta arrugada.', biblioteca: 'Estantes llenos de libros que no has abierto en meses.', radiador: 'Un radiador de hierro, ahora apagado.', luz: 'Una lámpara de pie con luz cálida.', mueble: 'Un mueble antiguo de madera oscura. Encima hay un tablero de ajedrez con una partida a medias.', tablero: '' },
+    salon: { sofa: 'Un sofá mullido, con una manta arrugada.', biblioteca: 'La mayoría de los libros ya los has leído. De entre todos, sobresale el que te estás leyendo ahora: las perversiones de Emily.', radiador: 'Un radiador de hierro, ahora apagado.', luz: 'Una lámpara de pie con luz cálida.', mueble: 'Un mueble antiguo de madera oscura. Encima hay un tablero de ajedrez con una partida a medias.', tablero: '' },
     habitacion: { cama: 'La cama deshecha, aún tibia.', armario: 'Un armario de dos puertas, repleto de ropa.', espejo: 'Tu reflejo te devuelve una cara cansada.', comoda: 'Una cómoda de madera con un cajón.' },
     despacho: { ordenador: 'Un ordenador de sobremesa. Lo mismo que el móvil, pero con pantalla grande.', escritorio: 'Un escritorio con papeles revueltos.', 'juegos de mesa': 'Varias cajas de juegos de mesa, apiladas.', cuadro: 'Un panel lleno de rosas y espinas, con placas numeradas.' },
     cocina: { cocina: 'Una cocina limpia, sin nada al fuego.', cafetera: 'Una cafetera que huele a café viejo.', nevera: '', caldera: '' },
     bano: { inodoro: 'Un inodoro corriente.', lavabo: 'Un lavabo con el grifo goteando.', ducha: 'Una ducha con mampara.', mueble: 'Un pequeño mueble con toallas.' },
     terraza: { macetas: 'Macetas con plantas algo secas.', tumbona: 'Una tumbona cómoda, al sol.' }
   },
-  alias: { ajedrez: 'tablero', radiadores: 'radiador', juegos: 'juegos de mesa', maceta: 'macetas', pc: 'ordenador' },
+  alias: { libreria: 'biblioteca', ajedrez: 'tablero', radiadores: 'radiador', juegos: 'juegos de mesa', maceta: 'macetas', pc: 'ordenador' },
   /* Comandos con respuesta de texto. Sin `estancia`/`objetos`: funcionan en cualquier lugar.
      Con ellos: solo funcionan en esa estancia y nombrando uno de sus objetos. */
   comandosTexto: [
@@ -41,6 +41,11 @@ const Datos = {
     exito: 'Mueves la pieza y la partida queda ganada. Al apoyar la mano en el mueble, el tablero cojea: hay algo debajo. Lo levantas y encuentras una llave.',
     yaResuelto: 'Ya has ganado esta partida.'
   },
+  /* Objetos que se pueden coger («coger [objeto]»). */
+  cogibles: [
+    { item: 'libro', nombres: /libro|perversion|emily/, estancia: 'salon',
+      texto: 'Coges «Las perversiones de Emily» de la biblioteca.', yaTienes: 'Ya tienes el libro contigo.' }
+  ],
   verduras: ['zanahorias', 'judías verdes', 'tomates', 'un pimiento rojo'],
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
   finales: [

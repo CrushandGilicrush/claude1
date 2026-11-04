@@ -127,7 +127,18 @@
         </aside>
     </div>
 
-        <script src="js/data.js"></script>
+        <!-- PANTALLA DE LECTURA -->
+    <div id="lectura" class="hidden fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-6">
+        <div class="lectura-pagina w-full max-w-3xl h-full rounded-xl flex flex-col shadow-2xl">
+            <div class="flex justify-between items-center border-b border-stone-300 px-5 py-3 shrink-0">
+                <h2 id="lectura-titulo" class="text-lg sm:text-xl font-bold"></h2>
+                <button id="lectura-cerrar" class="px-3 py-1 text-xs font-bold rounded-lg bg-stone-800 text-stone-100 hover:bg-stone-600"><i class="fa-solid fa-xmark mr-1"></i>CERRAR</button>
+            </div>
+            <div id="lectura-texto" class="flex-1 overflow-y-auto px-6 sm:px-12 py-6 text-base sm:text-lg leading-8 select-text"></div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/relato.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/orders.js"></script>
     <script src="js/ajedrez.js"></script>

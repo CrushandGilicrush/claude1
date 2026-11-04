@@ -21,6 +21,17 @@ const UI = (() => {
     t.scrollTop = t.scrollHeight;
   }
 
+  /* Pantalla de lectura a pantalla completa (se cierra con el botón o con Esc). */
+  function lectura(titulo, texto) {
+    $('lectura-titulo').textContent = titulo;
+    const cont = $('lectura-texto');
+    cont.innerHTML = '';
+    texto.trim().split(/\n\s*\n/).forEach(p => { const e = document.createElement('p'); e.textContent = p.trim(); cont.appendChild(e); });
+    cont.scrollTop = 0;
+    $('lectura').classList.remove('hidden');
+  }
+  function cerrarLectura() { $('lectura').classList.add('hidden'); $('command-input').focus(); }
+
   function vista(titulo, imagen, bloqueado = false, grande = false) {
     $('visor').classList.toggle('visor-grande', grande);
     $('room-title').innerText = titulo;
@@ -41,5 +52,5 @@ const UI = (() => {
 
   function bloquearEntrada() { $('command-input').disabled = true; $('btn-ejecutar').disabled = true; }
 
-  return { log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
+  return { lectura, cerrarLectura, log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
 })();
