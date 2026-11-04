@@ -46,8 +46,8 @@ const UI = (() => {
   function inventario(items) {
     $('inventory-count').innerText = items.length + ' objetos';
     $('inventory-list').innerHTML = items.length
-      ? items.map(i => `<div class="text-xs text-retro-amber p-2 border border-retro-border rounded">${i}</div>`).join('')
-      : '<div class="text-xs text-retro-dim italic p-2">Inventario vacío</div>';
+      ? items.map(i => `<div class="text-xs text-retro-amber px-2 py-0.5 border border-retro-border rounded">${i}</div>`).join('')
+      : '<div class="text-xs text-retro-dim italic">Inventario vacío</div>';
   }
 
   function bloquearEntrada() { $('command-input').disabled = true; $('btn-ejecutar').disabled = true; }
