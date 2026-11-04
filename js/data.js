@@ -29,7 +29,7 @@ const Datos = {
      Con ellos: solo funcionan en esa estancia y nombrando uno de sus objetos. */
   comandosTexto: [
     { verbos: ['bostezar', 'bosteza'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
-     { verbos: ['encender', 'humidificador'], texto: 'Tu obsesión enfermiza por tener la ropa seca te llevan a soñar que te pasas el día soplando la ropa con la boca.' },
+     { verbos: ['masturbar', 'masturbarse'], texto: 'Deslizas la mano por debajo de la ropa interior. Estás empapada. Comienzas despacio, presionando los dedos es la parte más sensible. Sientes pequeñas descargas de placer que pronto se transformarán en un orgasmo' },
     { verbos: ['gritar', 'grita'], texto: 'Gritas de impotencia, pero nadie parece oírte (o quizá sí).' },
     { verbos: ['limpiar', 'limpia'], estancia: 'bano', objetos: ['inodoro', 'taza', 'wc'], texto: 'Te pones de rodillas y limpias el borde de la taza.', fuera: 'No ves ningún inodoro por aquí.' }
   ],
