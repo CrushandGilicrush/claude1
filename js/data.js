@@ -1,11 +1,41 @@
 /* Contenido del juego: textos, estancias, objetos y finales. Aquí se edita la narrativa. */
 const Datos = {
   codigo: '885',
+  contacto: 'nombre',          // nombre del contacto de Telegram al que hay que escribir
+  exigirCafe: true,            // si es true, móvil y ordenador no se pueden usar hasta tomarse el café
+  destinoAlias: { pc: 'despacho', ordenador: 'despacho', dormitorio: 'habitacion' },
+  /* Textos de la secuencia de inicio. {contacto} y {dispositivo} se sustituyen solos. */
+  textos: {
+    sinCafe: 'Antes de ponerte a mirar nada, necesitas un café.',
+    cafeLejos: 'La cafetera está en la cocina.',
+    cafeHecho: 'Preparas la cafetera y la cocina se llena de olor a café recién hecho.',
+    cafeRepetido: 'Ya has preparado el café.',
+    cafeNoHay: 'No tienes ningún café preparado.',
+    cafeBebido: 'Te bebes el café a sorbos y poco a poco te vas espabilando. Puede ser un buen momento para revisar el correo.',
+    cafeYaBebido: 'Ya te has tomado el café.',
+    enciende: 'Enciendes {dispositivo}. Ves dos accesos: la red social «Life» y «Telegram».',
+    sinDispositivo: 'Primero tienes que encender el móvil o el ordenador.',
+    lifeNuevo: 'Entras en Life. Tienes un mensaje sin leer.',
+    lifeVacio: 'Entras en Life. No tienes mensajes nuevos.',
+    sinMensaje: 'No hay ningún mensaje que leer.',
+    mensajeIntro: 'El mensaje no tiene remitente conocido. Dice así:',
+    mensaje: '«Sé muy bien lo que hiciste. Y tengo las fotos para demostrarlo. Si no quieres que salgan a la luz, entra en Telegram y escríbeme a {contacto} de inmediato.»',
+    telegramBloqueado: 'Telegram está protegido con un código de 3 cifras. Hace tiempo que no lo usas y no te acuerdas, pero sí recuerdas que aparece en el cuadro que hay en la pared.',
+    pideCodigo: 'Escribe el código de 3 cifras (o «cancelar»):',
+    codigoMal: 'Código incorrecto.',
+    telegramAbre: 'Telegram se abre. Ya no te volverá a pedir el código.',
+    telegramListo: 'Telegram está abierto.',
+    telegramEscribe: 'Tienes que escribirle a {contacto}.',
+    escribirSinApp: 'Primero tienes que abrir Telegram.',
+    escribirSinMensaje: 'No sabes a quién escribir.',
+    escribirYa: 'No tienes nada más que decirle por ahora.',
+    escribirOk: 'Le escribes con dedos temblorosos. Al instante aparecen tres puntitos...',
+    respuesta: '«Has tardado. Veo que sabes seguir instrucciones. Vamos a ver hasta dónde llegas.»'
+  },
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
-  imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg' },
+  imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
   intro: [
-    ['narrativo', 'Despierta... Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.'],
-    ['dialogo', "«Sé muy bien lo que hiciste. Y tengo las fotos para demostrarlo. Si no quieres que salgan a la luz, háblame por Telegram de inmediato.»"]
+    ['narrativo', 'Despierta... Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.']
   ],
   estancias: {
     salon: { nombre: 'Salón', imagen: 'img/salon.svg', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
@@ -42,7 +72,7 @@ const Datos = {
     yaResuelto: 'Ya has ganado esta partida.'
   },
   /* Imágenes de objetos: se muestran en el visor al examinarlos («cerrar» vuelve a la estancia). */
-  imagenesObjetos: { caldera: 'img/caldera.svg', cuadro: 'img/cuadro.png', libro: 'img/libro-emily.svg' },
+  imagenesObjetos: { caldera: 'img/caldera.svg', cuadro: 'img/cuadro.svg', libro: 'img/libro-emily.svg' },
   /* Objetos que se pueden coger («coger [objeto]»). */
   cogibles: [
     { item: 'libro', nombres: /libro|perversion|emily/, estancia: 'salon',
