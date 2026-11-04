@@ -21,8 +21,13 @@ const Juego = (() => {
   function examinar(arg) {
     const nombre = sinArticulo(arg);
     if (!nombre) return UI.log('¿Qué quieres examinar?');
-    const clave = Datos.alias[nombre] || nombre;
-    const desc = Datos.objetos[estado.estancia][clave];
+    /* Busca el objeto como palabra completa dentro de la frase: «mueble antiguo» → «mueble». */
+    const objetos = Datos.objetos[estado.estancia];
+    const frase = ' ' + nombre + ' ';
+    const hallado = [...Object.keys(objetos), ...Object.keys(Datos.alias)]
+      .filter(k => frase.includes(' ' + k + ' ')).sort((a, b) => b.length - a.length)[0];
+    const clave = Datos.alias[hallado] || hallado;
+    const desc = objetos[clave];
     if (desc === undefined) return UI.log('No ves nada parecido por aquí.');
     if (clave === 'tablero') return Ajedrez.examinar();
     if (clave === 'nevera') return Ordenes.examinarNevera();
@@ -74,7 +79,7 @@ const Juego = (() => {
 
   function leer(arg) {
     if (!/libro|perversion|emily/.test(arg)) return UI.log('No hay nada que leer ahí.');
-        if (!estado.inventario.includes('libro') && estado.estancia !== 'salon') return UI.log('No ves ningún libro por aquí.');
+    if (!estado.inventario.includes('libro') && estado.estancia !== 'salon') return UI.log('No ves ningún libro por aquí.');
     UI.lectura(Relato.titulo, Relato.texto);
   }
 
