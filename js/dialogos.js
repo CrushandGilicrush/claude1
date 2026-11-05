@@ -57,6 +57,13 @@ const Dialogos = {
         'Negarse tiene consecuencias.',
         'Tú misma. Atente a las consecuencias',  ] },
 
+     
+      { palabras: [
+        'cuales','cuales?', 'que consecuencias','que consecuencias?'
+      ],
+      respuestas: [
+        'Pienso compartir esas fotos comprometidas que tengo tuyas con familiares, compañeros de trabajo...'] },
+
     /* Fotos */
     { palabras: ['foto', 'fotos', 'imagenes', 'pruebas'],
       respuestas: [
