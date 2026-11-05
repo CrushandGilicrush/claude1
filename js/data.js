@@ -51,7 +51,7 @@ const Datos = {
     salon: { nombre: 'Salón', imagen: 'img/habitacion.png', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
     habitacion: { nombre: 'Habitación', imagen: 'img/cama.png', desc: 'Tu habitación es tu pequeño refugio, un espacio reservado a la intimidad y alejado del resto del mundo. La cama ocupa buena parte de la estancia, invitándote al descanso, mientras el armario permanece cerrado, guardando discretamente su contenido. Un espejo refleja la habitación desde uno de sus rincones, devolviéndote una imagen familiar de ti mismo. Junto a él, una cómoda con un cajón completa el mobiliario. Todo parece estar en su sitio. Es un lugar cotidiano, tranquilo y exclusivamente tuyo, donde cada objeto forma parte de tu rutina.' },
     despacho: { nombre: 'Despacho', imagen: 'img/despacho.svg', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
-    cocina: { nombre: 'Cocina', imagen: 'img/cocina.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
+    cocina: { nombre: 'Cocina', imagen: 'img/cafetera.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
     bano: { nombre: 'Baño', imagen: 'img/bano.svg', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
     terraza: { nombre: 'Terraza', imagen: 'img/terraza.svg', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
   },
