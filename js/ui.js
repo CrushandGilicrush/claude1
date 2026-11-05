@@ -7,7 +7,7 @@ const UI = (() => {
     const t = $('terminal'), e = document.createElement('div');
     e.className = 'mb-2 leading-relaxed txt-' + tipo;
     if (tipo === 'usuario') e.textContent = '> ' + texto;
-    else e.innerHTML = tipo === 'dialogo' ? '<b>Desconocido:</b> ' + texto : texto;
+    else e.innerHTML = texto;
     t.appendChild(e);
     t.scrollTop = t.scrollHeight;
   }
@@ -32,6 +32,31 @@ const UI = (() => {
   }
   function cerrarLectura() { $('lectura').classList.add('hidden'); $('command-input').focus(); }
 
+  /* Mensajes del desconocido por Telegram: muestran «escribiendo...» y luego el texto, uno tras otro. */
+  const cola = [];
+  let ocupado = false, temporizador = null;
+  function dialogo(texto) { cola.push(texto); if (!ocupado) siguienteDialogo(); }
+  function siguienteDialogo() {
+    if (!cola.length) { ocupado = false; return; }
+    ocupado = true;
+    const texto = cola.shift(), t = $('terminal'), e = document.createElement('div');
+    const ms = (typeof Dialogos !== 'undefined' && Dialogos.escribiendoMs) || 3000;
+    e.className = 'mb-2 leading-relaxed txt-dialogo escribiendo';
+    e.innerHTML = 'escribiendo<span>.</span><span>.</span><span>.</span>';
+    t.appendChild(e);
+    t.scrollTop = t.scrollHeight;
+    temporizador = setTimeout(() => {
+      e.className = 'mb-2 leading-relaxed txt-dialogo';
+      e.innerHTML = texto;
+      t.scrollTop = t.scrollHeight;
+      siguienteDialogo();
+    }, ms);
+  }
+  function vaciarCola() {
+    cola.length = 0; ocupado = false; clearTimeout(temporizador);
+    document.querySelectorAll('.escribiendo').forEach(n => n.remove());
+  }
+
   function vista(titulo, imagen, bloqueado = false, grande = false, contener = true) {
     $('visor').classList.toggle('visor-grande', grande);
     $('room-title').innerText = titulo;
@@ -52,5 +77,5 @@ const UI = (() => {
 
   function bloquearEntrada() { $('command-input').disabled = true; $('btn-ejecutar').disabled = true; }
 
-  return { lectura, cerrarLectura, log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
+  return { dialogo, vaciarCola, lectura, cerrarLectura, log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
 })();

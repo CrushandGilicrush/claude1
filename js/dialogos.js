@@ -5,6 +5,7 @@
    - Si una regla tiene varias respuestas, se van alternando en orden.
    - El orden importa: si dos reglas comparten una palabra, gana la que está más arriba. */
 const Dialogos = {
+  escribiendoMs: 3000,   // cuánto dura el «escribiendo...» antes de cada respuesta (milisegundos)
   sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir hola».',
   porDefecto: [
     '«No te he preguntado eso.»',
@@ -285,6 +286,38 @@ const Dialogos = {
         '«Bien. Espero que no haya sido un esfuerzo excesivo.»',
         '«Ahora sí. Continúa.»',
         '«Veo que no eres incapaz de aprender.»'
+      ] },
+
+    /* Agradecimientos y ofrecimientos (los que llevan «señor» van antes que los simples) */
+    { palabras: ['gracias señor', 'muchas gracias señor', 'mil gracias señor', 'se lo agradezco', 'le agradezco'],
+      respuestas: [
+        '«Así me gusta. Agradecida y obediente.»',
+        '«Los buenos modales te favorecen.»',
+        '«De nada. Pero no te acostumbres.»',
+        '«Veo que aprendes rápido a mostrar gratitud.»',
+        '«Agradéceme cumpliendo lo que te pido.»'
+      ] },
+
+    { palabras: [
+        'servirle', 'servirte', 'para servir', 'a su servicio', 'a tu servicio', 'a su disposicion',
+        'a tu disposicion', 'a tus ordenes', 'para lo que necesite', 'para lo que necesites'
+      ],
+      respuestas: [
+        '«Eso es exactamente lo que quería oír.»',
+        '«Veo que empiezas a entender tu papel.»',
+        '«Entonces demuéstralo.»',
+        '«Qué disposición tan repentina. Veremos cuánto dura.»',
+        '«Servir no es decirlo. Es hacerlo.»',
+        '«Bien. Que no se te olvide.»'
+      ] },
+
+    { palabras: ['gracias', 'agradezco', 'agradecid*'],
+      respuestas: [
+        '«No me des las gracias. Cumple.»',
+        '«No hay de qué. Todavía.»',
+        '«Guárdate la gratitud para cuando termine.»',
+        '«Es curioso que me des las gracias.»',
+        '«Las gracias no son necesarias. La obediencia, sí.»'
       ] },
 
     /* Obediencia simple */

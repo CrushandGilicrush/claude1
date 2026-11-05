@@ -5,8 +5,8 @@ const Ordenes = (() => {
   const e = { temperatura: 47, bloqueada: false, fase4: null, fotos: [] };
 
   const defs = {
-    caldera: { pide: () => UI.log('Empecemos con algo sencillo. Sube la caldera a 70 grados.', 'dialogo') },
-    verduras: { pide: () => { e.fase4 = 'examinar'; UI.log('Dime qué verduras tienes en la nevera.', 'dialogo'); } }
+    caldera: { pide: () => UI.dialogo('Empecemos con algo sencillo. Sube la caldera a 70 grados.') },
+    verduras: { pide: () => { e.fase4 = 'examinar'; UI.dialogo('Dime qué verduras tienes en la nevera.'); } }
   };
 
   const activa = () => secuencia[indice];
@@ -46,8 +46,8 @@ const Ordenes = (() => {
     if (activa() !== 'verduras' || e.fase4 !== 'responder') return false;
     if (Juego.norm(cmd).includes('pimiento')) {
       e.fase4 = 'foto';
-      UI.log('Perfecto. Haz una fotografía de esa verdura y envíamela.', 'dialogo');
-    } else UI.log('No es eso lo que busco. Mira mejor.', 'dialogo');
+      UI.dialogo('Perfecto. Haz una fotografía de esa verdura y envíamela.');
+    } else UI.dialogo('No es eso lo que busco. Mira mejor.');
     return true;
   }
   const verdura = t => ['zanahoria', 'judia', 'tomate', 'pimiento'].find(v => t.includes(v));
@@ -64,10 +64,10 @@ const Ordenes = (() => {
     if (!Juego.estado.desbloqueado) return UI.log('Telegram sigue bloqueado.');
     if (!e.fotos.length) return UI.log('No tienes ninguna foto que enviar.');
     if (activa() === 'verduras' && e.fase4 === 'foto' && e.fotos[e.fotos.length - 1] === 'pimiento') {
-      UI.log('Bien. Por ahora es suficiente.', 'dialogo');
+      UI.dialogo('Bien. Por ahora es suficiente.');
       return superar();
     }
-    UI.log('Eso no es lo que te he pedido.', 'dialogo');
+    UI.dialogo('Eso no es lo que te he pedido.');
   }
 
   return { siguiente, examinarCaldera, ajustar, examinarNevera, responder, hacerFoto, enviarFoto };

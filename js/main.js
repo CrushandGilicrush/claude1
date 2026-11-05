@@ -124,7 +124,7 @@ const Juego = (() => {
     if (!estado.contactado) {
       estado.contactado = true;
       UI.log(T('escribirOk'));
-      UI.log(T('respuesta'), 'dialogo');
+      UI.dialogo(T('respuesta'));
       return Ordenes.siguiente();
     }
     const texto = arg.replace(new RegExp('^(a )?' + escapa(norm(Datos.contacto)) + '\\s*'), '').trim();
@@ -140,7 +140,7 @@ const Juego = (() => {
     const i = Dialogos.reglas.findIndex(r => r.palabras.some(coincide));
     const lista = i >= 0 ? Dialogos.reglas[i].respuestas : Dialogos.porDefecto;
     turnos[i] = (turnos[i] || 0) + 1;
-    UI.log(lista[(turnos[i] - 1) % lista.length], 'dialogo');
+    UI.dialogo(lista[(turnos[i] - 1) % lista.length]);
   }
 
   /* ---------- Otros comandos ---------- */
@@ -151,6 +151,7 @@ const Juego = (() => {
 
   function terminar(i) {
     estado.terminado = true;
+    UI.vaciarCola();
     UI.log(`<b>FIN DE LA PARTIDA</b><br>${Datos.finales[i]}<br><br>Pulsa el botón ↻ para volver a empezar.`, 'final');
     UI.bloquearEntrada();
   }
