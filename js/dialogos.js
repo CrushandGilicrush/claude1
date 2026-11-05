@@ -64,6 +64,25 @@ const Dialogos = {
         'Las tengo todas, y bien guardadas.'
       ] },
 
+         /* Cachonda */
+    { palabras: [ 'estoy cachonda', 'ando cachonda', 'voy cachonda',
+    'estoy caliente', 'ando caliente', 'voy caliente',
+    'estoy excitada', 'ando excitada', 'voy excitada',
+    'estoy húmeda', 'estoy mojada', 'estoy empapada',
+    'estoy mojadita', 'estoy chorreando',
+    'estoy ardiendo', 'estoy que ardo', 'estoy a mil',
+    'estoy muy cachonda', 'estoy súper cachonda', 'estoy bien cachonda',
+    'tengo las bragas mojadas'],
+      respuestas: [
+        'Eres una cerda. No esperaba que te pusieras cachonda',
+        'La idea no era que te gustara, pero mejor para ti, así no te costará tanto seguir mis instrucciones'
+      ] },
+ /* Peticiones */
+    { palabras: ['quiero que me', 'me gustaría que me', 'obligame a', 'pideme que', 'ordename que'],
+      respuestas: [
+        '¿En serio me estás pidiendo nada? Yo no estoy aquí para cumplir tus fantasías. Haz lo que te pido y calla'
+      ] },
+
     /* Saludos */
     { palabras: ['hola', 'buenas', 'buenos dias', 'buenas tardes', 'saludos'],
       respuestas: [
