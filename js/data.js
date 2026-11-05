@@ -11,7 +11,7 @@ const Datos = {
     cafeHecho: 'Preparas la cafetera y la cocina se llena de olor a café recién hecho.',
     cafeRepetido: 'Ya has preparado el café.',
     cafeNoHay: 'No tienes ningún café preparado.',
-    cafeBebido: 'Te bebes el café a sorbos y poco a poco te vas espabilando. Puede ser un buen momento para revisar el correo.',
+    cafeBebido: 'Te bebes el café a sorbos y poco a poco te vas espabilando. Puede ser un buen momento para ir al despacho y mirar en el ordenador si tienes mensajes.',
     cafeYaBebido: 'Ya te has tomado el café.',
     enciende: 'Enciendes {dispositivo}. Ves dos accesos: la red social «Life» y «Telegram».',
     sinDispositivo: 'Primero tienes que encender el móvil o el ordenador.',
