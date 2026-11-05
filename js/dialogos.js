@@ -50,6 +50,13 @@ const Dialogos = {
         '«Llama, si te atreves.»'
       ] },
 
+      { palabras: [
+        'no','no quiero', 'no me da la gana','no me sale del coño'
+      ],
+      respuestas: [
+        '«Negarse tiene consecuencias.»',
+        '«Tú misma. Atente a las consecuencias»',  ] },
+
     /* Fotos */
     { palabras: ['foto', 'fotos', 'imagenes', 'pruebas'],
       respuestas: [
