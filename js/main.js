@@ -22,6 +22,7 @@ const Juego = (() => {
     const nombre = sinArticulo(arg);
     const destino = Datos.destinoAlias[nombre] || nombre;
     if (!Datos.estancias[destino]) return UI.log('No puedes ir a ese lugar o no existe.');
+    Ordenes.cortarVideo();
     estado.estancia = destino;
     mostrarSala();
   }
@@ -41,6 +42,7 @@ const Juego = (() => {
     const desc = objetos[clave];
     if (desc === undefined) return UI.log('No ves nada parecido por aquí.');
     if (clave === 'cuadro') estado.cuadroVisto = true;
+    if (clave === 'cajon') return Ordenes.examinarCajon();
     if (clave === 'tablero') return Ajedrez.examinar();
     const img = Datos.imagenesObjetos[clave];
     if (img) {
@@ -74,6 +76,9 @@ const Juego = (() => {
   const titulo = () => (estado.dispositivo === 'movil' ? 'Móvil' : 'Ordenador');
 
   function abrir(arg) {
+    if (/nevera/.test(arg)) return examinar('nevera');
+    if (/congelador/.test(arg)) return Ordenes.abrirCongelador();
+    if (/comoda|cajon/.test(arg)) return Ordenes.abrirCajon();
     const pc = /ordenador|pc/.test(arg), movil = /movil/.test(arg);
     if (!pc && !movil) return UI.log('No puedes abrir eso.');
     if (pc && estado.estancia !== 'despacho') return UI.log('El ordenador está en el despacho.');
@@ -165,7 +170,8 @@ const Juego = (() => {
     const o = Datos.cogibles.find(c => c.nombres.test(arg));
     if (!o) return UI.log('No puedes coger eso.');
     if (estado.inventario.includes(o.item)) return UI.log(o.yaTienes);
-    if (o.estancia !== estado.estancia) return UI.log(`No ves ningún ${o.item} por aquí.`);
+    if (o.estancia !== estado.estancia) return UI.log(o.fuera || `No ves ningún ${o.item} por aquí.`);
+    if (o.requiere && !Ordenes.cumple(o.requiere)) return UI.log(o.bloqueado);
     estado.inventario.push(o.item);
     UI.inventario(estado.inventario);
     UI.log(o.texto);
@@ -206,11 +212,16 @@ const Juego = (() => {
     if (['examinar', 'ver', 'mirar'].includes(verbo)) return examinar(arg);
     if (verbo === 'subir' && /temperatura|caldera|calefaccion/.test(arg)) return Ordenes.subirTemperatura();
     if (['apoyar', 'poner', 'tocar', 'colocar', 'pegar', 'mantener'].includes(verbo) && /radiador/.test(arg)) return Ordenes.apoyarMano();
+    if (['grabar', 'encender', 'hacer', 'empezar'].includes(verbo) && /video/.test(arg)) return Ordenes.grabarVideo();
+    if (['parar', 'detener', 'terminar', 'dejar', 'cortar'].includes(verbo) && /video|grab/.test(arg)) return Ordenes.pararVideo();
+    if (/cubito|hielo/.test(arg) && (/boca/.test(arg) || ['chupar', 'lamer', 'comer'].includes(verbo))) return Ordenes.cubitoBoca();
+    if (['morder', 'comer'].includes(verbo) && /calabacin/.test(arg)) return Ordenes.morderCalabacin();
     if (['hacer', 'preparar', 'usar', 'poner'].includes(verbo) && /cafe/.test(arg)) return hacerCafe();
     if (['beber', 'tomar', 'tomarse'].includes(verbo) && /cafe/.test(arg)) return beberCafe();
     if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
     if (verbo === 'leer' || verbo === 'lee') return leer(sinArticulo(arg));
     if (verbo === 'abrir' || verbo === 'encender') return abrir(arg);
+    if (['escribir', 'escribirme', 'pintar', 'anotar'].includes(verbo) && /brazo/.test(arg)) return Ordenes.escribirBrazo();
     if (['escribir', 'decir', 'responder', 'contestar', 'preguntar', 'hablar'].includes(verbo)) return Ordenes.responder(cmd) || escribir(arg);
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
     if (/^llam/.test(verbo)) return llamar(cmd);
@@ -218,6 +229,7 @@ const Juego = (() => {
     const sujeto = sinArticulo(arg);
     if ((verbo === 'hacer' || verbo === 'sacar') && /^foto/.test(sujeto)) return Ordenes.hacerFoto(sinArticulo(sujeto.replace(/^foto\s*/, '')));
     if (['enviar', 'mandar', 'subir'].includes(verbo) && /^foto/.test(sujeto)) return Ordenes.enviarFoto();
+    if (['enviar', 'mandar', 'subir'].includes(verbo) && /^video/.test(sujeto)) return Ordenes.enviarVideo();
     if (comandoTexto(verbo, arg)) return;
     if (Ordenes.responder(cmd)) return;
     if (estado.app === 'telegram' && estado.desbloqueado && estado.mensajeLeido) return escribir(cmd);   // texto libre en Telegram = mensaje

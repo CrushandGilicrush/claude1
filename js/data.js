@@ -3,7 +3,7 @@ const Datos = {
   codigo: '885',
   contacto: 'nombre',          // nombre del contacto de Telegram al que hay que escribir
   exigirCafe: true,            // si es true, móvil y ordenador no se pueden usar hasta tomarse el café
-  destinoAlias: { pc: 'despacho', ordenador: 'despacho', dormitorio: 'habitacion' },
+  destinoAlias: { nevera: 'cocina', congelador: 'cocina', pc: 'despacho', ordenador: 'despacho', dormitorio: 'habitacion' },
   /* Textos de la secuencia de inicio. {contacto} y {dispositivo} se sustituyen solos. */
   textos: {
     sinCafe: 'Antes de ponerte a mirar nada, necesitas un café.',
@@ -40,7 +40,34 @@ const Datos = {
     radiadorYa: 'Ya tienes la mano roja. No hace falta insistir.',
     fotoManoNormal: 'Haces una foto de tu mano. No tiene nada de especial.',
     fotoManoRoja: 'Haces una foto de tu mano enrojecida.',
-    sinTelegram: 'Primero tienes que abrir Telegram.'
+    sinTelegram: 'Primero tienes que abrir Telegram.',
+    pedirHielo: '«Prueba 2. Coge un par de cubitos de hielo del congelador, sal a la terraza y grábate un vídeo metiéndote uno en la boca. Después, mándamelo.»',
+    congeladorYa: 'El congelador ya está abierto.',
+    congeladorLejos: 'El congelador está en la cocina.',
+    sinHielo: 'No tienes ningún cubito a mano.',
+    grabando: 'Enciendes la cámara del móvil y empiezas a grabar.',
+    yaGrabando: 'Ya estás grabando.',
+    sinGrabar: 'No estás grabando nada.',
+    corteVideo: 'Dejas de grabar.',
+    cubitoSinGrabar: 'Te metes un cubito en la boca. Está helado, pero nadie lo ha visto.',
+    videoCubito: 'Te metes un cubito de hielo en la boca delante de la cámara. Está helado. Detienes la grabación.',
+    sinVideo: 'No tienes ningún vídeo que enviar.',
+    pedirVerduras: '«Prueba 3. Dime qué verduras tienes en la nevera.»',
+    pedirCalabacin: '«Un calabacín. Qué interesante. Grábate un vídeo mordiéndolo y mándamelo.»',
+    sinCalabacin: 'No tienes ningún calabacín a mano.',
+    calabacinSinGrabar: 'Muerdes el calabacín. Sabe a poco, y nadie lo ha visto.',
+    videoCalabacin: 'Das un mordisco al calabacín delante de la cámara. Detienes la grabación.',
+    pedirRotulador: '«Prueba 4. Escríbete en el brazo, con un rotulador: hago lo que me pide. Después, mándame una foto.»',
+    cajonCerrado: 'El cajón está cerrado con llave.',
+    cajonAbre: 'Abres el cajón con la llave.',
+    cajonYa: 'El cajón ya está abierto.',
+    cajonContenido: 'Dentro del cajón hay un rotulador.',
+    cajonVacio: 'El cajón está vacío.',
+    sinRotulador: 'No tienes nada con lo que escribir.',
+    escribeBrazo: 'Destapas el rotulador y te escribes en el antebrazo, con letra temblorosa: «Hago lo que me pide».',
+    brazoYa: 'Ya te has escrito en el brazo.',
+    fotoBrazoNormal: 'Haces una foto de tu brazo. No tiene nada escrito.',
+    fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.'
   },
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
@@ -48,23 +75,23 @@ const Datos = {
     ['narrativo', 'Despierta... Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.']
   ],
   estancias: {
-    salon: { nombre: 'el salón', imagen: 'img/habitacion.png', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
-    habitacion: { nombre: 'tu habitación', imagen: 'img/cama.png', desc: 'Tu habitación es tu pequeño refugio, un espacio reservado a la intimidad y alejado del resto del mundo. La cama ocupa buena parte de la estancia, invitándote al descanso, mientras el armario permanece cerrado, guardando discretamente su contenido. Un espejo refleja la habitación desde uno de sus rincones, devolviéndote una imagen familiar de ti mismo. Junto a él, una cómoda con un cajón completa el mobiliario. Todo parece estar en su sitio. Es un lugar cotidiano, tranquilo y exclusivamente tuyo, donde cada objeto forma parte de tu rutina.' },
-    despacho: { nombre: 'el despacho', imagen: 'img/despacho.svg', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
-    cocina: { nombre: 'la cocina', imagen: 'img/cafetera.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
-    bano: { nombre: 'el baño', imagen: 'img/bano.svg', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
-    terraza: { nombre: 'la terraza', imagen: 'img/terraza.svg', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
+    salon: { nombre: 'Salón', imagen: 'img/salon.svg', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
+    habitacion: { nombre: 'Habitación', imagen: 'img/habitacion.svg', desc: 'Tu espacio privado. Contiene la cama, el armario, un espejo y una cómoda con cajón.' },
+    despacho: { nombre: 'Despacho', imagen: 'img/despacho.svg', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
+    cocina: { nombre: 'Cocina', imagen: 'img/cocina.svg', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
+    bano: { nombre: 'Baño', imagen: 'img/bano.svg', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
+    terraza: { nombre: 'Terraza', imagen: 'img/terraza.svg', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
   },
   /* Descripciones provisionales de «examinar»: reescribir a gusto. */
   objetos: {
-    salon: { sofa: 'Un sofá mullido, con una manta arrugada.', biblioteca: 'La mayoría de los libros ya los has leído. De entre todos, sobresale el que te estás leyendo ahora, un libro cuya venta fue prohibida el mismo día en que salió a la venta y del cual se conservan muy pocos ejemplares: Las perversiones de Emily.', radiador: 'Un radiador de hierro, ahora apagado.', luz: 'Una lámpara de pie con luz cálida.', mueble: 'Un mueble antiguo de madera oscura. Encima hay un tablero de ajedrez con una partida a medias.', tablero: '', libro: 'Las perversiones de Emily. Es el libro que te estás leyendo ahora.' },
-    habitacion: { cama: 'La cama deshecha, aún tibia.', armario: 'Un armario de dos puertas, repleto de ropa.', espejo: 'Tu reflejo te devuelve una cara cansada.', comoda: 'Una cómoda de madera con un cajón.' },
+    salon: { sofa: 'Un sofá mullido, con una manta arrugada.', biblioteca: 'La mayoría de los libros ya los has leído. De entre todos, sobresale el que te estás leyendo ahora: las perversiones de Emily.', radiador: 'Un radiador de hierro, ahora apagado.', luz: 'Una lámpara de pie con luz cálida.', mueble: 'Un mueble antiguo de madera oscura. Encima hay un tablero de ajedrez con una partida a medias.', tablero: '', libro: 'Las perversiones de Emily. Es el libro que te estás leyendo ahora.' },
+    habitacion: { cama: 'La cama deshecha, aún tibia.', armario: 'Un armario de dos puertas, repleto de ropa.', espejo: 'Tu reflejo te devuelve una cara cansada.', comoda: 'Una cómoda de madera con un cajón.', cajon: 'Un cajón de la cómoda.' },
     despacho: { ordenador: 'Un ordenador de sobremesa. Lo mismo que el móvil, pero con pantalla grande.', escritorio: 'Un escritorio con papeles revueltos.', 'juegos de mesa': 'Varias cajas de juegos de mesa, apiladas.', cuadro: 'Un panel lleno de rosas y espinas, con placas numeradas.' },
-    cocina: { cocina: 'Una cocina limpia, sin nada al fuego.', cafetera: 'Una cafetera que huele a café viejo.', nevera: '', caldera: '' },
+    cocina: { cocina: 'Una cocina limpia, sin nada al fuego.', cafetera: 'Una cafetera que huele a café viejo.', nevera: '', congelador: 'Un congelador pequeño, con la puerta cubierta de escarcha.', caldera: '' },
     bano: { inodoro: 'Un inodoro corriente.', lavabo: 'Un lavabo con el grifo goteando.', ducha: 'Una ducha con mampara.', mueble: 'Un pequeño mueble con toallas.' },
     terraza: { macetas: 'Macetas con plantas algo secas.', tumbona: 'Una tumbona cómoda, al sol.' }
   },
-  alias: { perversiones: 'libro', libreria: 'biblioteca', ajedrez: 'tablero', radiadores: 'radiador', juegos: 'juegos de mesa', maceta: 'macetas', pc: 'ordenador' },
+  alias: { verduras: 'nevera', alimentos: 'nevera', comida: 'nevera', cajones: 'cajon', perversiones: 'libro', libreria: 'biblioteca', ajedrez: 'tablero', radiadores: 'radiador', juegos: 'juegos de mesa', maceta: 'macetas', pc: 'ordenador' },
   /* Comandos con respuesta de texto. Sin `estancia`/`objetos`: funcionan en cualquier lugar.
      Con ellos: solo funcionan en esa estancia y nombrando uno de sus objetos. */
   comandosTexto: [
@@ -86,9 +113,16 @@ const Datos = {
   /* Objetos que se pueden coger («coger [objeto]»). */
   cogibles: [
     { item: 'libro', nombres: /libro|perversion|emily/, estancia: 'salon',
-      texto: 'Coges «Las perversiones de Emily» de la biblioteca.', yaTienes: 'Ya tienes el libro contigo.' }
+      texto: 'Coges «Las perversiones de Emily» de la biblioteca.', yaTienes: 'Ya tienes el libro contigo.' },
+    { item: 'vaso con hielo', nombres: /cubito|hielo/, estancia: 'cocina', requiere: 'congelador',
+      bloqueado: 'No ves hielo a mano. Quizá en el congelador.', fuera: 'No ves ningún hielo por aquí.',
+      texto: 'Coges los dos cubitos y los metes en un vaso.', yaTienes: 'Ya tienes el vaso con hielo.' },
+    { item: 'calabacín', nombres: /calabacin/, estancia: 'cocina',
+      texto: 'Coges un calabacín de la nevera.', yaTienes: 'Ya tienes el calabacín.' },
+    { item: 'rotulador', nombres: /rotulador/, estancia: 'habitacion', requiere: 'cajon',
+      bloqueado: 'El cajón está cerrado con llave.', texto: 'Coges el rotulador del cajón.', yaTienes: 'Ya tienes el rotulador.' }
   ],
-  verduras: ['zanahorias', 'judías verdes', 'tomates', 'un pimiento rojo'],
+  verduras: ['huevos', 'leche', 'queso', 'una bandeja de pollo', 'zanahorias', 'judías verdes', 'tomates', 'un calabacín', 'pimientos'],
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
   finales: [
     'Final 1 (texto pendiente).', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',

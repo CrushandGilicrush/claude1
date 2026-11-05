@@ -39,7 +39,9 @@ const UI = (() => {
   function siguienteDialogo() {
     if (!cola.length) { ocupado = false; return; }
     ocupado = true;
-    const texto = cola.shift(), t = $('terminal'), e = document.createElement('div');
+    const texto = cola.shift();
+    if (typeof texto === 'function') { texto(); return siguienteDialogo(); }
+    const t = $('terminal'), e = document.createElement('div');
     const ms = (typeof Dialogos !== 'undefined' && Dialogos.escribiendoMs) || 3000;
     e.className = 'mb-2 leading-relaxed txt-dialogo escribiendo';
     e.innerHTML = 'escribiendo<span>.</span><span>.</span><span>.</span>';
@@ -77,5 +79,5 @@ const UI = (() => {
 
   function bloquearEntrada() { $('command-input').disabled = true; $('btn-ejecutar').disabled = true; }
 
-  return { dialogo, vaciarCola, lectura, cerrarLectura, log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
+  return { dialogo, despues: dialogo, vaciarCola, lectura, cerrarLectura, log, logImagen, vista, contador, inventario, bloquearEntrada, $ };
 })();
