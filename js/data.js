@@ -22,7 +22,7 @@ const Datos = {
     mensaje: '«Sé muy bien lo que hiciste. Y tengo las fotos para demostrarlo. Si no quieres que salgan a la luz, entra en Telegram y escríbeme a {contacto} de inmediato.»',
     telegramBloqueado: 'Telegram está protegido con un código de 3 cifras. Hace tiempo que no lo usas y no te acuerdas, pero sí recuerdas que aparece en el cuadro que hay en la pared.',
     pideCodigo: 'Escribe el código de 3 cifras (o «cancelar»):',
-    codigoMal: 'Código incorrecto.',
+    codigoMal: 'Código incorrecto. Inténtalo de nuevo o escribe «cancelar».',
     telegramAbre: 'Telegram se abre. Ya no te volverá a pedir el código.',
     telegramListo: 'Telegram está abierto.',
     telegramEscribe: 'Tienes que escribirle a {contacto}.',

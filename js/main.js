@@ -104,11 +104,13 @@ const Juego = (() => {
   }
 
   function comprobarCodigo(cmd) {
-    estado.esperandoCodigo = false;
-    if (cmd !== Datos.codigo) {
+    if (['cancelar', 'salir', 'cerrar', 'volver'].includes(cmd)) {
+      estado.esperandoCodigo = false;
       UI.vista(titulo(), Datos.imagenes[estado.dispositivo]);
-      return UI.log(cmd === 'cancelar' ? 'Apartas la vista de la pantalla.' : T('codigoMal'));
+      return UI.log('Apartas la vista de la pantalla.');
     }
+    if (cmd !== Datos.codigo) return UI.log(T('codigoMal'));   // sigue esperando el código
+    estado.esperandoCodigo = false;
     estado.desbloqueado = true;
     mostrarApp('telegram', T('telegramAbre') + (estado.mensajeLeido ? ' ' + T('telegramEscribe') : ''));
   }
@@ -213,8 +215,9 @@ const Juego = (() => {
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
     if (/^llam/.test(verbo)) return llamar(cmd);
     if (verbo === 'ayuda') return ayuda();
-    if ((verbo === 'hacer' || verbo === 'sacar') && /^foto/.test(arg)) return Ordenes.hacerFoto(sinArticulo(arg.replace(/^foto\s*/, '')));
-    if (verbo === 'enviar' && /^foto/.test(arg)) return Ordenes.enviarFoto();
+    const sujeto = sinArticulo(arg);
+    if ((verbo === 'hacer' || verbo === 'sacar') && /^foto/.test(sujeto)) return Ordenes.hacerFoto(sinArticulo(sujeto.replace(/^foto\s*/, '')));
+    if (['enviar', 'mandar', 'subir'].includes(verbo) && /^foto/.test(sujeto)) return Ordenes.enviarFoto();
     if (comandoTexto(verbo, arg)) return;
     if (Ordenes.responder(cmd)) return;
     if (estado.app === 'telegram' && estado.desbloqueado && estado.mensajeLeido) return escribir(cmd);   // texto libre en Telegram = mensaje
