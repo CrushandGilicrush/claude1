@@ -30,7 +30,17 @@ const Datos = {
     escribirSinMensaje: 'No sabes a quién escribir.',
     escribirYa: 'No tienes nada más que decirle por ahora.',
     escribirOk: 'Le escribes con dedos temblorosos. Al instante aparecen tres puntitos...',
-    respuesta: '«Has tardado. Veo que sabes seguir instrucciones. Vamos a ver hasta dónde llegas.»'
+    respuesta: '«Has tardado. Veo que sabes seguir instrucciones. Vamos a ver hasta dónde llegas.»',
+    /* Orden 1: caldera, radiador y foto */
+    pedirCaldera: '«Empecemos con algo sencillo. Sube la caldera a 70 grados. Cuando esté caliente, apoya la mano en el radiador durante un minuto. Después, hazte una foto de la mano y mándamela.»',
+    calderaSubir: 'Tienes que escribir el ajuste con el formato de la nota.',
+    calderaYa: 'La caldera ya está a 70 grados y el panel está bloqueado.',
+    radiadorFrio: 'Apoyas la mano en el radiador. Está templado, nada más.',
+    radiadorMano: 'Apoyas la mano sobre el radiador y la mantienes ahí un minuto entero. Cuando la retiras, la tienes roja.',
+    radiadorYa: 'Ya tienes la mano roja. No hace falta insistir.',
+    fotoManoNormal: 'Haces una foto de tu mano. No tiene nada de especial.',
+    fotoManoRoja: 'Haces una foto de tu mano enrojecida.',
+    sinTelegram: 'Primero tienes que abrir Telegram.'
   },
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },

@@ -91,7 +91,10 @@ const Juego = (() => {
   }
 
   function abrirApp(cmd) {
-    if (!encendido()) return UI.log(T('sinDispositivo'));
+    if (!encendido()) {
+      if (Datos.exigirCafe && !estado.cafeTomado) return UI.log(T('sinCafe'));
+      estado.dispositivo = 'movil';   // el móvil siempre está a mano
+    }
     if (/life|red social/.test(cmd)) return mostrarApp('life', T(estado.mensajeLeido ? 'lifeVacio' : 'lifeNuevo'));
     if (estado.desbloqueado) return mostrarApp('telegram', estado.mensajeLeido && !estado.contactado ? T('telegramEscribe') : T('telegramListo'));
     UI.vista(`${titulo()} · Telegram`, Datos.imagenes.telegram, true);
@@ -199,6 +202,8 @@ const Juego = (() => {
     const arg = resto.join(' ');
     if (verbo === 'ir') return ir(arg);
     if (['examinar', 'ver', 'mirar'].includes(verbo)) return examinar(arg);
+    if (verbo === 'subir' && /temperatura|caldera|calefaccion/.test(arg)) return Ordenes.subirTemperatura();
+    if (['apoyar', 'poner', 'tocar', 'colocar', 'pegar', 'mantener'].includes(verbo) && /radiador/.test(arg)) return Ordenes.apoyarMano();
     if (['hacer', 'preparar', 'usar', 'poner'].includes(verbo) && /cafe/.test(arg)) return hacerCafe();
     if (['beber', 'tomar', 'tomarse'].includes(verbo) && /cafe/.test(arg)) return beberCafe();
     if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
