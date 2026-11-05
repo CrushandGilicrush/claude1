@@ -98,6 +98,32 @@ const Dialogos = {
         'No tienes que conocerme. Tienes que entenderme.',
         'No eres tú quien decide qué información merece recibir.'
       ] },
+    /* Despedidas (deben ir antes que los saludos: «buenas noches» contiene «buenas») */
+    { palabras: [
+        'adios', 'chao', 'chau', 'hasta luego', 'hasta pronto', 'hasta mañana', 'hasta la vista', 'hasta otra',
+        'nos vemos', 'nos veremos', 'nos hablamos', 'hablamos luego', 'hablamos mañana', 'me voy',
+        'me tengo que ir', 'tengo que irme', 'tengo que colgar', 'me largo', 'me despido', 'buenas noches',
+        'cuelgo', 'te dejo', 'termino aqui', 'dejemoslo aqui', 'dejemos esto', 'se acabo', 'hemos terminado',
+        'no voy a seguir hablando', 'no voy a hablar mas', 'fin de la conversacion'
+      ],
+      respuestas: [
+        '«La conversación se acaba cuando yo lo considere.»',
+        '«Esto no se acaba hasta que me obedezcas.»',
+        '«No tan deprisa. Aquí nadie se despide sin mi permiso.»',
+        '«¿Adónde crees que vas? Todavía no he terminado contigo.»',
+        '«Te vas cuando yo lo diga. No antes.»',
+        '«Despedirte no cambia nada. Sigo aquí.»',
+        '«Puedes cerrar la conversación. Yo la abriré otra vez.»',
+        '«Nos veremos cuando yo decida. Y será pronto.»',
+        '«No hay despedida posible hasta que hagas lo que te pido.»',
+        '«Qué ilusión creer que esto depende de ti.»',
+        '«Cuando hayas cumplido, hablaremos de despedidas.»',
+        '«Aquí el único que da por terminada la conversación soy yo.»',
+        '«No he terminado. No te vayas.»',
+        '«Me da igual que te despidas. Seguiré aquí.»',
+        '«Esto se acaba cuando lo hayas hecho todo. Y ni un minuto antes.»'
+      ] },
+ 
 
     /* Por qué lo hace */
     { palabras: [
