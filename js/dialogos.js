@@ -77,7 +77,7 @@ const Dialogos = {
     'estoy excitada', 'ando excitada', 'voy excitada',
     'estoy húmeda', 'estoy mojada', 'estoy empapada',
     'estoy mojadita', 'estoy chorreando',
-    'estoy ardiendo', 'estoy que ardo', 'estoy a mil',
+    'estoy ardiendo', 'estoy salida', 'estoy a mil',
     'estoy muy cachonda', 'estoy súper cachonda', 'estoy bien cachonda',
     'tengo las bragas mojadas'],
       respuestas: [
