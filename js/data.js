@@ -132,6 +132,6 @@ const Datos = {
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
   finales: [
     'Final 1 (texto pendiente).', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',
-    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Final 6: consecuencias (texto pendiente).'
+    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Das la dirección al desconocido...'
   ]
 };
