@@ -44,7 +44,13 @@ const Ordenes = (() => {
     escribeBrazo: 'Destapas el rotulador y te escribes en el antebrazo, con letra temblorosa: «Hago lo que me pide».',
     brazoYa: 'Ya te has escrito en el brazo.',
     fotoBrazoNormal: 'Haces una foto de tu brazo. No tiene nada escrito.',
-    fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.'
+    fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.',
+    recuerdaCaldera: '«Te he pedido que subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
+    recuerdaHielo: '«Te he pedido un vídeo en la terraza, metiéndote un cubito de hielo en la boca. Un vídeo, no otra cosa.»',
+    recuerdaCalabacin: '«Te he pedido que me digas qué verduras tienes en la nevera. Después ya te diré qué hacer con ellas.»',
+    recuerdaCalabacinVideo: '«Te he pedido un vídeo mordiendo el calabacín. Un vídeo, no otra cosa.»',
+    recuerdaRotulador: '«Te he pedido que te escribas una frase en el brazo con un rotulador y me mandes una foto. Hazlo bien.»',
+    recuerdaGenerico: '«Eso no es lo que te he pedido.»'
   };
   const t = clave => (Datos.textos && Datos.textos[clave]) || DEF[clave];
   const est = () => Juego.estado;
@@ -169,6 +175,15 @@ const Ordenes = (() => {
     if (est().app !== 'telegram') { UI.log(t('sinTelegram')); return false; }
     return true;
   }
+  /* Lo que el desconocido recuerda al jugador cuando manda algo que no es lo pedido. */
+  function recordatorio() {
+    const o = activa();
+    if (o === 'caldera') return t('recuerdaCaldera');
+    if (o === 'hielo') return t('recuerdaHielo');
+    if (o === 'calabacin') return t(e.fase3 === 'video' ? 'recuerdaCalabacinVideo' : 'recuerdaCalabacin');
+    if (o === 'rotulador') return t('recuerdaRotulador');
+    return t('recuerdaGenerico');
+  }
   function enviarFoto() {
     if (!telegramListo()) return;
     if (!e.fotos.length) return UI.log('No tienes ninguna foto que enviar.');
@@ -183,7 +198,7 @@ const Ordenes = (() => {
       UI.dialogo('«Eso es. Justo lo que quería ver.»');
       return superar();
     }
-    UI.dialogo('«Eso no es lo que te he pedido.»');
+    UI.dialogo(recordatorio());
   }
   function enviarVideo() {
     if (!telegramListo()) return;
@@ -200,7 +215,7 @@ const Ordenes = (() => {
       UI.dialogo('«Perfecto. Sabía que no tendrías problema.»');
       return superar();
     }
-    UI.dialogo('«Eso no es lo que te he pedido.»');
+    UI.dialogo(recordatorio());
   }
 
   return {

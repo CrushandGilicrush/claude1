@@ -67,7 +67,13 @@ const Datos = {
     escribeBrazo: 'Destapas el rotulador y te escribes en el antebrazo, con letra temblorosa: «Hago lo que me pide».',
     brazoYa: 'Ya te has escrito en el brazo.',
     fotoBrazoNormal: 'Haces una foto de tu brazo. No tiene nada escrito.',
-    fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.'
+    fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.',
+    recuerdaCaldera: '«Te he pedido que subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
+    recuerdaHielo: '«Te he pedido un vídeo en la terraza, metiéndote un cubito de hielo en la boca. Un vídeo, no otra cosa.»',
+    recuerdaCalabacin: '«Te he pedido que me digas qué verduras tienes en la nevera. Después ya te diré qué hacer con ellas.»',
+    recuerdaCalabacinVideo: '«Te he pedido un vídeo mordiendo el calabacín. Un vídeo, no otra cosa.»',
+    recuerdaRotulador: '«Te he pedido que te escribas una frase en el brazo con un rotulador y me mandes una foto. Hazlo bien.»',
+    recuerdaGenerico: '«Eso no es lo que te he pedido.»'
   },
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
