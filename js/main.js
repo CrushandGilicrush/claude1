@@ -117,14 +117,30 @@ const Juego = (() => {
     UI.log(T('mensaje'), 'dialogo');
   }
 
-  function escribir() {
+  const escapa = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  function escribir(arg) {
     if (estado.app !== 'telegram') return UI.log(T('escribirSinApp'));
     if (!estado.mensajeLeido) return UI.log(T('escribirSinMensaje'));
-    if (estado.contactado) return UI.log(T('escribirYa'));
-    estado.contactado = true;
-    UI.log(T('escribirOk'));
-    UI.log(T('respuesta'), 'dialogo');
-    Ordenes.siguiente();
+    if (!estado.contactado) {
+      estado.contactado = true;
+      UI.log(T('escribirOk'));
+      UI.log(T('respuesta'), 'dialogo');
+      return Ordenes.siguiente();
+    }
+    const texto = arg.replace(new RegExp('^(a )?' + escapa(norm(Datos.contacto)) + '\\s*'), '').trim();
+    if (!texto) return UI.log(Dialogos.sinTexto);
+    conversar(texto);
+  }
+
+  /* Conversación por palabras clave (reglas en js/dialogos.js). */
+  const turnos = {};
+  function conversar(texto) {
+    const msg = ' ' + norm(texto).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ') + ' ';
+    const coincide = p => { p = norm(p); return p.endsWith('*') ? msg.includes(' ' + p.slice(0, -1)) : msg.includes(' ' + p + ' '); };
+    const i = Dialogos.reglas.findIndex(r => r.palabras.some(coincide));
+    const lista = i >= 0 ? Dialogos.reglas[i].respuestas : Dialogos.porDefecto;
+    turnos[i] = (turnos[i] || 0) + 1;
+    UI.log(lista[(turnos[i] - 1) % lista.length], 'dialogo');
   }
 
   /* ---------- Otros comandos ---------- */
@@ -165,7 +181,7 @@ const Juego = (() => {
   }
 
   function ayuda() {
-    UI.log('Comandos: «ir a [estancia]», «examinar [objeto]», «coger [objeto]», «leer [objeto]», «encender móvil», «encender ordenador», «mirar red social», «abrir telegram», «escribir a [contacto]», «hacer foto [objeto]», «enviar foto», «cerrar», «llamar a la policía».');
+    UI.log('Comandos: «ir a [estancia]», «examinar [objeto]», «coger [objeto]», «leer [objeto]», «encender móvil», «encender ordenador», «mirar red social», «abrir telegram», «escribir [mensaje]», «hacer foto [objeto]», «enviar foto», «cerrar», «llamar a la policía».');
   }
 
   /* ---------- Intérprete ---------- */
@@ -187,14 +203,16 @@ const Juego = (() => {
     if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
     if (verbo === 'leer' || verbo === 'lee') return leer(sinArticulo(arg));
     if (verbo === 'abrir' || verbo === 'encender') return abrir(arg);
-    if (verbo === 'escribir') return escribir();
+    if (['escribir', 'decir', 'responder', 'contestar', 'preguntar', 'hablar'].includes(verbo)) return Ordenes.responder(cmd) || escribir(arg);
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
     if (/^llam/.test(verbo)) return llamar(cmd);
     if (verbo === 'ayuda') return ayuda();
     if ((verbo === 'hacer' || verbo === 'sacar') && /^foto/.test(arg)) return Ordenes.hacerFoto(sinArticulo(arg.replace(/^foto\s*/, '')));
     if (verbo === 'enviar' && /^foto/.test(arg)) return Ordenes.enviarFoto();
     if (comandoTexto(verbo, arg)) return;
-    if (!Ordenes.responder(cmd)) UI.log('No entiendo ese comando.');
+    if (Ordenes.responder(cmd)) return;
+    if (estado.app === 'telegram' && estado.desbloqueado && estado.mensajeLeido) return escribir(cmd);   // texto libre en Telegram = mensaje
+    UI.log('No entiendo ese comando.');
   }
 
   function iniciar() {
