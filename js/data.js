@@ -135,7 +135,7 @@ const Datos = {
   verduras: ['huevos', 'leche', 'queso', 'una bandeja de pollo', 'zanahorias', 'judías verdes', 'tomates', 'un calabacín', 'pimientos'],
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
   finales: [
-    'Final 1 (texto pendiente).', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',
-    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Final 6: consecuencias (texto pendiente).'
+    'Has ganado la partida.', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',
+    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Tu agresor llega a casa y... Has perdido la partida.'
   ]
 };
