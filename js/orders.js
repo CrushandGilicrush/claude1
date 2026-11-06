@@ -5,10 +5,10 @@ const Ordenes = (() => {
   let indice = -1;
   const e = {
     temperatura: 47, bloqueada: false, manoRoja: false, congelador: false, grabando: false,
-    fase3: null, cajon: false, brazo: false, fotos: [], videos: []
+    fase3: null, neveraVista: false, cajon: false, brazo: false, fotos: [], videos: []
   };
   const DEF = {
-    pedirCaldera: '«Empecemos con algo sencillo. Sube la caldera a 70 grados. Cuando esté caliente, apoya la mano en el radiador durante un minuto. Después, hazte una foto de la mano y mándamela.»',
+    pedirCaldera: '«Empecemos con algo sencillo. Desnúdate. Sube la caldera a 70 grados. Cuando esté caliente, apoya la mano en el radiador durante un minuto. Después, hazte una foto de la mano y mándamela.»',
     calderaSubir: 'Tienes que escribir el ajuste con el formato de la nota.',
     calderaYa: 'La caldera ya está a 70 grados y el panel está bloqueado.',
     radiadorFrio: 'Apoyas la mano en el radiador. Está templado, nada más.',
@@ -45,12 +45,13 @@ const Ordenes = (() => {
     brazoYa: 'Ya te has escrito en el brazo.',
     fotoBrazoNormal: 'Haces una foto de tu brazo. No tiene nada escrito.',
     fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.',
-    recuerdaCaldera: '«Te he pedido que subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
+    recuerdaCaldera: '«Te he pedido que te desnudes, subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
     recuerdaHielo: '«Te he pedido un vídeo en la terraza, metiéndote un cubito de hielo en la boca. Un vídeo, no otra cosa.»',
     recuerdaCalabacin: '«Te he pedido que me digas qué verduras tienes en la nevera. Después ya te diré qué hacer con ellas.»',
     recuerdaCalabacinVideo: '«Te he pedido un vídeo mordiendo el calabacín. Un vídeo, no otra cosa.»',
     recuerdaRotulador: '«Te he pedido que te escribas una frase en el brazo con un rotulador y me mandes una foto. Hazlo bien.»',
-    recuerdaGenerico: '«Eso no es lo que te he pedido.»'
+    recuerdaGenerico: '«Eso no es lo que te he pedido.»',
+    recuerdaDesnudarse: '«Te he dicho que te desnudaras. Hazlo y vuelve a mandármela.»'
   };
   const t = clave => (Datos.textos && Datos.textos[clave]) || DEF[clave];
   const est = () => Juego.estado;
@@ -60,7 +61,7 @@ const Ordenes = (() => {
   const defs = {
     caldera: { pide: () => UI.dialogo(t('pedirCaldera')) },
     hielo: { pide: () => UI.dialogo(t('pedirHielo')) },
-    calabacin: { pide: () => { e.fase3 = 'examinar'; UI.dialogo(t('pedirVerduras')); } },
+    calabacin: { pide: () => { e.fase3 = e.neveraVista ? 'responder' : 'examinar'; UI.dialogo(t('pedirVerduras')); } },
     rotulador: { pide: () => UI.dialogo(t('pedirRotulador')) }
   };
 
@@ -123,14 +124,23 @@ const Ordenes = (() => {
   function examinarNevera() {
     if (est().estancia !== 'cocina') return;
     UI.log('Abres la nevera. Hay: ' + Datos.verduras.join(', ') + '.');
+    e.neveraVista = true;
     if (activa() === 'calabacin' && e.fase3 === 'examinar') e.fase3 = 'responder';
   }
-  /* Respuesta libre por Telegram: ignora mayúsculas, acentos, espacios y otros alimentos. */
+  /* Respuesta libre por Telegram: ignora mayúsculas, acentos, espacios y otros alimentos.
+     Basta con que aparezca «calabac…» (calabacín, calabacines). */
+  const ALIMENTOS = /huevo|leche|queso|pollo|zanahoria|judia|tomate|calabac|pimiento/;
   function responder(cmd) {
-    if (activa() !== 'calabacin' || e.fase3 !== 'responder' || est().app !== 'telegram') return false;
-    if (Juego.norm(cmd).includes('calabacin')) { e.fase3 = 'video'; UI.dialogo(t('pedirCalabacin')); }
-    else UI.dialogo('«No es eso lo que busco. Mira mejor.»');
-    return true;
+    if (activa() !== 'calabacin' || e.fase3 === 'video') return false;
+    const texto = Juego.norm(cmd), dice = texto.includes('calabac');
+    if (est().app !== 'telegram') {   // si parece una respuesta pero Telegram está cerrado, avisa
+      if (!dice && !(e.fase3 === 'responder' && ALIMENTOS.test(texto))) return false;
+      UI.log(t('sinTelegram'));
+      return true;
+    }
+    if (dice) { e.fase3 = 'video'; UI.dialogo(t('pedirCalabacin')); return true; }
+    if (e.fase3 === 'responder') { UI.dialogo('«No es eso lo que busco. Mira mejor.»'); return true; }
+    return false;
   }
   function morderCalabacin() {
     if (est().estancia !== 'cocina' && !est().inventario.includes('calabacín')) return UI.log(t('sinCalabacin'));
@@ -189,6 +199,7 @@ const Ordenes = (() => {
     if (!e.fotos.length) return UI.log('No tienes ninguna foto que enviar.');
     const ultima = e.fotos[e.fotos.length - 1];
     if (activa() === 'caldera' && e.bloqueada && ultima === 'mano roja') {
+      if (!est().desnuda) return UI.dialogo(t('recuerdaDesnudarse'));   // desnudarse es necesario en la prueba 1
       e.fotos.pop();
       UI.dialogo('«Muy bien. Veo que sabes obedecer.»');
       return superar();

@@ -3,7 +3,7 @@ const Juego = (() => {
   const estado = {
     estancia: 'habitacion', inventario: [], contador: 0, terminado: false,
     dispositivo: null, app: null, esperandoCodigo: false, desbloqueado: false,
-    cafeHecho: false, cafeTomado: false, mensajeLeido: false, cuadroVisto: false, contactado: false
+    desnuda: false, cafeHecho: false, cafeTomado: false, mensajeLeido: false, cuadroVisto: false, contactado: false
   };
   const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
   const sinArticulo = t => t.replace(/^(a|al|la|el|los|las|un|una|de|del)\s+/, '').replace(/^(a|al|la|el|de|del)\s+/, '');
@@ -154,9 +154,20 @@ const Juego = (() => {
   }
 
   /* ---------- Otros comandos ---------- */
+  const TF = (clave, defecto) => (Datos.textos && Datos.textos[clave]) || defecto;
+
   function llamar(cmd) {
-    if (cmd.includes('policia')) return terminar(estado.contador);
+    if (cmd.includes('policia')) {
+      if (!estado.mensajeLeido) return UI.log(TF('policiaSinMotivo', 'No ha pasado nada que merezca llamar a la policía.'));   // hasta leer el mensaje de Life
+      return terminar(estado.contador);
+    }
     UI.log('Parece que no hay nadie al otro lado.');
+  }
+
+  function desnudarse() {
+    if (estado.desnuda) return UI.log(TF('yaDesnuda', 'Ya estás desnuda.'));
+    estado.desnuda = true;
+    UI.log(TF('desnudarse', 'Con las manos temblorosas, te quitas la ropa.'));
   }
 
   function terminar(i) {
@@ -215,7 +226,7 @@ const Juego = (() => {
     if (['grabar', 'encender', 'hacer', 'empezar'].includes(verbo) && /video/.test(arg)) return Ordenes.grabarVideo();
     if (['parar', 'detener', 'terminar', 'dejar', 'cortar'].includes(verbo) && /video|grab/.test(arg)) return Ordenes.pararVideo();
     if (/cubito|hielo/.test(arg) && (/boca/.test(arg) || ['chupar', 'lamer', 'comer'].includes(verbo))) return Ordenes.cubitoBoca();
-    if (['morder', 'comer'].includes(verbo) && /calabacin/.test(arg)) return Ordenes.morderCalabacin();
+    if ((['morder', 'comer', 'masticar', 'mordisquear'].includes(verbo) || /mordisco/.test(arg)) && /calabac/.test(arg)) return Ordenes.morderCalabacin();
     if (['hacer', 'preparar', 'usar', 'poner'].includes(verbo) && /cafe/.test(arg)) return hacerCafe();
     if (['beber', 'tomar', 'tomarse'].includes(verbo) && /cafe/.test(arg)) return beberCafe();
     if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
@@ -224,6 +235,7 @@ const Juego = (() => {
     if (['escribir', 'escribirme', 'pintar', 'anotar'].includes(verbo) && /brazo/.test(arg)) return Ordenes.escribirBrazo();
     if (['escribir', 'decir', 'responder', 'contestar', 'preguntar', 'hablar'].includes(verbo)) return Ordenes.responder(cmd) || escribir(arg);
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
+    if (/^desnud|^desvest/.test(verbo) || (/^quit/.test(verbo) && /ropa/.test(arg))) return desnudarse();
     if (/^llam/.test(verbo)) return llamar(cmd);
     if (verbo === 'ayuda') return ayuda();
     const sujeto = sinArticulo(arg);
@@ -240,6 +252,7 @@ const Juego = (() => {
     Datos.intro.forEach(([tipo, texto]) => UI.log(texto, tipo));
     mostrarSala();
     UI.inventario(estado.inventario);
+    UI.$('terminal').scrollTop = 0;   // el inicio se lee desde arriba
     const input = UI.$('command-input');
     const lanzar = () => { const v = input.value; input.value = ''; ejecutar(v); };
     input.addEventListener('keypress', ev => { if (ev.key === 'Enter') lanzar(); });

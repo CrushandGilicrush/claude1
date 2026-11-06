@@ -11,7 +11,7 @@ const Datos = {
     cafeHecho: 'Preparas la cafetera y la cocina se llena de olor a café recién hecho.',
     cafeRepetido: 'Ya has preparado el café.',
     cafeNoHay: 'No tienes ningún café preparado.',
-    cafeBebido: 'Te bebes el café a sorbos y poco a poco te vas espabilando. Puede ser un buen momento para ir al despacho y mirar en el ordenador si tienes mensajes.',
+    cafeBebido: 'Te bebes el café a sorbos y poco a poco te vas espabilando. Puede ser un buen momento para revisar el correo.',
     cafeYaBebido: 'Ya te has tomado el café.',
     enciende: 'Enciendes {dispositivo}. Ves dos accesos: la red social «Life» y «Telegram».',
     sinDispositivo: 'Primero tienes que encender el móvil o el ordenador.',
@@ -32,7 +32,7 @@ const Datos = {
     escribirOk: 'Le escribes con dedos temblorosos. Al instante aparecen tres puntitos...',
     respuesta: '«Has tardado. Veo que sabes seguir instrucciones. Vamos a ver hasta dónde llegas.»',
     /* Orden 1: caldera, radiador y foto */
-    pedirCaldera: '«Empecemos con algo sencillo. Sube la caldera a 70 grados. Cuando esté caliente, apoya la mano en el radiador durante un minuto. Después, hazte una foto de la mano y mándamela.»',
+    pedirCaldera: '«Empecemos con algo sencillo. Desnúdate. Sube la caldera a 70 grados. Cuando esté caliente, apoya la mano en el radiador durante un minuto. Después, hazte una foto de la mano y mándamela.»',
     calderaSubir: 'Tienes que escribir el ajuste con el formato de la nota.',
     calderaYa: 'La caldera ya está a 70 grados y el panel está bloqueado.',
     radiadorFrio: 'Apoyas la mano en el radiador. Está templado, nada más.',
@@ -68,12 +68,16 @@ const Datos = {
     brazoYa: 'Ya te has escrito en el brazo.',
     fotoBrazoNormal: 'Haces una foto de tu brazo. No tiene nada escrito.',
     fotoBrazoEscrito: 'Haces una foto de tu brazo con la frase escrita.',
-    recuerdaCaldera: '«Te he pedido que subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
+    recuerdaCaldera: '«Te he pedido que te desnudes, subas la caldera a 70 grados, apoyes la mano en el radiador durante un minuto y me mandes una foto de la mano. Hazlo bien.»',
     recuerdaHielo: '«Te he pedido un vídeo en la terraza, metiéndote un cubito de hielo en la boca. Un vídeo, no otra cosa.»',
     recuerdaCalabacin: '«Te he pedido que me digas qué verduras tienes en la nevera. Después ya te diré qué hacer con ellas.»',
     recuerdaCalabacinVideo: '«Te he pedido un vídeo mordiendo el calabacín. Un vídeo, no otra cosa.»',
     recuerdaRotulador: '«Te he pedido que te escribas una frase en el brazo con un rotulador y me mandes una foto. Hazlo bien.»',
-    recuerdaGenerico: '«Eso no es lo que te he pedido.»'
+    recuerdaGenerico: '«Eso no es lo que te he pedido.»',
+    recuerdaDesnudarse: '«Te he dicho que te desnudaras. Hazlo y vuelve a mandármela.»',
+    desnudarse: 'Con las manos temblorosas, te quitas la ropa.',
+    yaDesnuda: 'Ya estás desnuda.',
+    policiaSinMotivo: 'No ha pasado nada que merezca llamar a la policía.'
   },
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
@@ -123,7 +127,7 @@ const Datos = {
     { item: 'vaso con hielo', nombres: /cubito|hielo/, estancia: 'cocina', requiere: 'congelador',
       bloqueado: 'No ves hielo a mano. Quizá en el congelador.', fuera: 'No ves ningún hielo por aquí.',
       texto: 'Coges los dos cubitos y los metes en un vaso.', yaTienes: 'Ya tienes el vaso con hielo.' },
-    { item: 'calabacín', nombres: /calabacin/, estancia: 'cocina',
+    { item: 'calabacín', nombres: /calabac/, estancia: 'cocina',
       texto: 'Coges un calabacín de la nevera.', yaTienes: 'Ya tienes el calabacín.' },
     { item: 'rotulador', nombres: /rotulador/, estancia: 'habitacion', requiere: 'cajon',
       bloqueado: 'El cajón está cerrado con llave.', texto: 'Coges el rotulador del cajón.', yaTienes: 'Ya tienes el rotulador.' }
@@ -131,7 +135,7 @@ const Datos = {
   verduras: ['huevos', 'leche', 'queso', 'una bandeja de pollo', 'zanahorias', 'judías verdes', 'tomates', 'un calabacín', 'pimientos'],
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
   finales: [
-    'Llamas a la policia y denuncias lo que te acaba de pasar. Has superado la extorsión. La aventura termina aquí.', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',
-    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Das la dirección al desconocido...'
+    'Final 1 (texto pendiente).', 'Final 2 (texto pendiente).', 'Final 3 (texto pendiente).',
+    'Final 4 (texto pendiente).', 'Final 5 (texto pendiente).', 'Final 6: consecuencias (texto pendiente).'
   ]
 };

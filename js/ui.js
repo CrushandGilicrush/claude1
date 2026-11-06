@@ -2,6 +2,12 @@
 const UI = (() => {
   const $ = id => document.getElementById(id);
 
+  /* Muestra el mensaje recién añadido: si es más alto que la terminal, se empieza a leer por arriba. */
+  function desplazar(t, e) {
+    if (e.offsetHeight > t.clientHeight) t.scrollTop += e.getBoundingClientRect().top - t.getBoundingClientRect().top;
+    else t.scrollTop = t.scrollHeight;
+  }
+
   /* tipo: 'narrativo' (naranja), 'dialogo' (azul frío), 'usuario', 'final' */
   function log(texto, tipo = 'narrativo') {
     const t = $('terminal'), e = document.createElement('div');
@@ -9,16 +15,16 @@ const UI = (() => {
     if (tipo === 'usuario') e.textContent = '> ' + texto;
     else e.innerHTML = texto;
     t.appendChild(e);
-    t.scrollTop = t.scrollHeight;
+    desplazar(t, e);
   }
 
   function logImagen(src) {
     const t = $('terminal'), e = document.createElement('div');
     e.className = 'mb-2';
     e.innerHTML = `<img src="${src}" alt="Imagen" class="max-h-72 rounded border border-retro-border">`;
-    e.firstChild.onload = () => { t.scrollTop = t.scrollHeight; };
+    e.firstChild.onload = () => { desplazar(t, e); };
     t.appendChild(e);
-    t.scrollTop = t.scrollHeight;
+    desplazar(t, e);
   }
 
   /* Pantalla de lectura a pantalla completa (se cierra con el botón o con Esc). */
@@ -46,11 +52,11 @@ const UI = (() => {
     e.className = 'mb-2 leading-relaxed txt-dialogo escribiendo';
     e.innerHTML = 'escribiendo<span>.</span><span>.</span><span>.</span>';
     t.appendChild(e);
-    t.scrollTop = t.scrollHeight;
+    desplazar(t, e);
     temporizador = setTimeout(() => {
       e.className = 'mb-2 leading-relaxed txt-dialogo';
       e.innerHTML = texto;
-      t.scrollTop = t.scrollHeight;
+      desplazar(t, e);
       siguienteDialogo();
     }, ms);
   }
@@ -75,6 +81,9 @@ const UI = (() => {
     $('inventory-list').innerHTML = items.length
       ? items.map(i => `<div class="text-xs text-retro-amber px-2 py-0.5 border border-retro-border rounded">${i}</div>`).join('')
       : '<div class="text-xs text-retro-dim italic">Inventario vacío</div>';
+    $('inventory-list-mobile').innerHTML = items.length
+      ? items.map(i => `<span class="text-xs text-retro-amber px-2 py-0.5 border border-retro-border rounded shrink-0">${i}</span>`).join('')
+      : '<span class="text-xs text-retro-dim italic">Inventario vacío</span>';
   }
 
   function bloquearEntrada() { $('command-input').disabled = true; $('btn-ejecutar').disabled = true; }
