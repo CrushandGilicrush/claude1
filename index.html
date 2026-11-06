@@ -19,10 +19,12 @@
                     },
                     colors: {
                         retro: {
-                            bg: '#070707',
-                            panel: '#111111',
-                            border: '#7a1515',
-                            red: '#d41f1f',
+                            bg: '#000000',
+                            panel: '#131313',
+                            border: '#272f3c',
+                            red: '#870000',
+                            redhi: '#c80000',
+                            panel2: '#1b1b1b',
                             green: '#33ff57',
                             amber: '#ffb000',
                             cyan: '#00f0ff',
@@ -40,10 +42,9 @@
 <body class="alto-pantalla flex flex-col overflow-hidden p-2 md:p-4 select-none">
 
     <!-- CABECERA -->
-    <header class="flex items-center bg-retro-panel border-2 border-retro-border p-3 rounded-xl mb-3 shadow-xl shrink-0 space-x-3">
-        <div class="spectrum flex-1"><i></i><i></i><i></i><i></i></div>
-        <span class="text-xs text-retro-cyan font-mono shrink-0">[CONTADOR: <span id="contador-subm">0</span>]</span>
-        <button onclick="location.reload()" title="Reiniciar" class="px-3 py-1.5 bg-neutral-800 hover:bg-retro-red hover:text-black text-retro-cyan text-xs font-bold rounded-lg transition-all shrink-0">
+    <header class="flex justify-between items-center bg-black border-2 border-retro-border p-3 rounded-xl mb-3 shadow-xl shrink-0">
+        <span class="text-xs text-retro-cyan font-mono">[CONTADOR: <span id="contador-subm">0</span>]</span>
+        <button onclick="location.reload()" title="Reiniciar" class="px-3 py-1.5 bg-[#63100c] hover:bg-retro-red text-retro-cyan text-xs font-bold rounded-lg border border-retro-redhi/50 transition-all">
             <i class="fa-solid fa-rotate-right"></i>
         </button>
     </header>
@@ -59,11 +60,11 @@
                 <div class="absolute inset-0 bg-cover bg-center opacity-70" id="room-bg" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80')"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-retro-panel via-transparent to-black/40"></div>
                 
-                <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-retro-red/70 px-3 py-1 rounded-lg text-xs font-bold text-retro-cyan flex items-center space-x-2">
-                    <span class="w-2 h-2 rounded-full bg-retro-red animate-ping"></span>
+                <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-retro-redhi px-3 py-1 rounded-lg text-xs font-bold text-retro-cyan flex items-center space-x-2">
+                    <span class="w-2 h-2 rounded-full bg-retro-redhi animate-ping"></span>
                     <span id="room-title">Salón</span>
                 </div>
-                <div id="bloqueo" class="hidden absolute top-3 right-3 bg-black/80 border border-retro-red/70 px-3 py-1 rounded-lg text-xs font-bold text-retro-magenta"><i class="fa-solid fa-lock mr-1"></i>BLOQUEADO</div>
+                <div id="bloqueo" class="hidden absolute top-3 right-3 bg-black/80 border border-retro-redhi px-3 py-1 rounded-lg text-xs font-bold text-retro-magenta"><i class="fa-solid fa-lock mr-1"></i>BLOQUEADO</div>
             </div>
 
             <!-- Inventario (solo móvil) -->
@@ -80,12 +81,12 @@
             </div>
 
             <!-- Barra de Comandos -->
-            <div class="bg-retro-panel border-2 border-retro-border rounded-xl p-2.5 flex items-center space-x-2 shrink-0 focus-within:border-retro-red transition-colors shadow-lg">
+            <div class="bg-retro-panel2 border-2 border-retro-border rounded-xl p-2.5 flex items-center space-x-2 shrink-0 focus-within:border-retro-redhi transition-colors shadow-lg">
                 <span class="text-retro-green font-bold text-lg glow-green pl-1">></span>
                 <input type="text" id="command-input" placeholder="Escribe un comando ('ir a cocina', 'abrir móvil', 'ayuda')..." 
                        class="w-full bg-transparent border-none text-retro-green font-mono text-xs sm:text-sm focus:outline-none placeholder-retro-dim/50"
                        autocomplete="off">
-                <button id="btn-ejecutar" class="px-4 py-2 bg-retro-red text-black font-bold rounded-lg text-xs hover:bg-neutral-300 transition-colors flex items-center space-x-1">
+                <button id="btn-ejecutar" class="px-4 py-2 bg-retro-red text-neutral-200 font-bold rounded-lg text-xs hover:bg-retro-redhi transition-colors flex items-center space-x-1">
                     <span>EJECUTAR</span>
                 </button>
             </div>
