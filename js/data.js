@@ -90,7 +90,7 @@ const Datos = {
     despacho: { nombre: 'Despacho', imagen: 'img/despacho.png', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
     cocina: { nombre: 'Cocina', imagen: 'img/cocina1.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
     bano: { nombre: 'Baño', imagen: 'img/baño.png', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
-    terraza: { nombre: 'Terraza', imagen: 'img/terraza.svg', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
+    terraza: { nombre: 'Terraza', imagen: 'img/terraza.png', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
   },
   /* Descripciones provisionales de «examinar»: reescribir a gusto. */
   objetos: {
