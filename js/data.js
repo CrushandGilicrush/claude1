@@ -82,7 +82,7 @@ const Datos = {
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
   intro: [
-    ['narrativo', 'Despierta... Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.']
+    ['narrativo', '<p><em>Despierta... </em></p>Giras a un lado y a otro de la cama, abrazada a la almohada con fuerza, abrigada del frío. Tu único esfuerzo es abrir los ojos. Tal vez, después de tomarte un café, reunas energía suficiente como para procrastinar con mayor entusiasmo.']
   ],
   estancias: {
     salon: { nombre: 'Salón', imagen: 'img/salon.svg', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
