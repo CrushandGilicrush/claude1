@@ -88,7 +88,7 @@ const Datos = {
     salon: { nombre: 'Salón', imagen: 'img/salon.png', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
     habitacion: { nombre: 'Habitación', imagen: 'img/habitacion2.png', desc: 'Tu espacio privado. Contiene la cama, el armario, un espejo y una cómoda con cajón.' },
     despacho: { nombre: 'Despacho', imagen: 'img/despacho.svg', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
-    cocina: { nombre: 'Cocina', imagen: 'img/cocina.svg', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
+    cocina: { nombre: 'Cocina', imagen: 'img/cocina1.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
     bano: { nombre: 'Baño', imagen: 'img/bano.svg', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
     terraza: { nombre: 'Terraza', imagen: 'img/terraza.svg', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
   },
