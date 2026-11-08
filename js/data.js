@@ -18,7 +18,7 @@ const Datos = {
     lifeNuevo: 'Entras en fetlife. Ves que uno de tus amigos ha comentado el estatus de un tal Lapso: <em>Menuda porquería de juego</em> le dice. No sientes curiosidad por el tema, así que te fijas en el cirulito rojo que te notifica que tienes un mensaje sin leer.',
     lifeVacio: 'Entras en Fetlife. No tienes mensajes nuevos.',
     sinMensaje: 'No hay ningún mensaje que leer.',
-    mensajeIntro: 'El mensaje es de 02E4E3E.  Encabeza el mensaje una foto borrosa. Curiosa, antes de leer nada, desactivas la censura para poder verla. De pronto sientes una punzada en el estómago y tus pulsaciones se aceleran: la foto es tuya, o, más bien, sales tú en una situación y en unas condiciones que jamás debiron ser registradas de modo alguno. Nerviosa decides leer el mensaje:',
+    mensajeIntro: 'El mensaje es de un desconocido llamado 02E4E3E.  Encabeza el mensaje una foto borrosa. Curiosa, antes de leer nada, desactivas la censura para poder verla. De pronto sientes una punzada en el estómago y tus pulsaciones se aceleran: la foto es tuya, o, más bien, sales tú en una situación y en unas condiciones que jamás debiron ser registradas de modo alguno. Nerviosa decides leer el mensaje:',
     mensaje: '«Te confieso que es de mis fotos favoritas. Tengo otras tuyas, pero ninguna como esta. No es lo degradante de la escena, sino la expresión de tu rostro. Si no quieres que salgan a la luz, entra en Telegram y escríbeme a {contacto} de inmediato.»',
     telegramBloqueado: 'Telegram está protegido con un código de 3 cifras. Hace tiempo que no lo usas y no te acuerdas, pero sí recuerdas que aparece en el cuadro que hay en la pared.',
     pideCodigo: 'Escribe el código de 3 cifras (o «cancelar»):',
