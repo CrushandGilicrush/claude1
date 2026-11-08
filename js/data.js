@@ -7,7 +7,7 @@ const Datos = {
   /* Textos de la secuencia de inicio. {contacto} y {dispositivo} se sustituyen solos. */
   textos: {
     sinCafe: 'Antes de ponerte a mirar nada, ve a prepararte un café.',
-    cafeLejos: 'La telequinesis no te funciona para encender la cafetera. Si quieres un café, te sugiero ir a la cocina.',
+    cafeLejos: 'La telequinesis no es tu fuerte. Si quieres un café, te sugiero ir a la cocina.',
     cafeHecho: 'Preparas la cafetera y la cocina se llena de un olor a café recién hecho.',
     cafeRepetido: 'Ya has preparado un café. No tomes más',
     cafeNoHay: 'No tienes ningún café preparado.',
