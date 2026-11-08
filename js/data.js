@@ -82,8 +82,7 @@ const Datos = {
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/life.svg', telegram: 'img/telegram.svg' },
   intro: [
-    ['narrativo', '<em>Tu voz interior te pide que despiertes. La luz entra ya por la ventana,  pero cuesta renunciar al calor que te ofrece el edredón. Te gusta remolonear. Has planeado procrastinar todo el día, pero antes de volcarte a tan dura tarea, quieres echar un vistazo a life y ver qué se cuece por ahí. Pero primero vas a tener que levantarte, y antes de ir a lo que tú llamas despacho y abrir el ordenador, quieres tomarte un café</em>
-.']
+    ['narrativo', 'Tu voz interior te pide que despiertes. La luz entra ya por la ventana,  pero cuesta renunciar al calor que te ofrece el edredón. Te gusta remolonear. Has planeado procrastinar todo el día, pero antes de volcarte a tan dura tarea, quieres echar un vistazo a life y ver qué se cuece por ahí. Pero primero vas a tener que levantarte, y antes de ir a lo que tú llamas despacho y abrir el ordenador, quieres tomarte un café.']
   ],
   estancias: {
     salon: { nombre: 'Salón', imagen: 'img/salon.png', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
