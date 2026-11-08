@@ -2,9 +2,15 @@
 const UI = (() => {
   const $ = id => document.getElementById(id);
 
-  /* Muestra el mensaje recién añadido: si es más alto que la terminal, se empieza a leer por arriba. */
+  /* La respuesta a un comando se lee desde su principio: mientras el texto cabe en la terminal se baja hasta el final;
+     en cuanto la respuesta (desde la línea del comando) es más alta que la terminal, se deja el comando arriba. */
+  let inicio = null;
   function desplazar(t, e) {
-    if (e.offsetHeight > t.clientHeight) t.scrollTop += e.getBoundingClientRect().top - t.getBoundingClientRect().top;
+    if (e.className.indexOf('txt-usuario') >= 0) inicio = e;
+    const ref = inicio && inicio.isConnected !== false ? inicio : e;
+    const caja = t.getBoundingClientRect().top;
+    const alto = e.getBoundingClientRect().bottom - ref.getBoundingClientRect().top;
+    if (alto > t.clientHeight) t.scrollTop += ref.getBoundingClientRect().top - caja;
     else t.scrollTop = t.scrollHeight;
   }
 
