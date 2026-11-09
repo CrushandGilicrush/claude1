@@ -564,6 +564,53 @@ const Dialogos = {
         '¿Y después de que te suelte el brazo, saldrás con eso de -¿quiere bolsa?-. Menudo mazazo a la originalidad y qué falta de personalidad.'
       ] },
 
+     /*degradacion*/
+
+     {
+  palabras: [
+    'follame', 'follame ya', 'follame ahora', 'follame fuerte',
+    'follame duro', 'follame despacio', 'follame sin parar',
+    'follame hasta que no pueda mas', 'follame como quieras',
+    'penetrame', 'penetrame ya', 'penetrame ahora',
+    'penetrame fuerte', 'penetrame despacio', 'penetrame con los dedos',
+    'penetrame el coño', 'penetrame el culo', 'metemela',
+    'metemela ya', 'metemela entera', 'metemela hasta el fondo',
+    'quiero que me folles', 'quiero que me penetres',
+    'quiero que me la metas', 'quiero tenerte dentro',
+    'quiero que estes dentro', 'quiero que me llenes'
+  ],
+  respuestas: [
+    'Ten paciencia. Sigue mis instrucciones y te haré mucho más que eso'
+  ],
+
+},
+{
+  palabras: [
+    'ordename', 'ordename algo', 'dame una orden', 'dame ordenes',
+    'ponme normas', 'ponme reglas', 'ponme una norma', 'ponme una regla',
+    'ponme deberes', 'dime que hago', 'dime que hago ahora',
+    'mandame', 'mandame algo', 'dame instrucciones',
+    'que normas tengo', 'cuales son las reglas', 'que tengo que hacer'
+  ],
+  respuestas: [
+    '1. Te dirigirás a mí como «Señor». Mantendrás siempre un trato respetuoso y cuidarás tus palabras. 2. leerás atentamente mis instrucciones y harás cuanto te pida. No actuarás por impulso ni darás nada por supuesto. 3. No le cuentes a nadie de mi existencia.'
+  ],
+
+},
+{
+  palabras: [
+    'insultame', 'insultame ya', 'insultame un poco', 'dime cosas',
+    'dime guarradas', 'ponme verde', 'humillame', 'tratame mal',
+    'tratame peor', 'dime lo que soy', 'que soy', 'que soy para ti',
+    'llamame zorra', 'dime que soy una zorra', 'dime que soy una puta'
+  ],
+  respuestas: [
+    'Eres una zorra que lo único que saber hacer es pedir más.'
+  ],
+ 
+},
+
+
     /* Obediencia con señor (debe ir antes que la obediencia simple) */
     { palabras: [
         'vale señor', 'de acuerdo señor', 'esta bien señor', 'ok señor', 'okay señor', 'entendido señor',
