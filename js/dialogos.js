@@ -1691,6 +1691,42 @@ const Dialogos = {
   ]
 },
 
+/*Personales*/
+  {
+  palabras: [
+    'como te llamas', 'cual es tu nombre', 'dime tu nombre',
+    'quien eres', 'quien eres tu', 'con quien hablo',
+    'quien esta ahi', 'como te identificas', 'cual es tu identidad',
+    'donde vives', 'donde resides', 'en que ciudad vives',
+    'de donde eres', 'donde has nacido', 'cual es tu nacionalidad',
+    'cuantos años tienes', 'que edad tienes', 'cuando naciste',
+    'a que te dedicas', 'en que trabajas', 'cual es tu profesion',
+    'donde trabajas', 'que estudios tienes', 'que has estudiado',
+    'tienes estudios', 'eres inteligente', 'cual es tu formacion',
+    'como eres', 'como eres fisicamente', 'que aspecto tienes',
+    'como es tu cara', 'eres alto', 'eres guapo',
+    'eres hombre', 'eres mujer', 'cual es tu sexo',
+    'tienes pareja', 'estas casado', 'estas soltero',
+    'tienes novia', 'tienes novio', 'tienes familia',
+    'tienes hijos', 'tienes hermanos', 'quienes son tus padres',
+    'como es tu familia', 'tienes amigos', 'con quien vives',
+    'que te gusta', 'cuales son tus aficiones', 'que haces en tu tiempo libre',
+    'que musica escuchas', 'que libros lees', 'que peliculas te gustan',
+    'cual es tu comida favorita', 'tienes mascotas',
+    'cual es tu telefono', 'cual es tu direccion',
+    'cual es tu correo', 'tienes redes sociales',
+    'cual es tu pasado', 'como ha sido tu vida',
+    'donde has estado', 'que has hecho antes',
+    'puedes contarme algo de ti', 'hablame de ti',
+    'quiero conocerte', 'me gustaria conocerte',
+    'puedo saber algo de ti', 'cuentame quien eres',
+    'por que no me dices quien eres', 'por que no contestas',
+    'por que no respondes a mis preguntas personales'
+  ],
+  respuestas: [
+    'A ti eso no te importa, y las preguntas las hago yo. Aquí lo único importante es tu disposición a complacerme.'
+  ]
+},
 
 /* ARTE*/
 {
@@ -1703,7 +1739,7 @@ const Dialogos = {
 {
   palabras: ['que cuadro te gusta', 'cual es tu cuadro favorito', 'tienes un cuadro preferido'],
   respuestas: [
-    'Los que tienen a alguien quieto y desnudo esperando. Preferiblemente sin que se le note el nervio.',
+    'Los que tienen a alguien quieto y desnudo esperando.',
     'Ninguno en concreto. Me interesan más las razones por las que tú eliges uno.'
   ]
 },
