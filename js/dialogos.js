@@ -100,6 +100,69 @@ const Dialogos = {
         '¿Has venido a saludarme o a hacer lo que te he pedido?'
       ] },
 
+     /*conseguir fotos*/
+
+     {
+  palabras: [
+    'como conseguiste mis fotos',
+    'como has conseguido mis fotos',
+    'de donde has sacado mis fotos',
+    'donde conseguiste mis fotos',
+    'como tienes mis fotografias',
+    'de donde has obtenido mis fotografias',
+    'quien te ha dado mis fotos',
+    'quien te ha enviado mis fotos',
+    'como has conseguido mis imagenes',
+    'de donde has sacado mis imagenes',
+    'como has accedido a mis fotos',
+    'como has conseguido mis fotografias',
+    'donde has encontrado mis fotos',
+    'como has encontrado mis fotos',
+    'quien te ha pasado mis fotos',
+    'como has conseguido esas fotos',
+    'de donde has sacado esas imagenes',
+    'como has conseguido esas fotografias',
+    'como sabes que esas fotos son mias',
+    'como has conseguido fotos mias',
+    'quien te ha proporcionado mis fotos',
+    'como has obtenido fotos privadas mias',
+    'como has conseguido mis fotos privadas',
+    'de donde has conseguido mis fotos personales',
+    'como has conseguido mis imagenes privadas'
+  ],
+  respuestas: [
+    '¿Crees que te lo voy a decir?'
+  ]
+},
+     {
+  palabras: [
+    'para que las quieres',
+    'para que quieres mis fotos',
+    'para que necesitas mis fotos',
+    'que quieres hacer con mis fotos',
+    'que vas a hacer con mis fotos',
+    'que piensas hacer con ellas',
+    'que uso vas a darles',
+    'para que las necesitas',
+    'que pretendes conseguir con ellas',
+    'que quieres conseguir con mis fotos',
+    'que haras con mis fotografias',
+    'para que quieres mis imagenes',
+    'que vas a hacer con esas fotos',
+    'que pretendes hacer con ellas',
+    'por que quieres mis fotos',
+    'por que necesitas mis fotografias',
+    'que interes tienes en mis fotos',
+    'que quieres de mi',
+    'que buscas conseguir',
+    'que pretendes de mi',
+    'que quieres sacar de todo esto'
+  ],
+  respuestas: [
+    'Conseguir lo que se me antoje de ti, dónde quiera y cuándo quiera'
+  ]
+},
+
     /* Quién es él */
     { palabras: [
         'quien eres', 'quien es', 'como te llamas', 'cual es tu nombre', 'quien me habla',
@@ -311,7 +374,7 @@ const Dialogos = {
         'no tienes vergüenza', 'eres despreciable', 'eres patetico','que te follen', 'que te den'
       ],
       respuestas: [
-        'Insulta lo que quieras. No cambia nada.',
+        'Insúltame lo que quieras. No cambia nada.',
         '¿Ya has terminado de demostrar tu educación?',
         'Cuando se te pase la rabieta, seguimos.',
         'Qué poca imaginación. Esperaba algo más elaborado.',
