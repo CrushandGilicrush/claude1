@@ -229,6 +229,7 @@ const Juego = (() => {
     if ((['morder', 'comer', 'masticar', 'mordisquear'].includes(verbo) || /mordisco/.test(arg)) && /calabac/.test(arg)) return Ordenes.morderCalabacin();
     if (['hacer', 'preparar', 'usar', 'poner'].includes(verbo) && /cafe/.test(arg)) return hacerCafe();
     if (['beber', 'tomar', 'tomarse'].includes(verbo) && /cafe/.test(arg)) return beberCafe();
+    if (['encender', 'activar'].includes(verbo) && /cafetera/.test(arg)) return encenderCafetera();
     if (verbo === 'coger' || verbo === 'coge') return coger(sinArticulo(arg));
     if (verbo === 'leer' || verbo === 'lee') return leer(sinArticulo(arg));
     if (verbo === 'abrir' || verbo === 'encender') return abrir(arg);
