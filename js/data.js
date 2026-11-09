@@ -107,6 +107,19 @@ const Datos = {
   comandosTexto: [
     { verbos: ['bostezar', 'bosteza'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
     { verbos: ['gritar', 'grita'], texto: 'Gritas de impotencia, pero nadie parece oírte (o quizá sí).' },
+    { verbos: ['encender', 'enciende'], estancia: 'cocina', objetos: ['cafetera'], texto: 'Enciendes la cafetera', fuera: 'No ves ninguna cafetera por aquí.' },
+    { verbos: ['encender', 'enciende'], estancia: 'cocina', objetos: ['cafetera'], texto: 'Ya está encendida.', fuera: 'No ves ninguna cafetera por aquí.' },
+    //baño
+    { verbos: ['mirarse', 'mirar', 'observar'], estancia: 'bano', objetos: ['espejo'], texto: 'Te observas detenidamente en el espejo. Tu reflejo te devuelve una mirada algo cansada.', fuera: 'No ves ningún espejo por aquí.' },
+{ verbos: ['mear', 'orinar', 'hacer pis'], estancia: 'bano', objetos: ['inodoro', 'water', 'retrete'], texto: 'Levantas la tapa y haces pis. Después tiras de la cadena.', fuera: 'No hay ningún inodoro por aquí.' },
+{ verbos: ['cagar', 'defecar', 'hacer caca'], estancia: 'bano', objetos: ['inodoro', 'water', 'retrete'], texto: 'Te sientas en el inodoro y haces tus necesidades. Después tiras de la cadena.', fuera: 'No hay ningún inodoro por aquí.' },
+{ verbos: ['ducharse', 'duchar', 'bañarse'], estancia: 'bano', objetos: ['ducha'], texto: 'Abres el grifo y te das una ducha. El agua caliente te ayuda a relajarte durante unos minutos.', fuera: 'No ves ninguna ducha por aquí.' },
+{ verbos: ['lavarse', 'lavar'], estancia: 'bano', objetos: ['manos', 'manos lavabo'], texto: 'Abres el grifo, te enjabonas las manos y las aclaras cuidadosamente.', fuera: 'No tienes ningún lavabo a mano.' },
+{ verbos: ['cepillarse', 'cepillar', 'lavarse'], estancia: 'bano', objetos: ['dientes', 'cepillo dientes'], texto: 'Coges el cepillo de dientes y te los limpias durante un par de minutos.', fuera: 'No tienes ningún cepillo de dientes por aquí.' },
+{ verbos: ['peinarse', 'peinar'], estancia: 'bano', objetos: ['pelo', 'cabello', 'peine'], texto: 'Te pasas el peine por el cabello intentando poner un poco de orden.', fuera: 'No encuentras ningún peine por aquí.' },
+{ verbos: ['abrir', 'destapar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Abres el grifo. El agua empieza a correr por el lavabo.', fuera: 'No ves ningún grifo por aquí.' },
+{ verbos: ['cerrar', 'cortar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Cierras el grifo y el agua deja de correr.', fuera: 'No ves ningún grifo por aquí.' },
+{ verbos: ['secarse', 'secar'], estancia: 'bano', objetos: ['toalla'], texto: 'Coges la toalla y te secas cuidadosamente.', fuera: 'No encuentras ninguna toalla por aquí.' },
     { verbos: ['limpiar', 'limpia'], estancia: 'bano', objetos: ['inodoro', 'taza', 'wc'], texto: 'Te pones de rodillas y limpias el borde de la taza.', fuera: 'No ves ningún inodoro por aquí.' }
   ],
   /* Puzzle de ajedrez. `soluciones`: jugadas ganadoras en minúsculas, «origen destino». */
