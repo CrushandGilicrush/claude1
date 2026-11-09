@@ -472,6 +472,139 @@ const Personajes = (() => {
       ]
     }
   ]
+},
+     {
+      id: 'Dolmance',
+      nombre: 'Dolmancé',
+      alias: ['Domance', 'dolmance', 'el libertino'],
+      color: '#9c2b3f',
+      etiqueta: true,
+      disponible: estado => true,
+      noDisponible: 'Dolmancé está ocupado instruyendo a alguien. Espera.',
+      abre: 'Abres el chat con Dolmancé.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Dolmance explícame lo de Eugénie».',
+  porDefecto: [
+    '«No le he entendido. Y no por falta de atención, sino por falta de precisión en usted.»',
+    '«Bien, bien. Siga por ahí, que el camino se va poniendo interesante.»',
+    '«Me hace sonreír. Aquí se viene a aprender, no a adornarse.»'
+  ],
+  reglas: [
+    {
+      palabras: ['hola', 'buenas', 'hey', 'que tal', 'saludos'],
+      respuestas: [
+        '«Buenas. Pase y cierre, que las puertas abiertas enfrían las ideas.»',
+        '«Hola. Supongo que viene con la cabeza dispuesta. Si no, ya la dispondré yo.»'
+      ]
+    },
+    {
+      palabras: ['quien eres', 'presentate', 'hablame de ti', 'como te llamas'],
+      respuestas: [
+        '«Dolmancé. Libertino por vocación y por método, instructor por gusto.»',
+        '«Un hombre que prefiere tres días de enseñanza bien llevada a veinte años de catecismo.»'
+      ]
+    },
+    {
+      palabras: ['como estas', 'que haces', 'y tu', 'como te va'],
+      respuestas: [
+        '«Excelente. Acabo de corregirle a alguien una idea heredada y me ha quedado buen sabor.»',
+        '«Ocupado en lo de siempre: desmontar prejuicios con la paciencia de un relojero.»'
+      ]
+    },
+    {
+      palabras: ['ayuda', 'ayudame', 'necesito', 'tengo una duda'],
+      respuestas: [
+        '«Diga. Aunque le advierto que mi ayuda no siempre deja la cabeza como estaba.»',
+        '«Le escucho. Y no me venga con rodeos: los rodeos son para los púlpitos.»'
+      ]
+    },
+    {
+      palabras: ['adios', 'chao', 'hasta luego', 'me voy'],
+      respuestas: [
+        '«Váyase. Y vuelva cuando se le haya caído encima alguna convicción.»',
+        '«Hasta pronto. Cierre bien, que se escapa el aire de las buenas costumbres.»'
+      ]
+    },
+
+    // CONVERSACION SOBRE LA FILOSOFIA EN EL TOCADOR: 50 PALABRAS Y 50 RESPUESTAS
+
+    {
+      palabras: ['filosofia en el tocador', 'el libro', 'de que va el libro', 'sade escribio sobre ti'],
+      respuestas: [
+        '«El libro es un diálogo en tres jornadas. Se titula Filosofía en el tocador y el título es literal: el mueble es el aula.»',
+        '«Sade me puso a instruir y lo hice con gusto. La filosofía, en un salón, se vuelve ceremonia; en un tocador, se vuelve útil.»',
+        '«No es una novela de trama, es un curso. Con su parte práctica, claro.»'
+      ]
+    },
+    {
+      palabras: ['eugenie', 'quien es eugenie', 'la educacion de eugenie', 'eugenie de mistival'],
+      respuestas: [
+        '«Eugénie de Mistival, doncella recién salida del convento. Materia excelente: blanda, curiosa y sin vicios adquiridos.»',
+        '«En tres días pasa de no saber nada a no tener que envidiar a nadie. Eso es instrucción, no charla.»',
+        '«Se la educa en el cuerpo para que deje de mirarlo como una aduana.»'
+      ]
+    },
+    {
+      palabras: ['madame de saint-ange', 'saint-ange', 'quien es saint-ange'],
+      respuestas: [
+        '«Madame de Saint-Ange, mi colaboradora. Tiene la casa, el criterio y la paciencia de la que yo carezco.»',
+        '«Sin ella el tocador sería un aula sin techo. Ella pone el orden y yo el empuje.»'
+      ]
+    },
+    {
+      palabras: ['sodomia', 'el culo', 'placeres traseros', 'por detras'],
+      respuestas: [
+        '«El placer de quien ya ha probado lo demás. Tiene la ventaja de no dejar consecuencia.»',
+        '«La sodomía no es un capricho: es una elección razonada. Lo demás viene solo.»',
+        '«Quien la desdeña suele no haberla probado con método.»'
+      ]
+    },
+    {
+      palabras: ['dios', 'ateismo', 'existe dios', 'religion'],
+      respuestas: [
+        '«No he visto a Dios por ningún lado. He visto materia, apetito y relojes.»',
+        '«Dios es una hipótesis cara: exige culto, ministros y miedo. La naturaleza trabaja gratis.»',
+        '«Si existiera y fuera bueno, habría que pedirle cuentas por el mundo.»'
+      ]
+    },
+    {
+      palabras: ['la crueldad', 'cruel', 'por que la crueldad', 'dolor'],
+      respuestas: [
+        '«La crueldad es la primera de las virtudes. El placer sin ella se gasta en dos tardes.»',
+        '«El cuerpo aprende más con un azote que con cien discursos, y lo aprendido así no se olvida.»',
+        '«No la busco por penitencia, como los santos. La busco por intensidad.»'
+      ]
+    },
+    {
+      palabras: ['français encore un effort', 'el panfleto', 'la republica', 'politica'],
+      respuestas: [
+        '«Lo leo en voz alta en la quinta jornada. Sin política, la alcoba es un mueble y nada más.»',
+        '«Si la República no refunda las costumbres, la ley es un adorno colgado en la pared.»',
+        '«Francia hace la revolución y conserva el pudor. Eso no es un pueblo libre, es un pueblo disfrazado.»'
+      ]
+    },
+    {
+      palabras: ['mujeres', 'matrimonio', 'la virginidad', 'educacion de las mujeres'],
+      respuestas: [
+        '«A la mujer se la educa para agradar y luego se le reprocha que agrade.»',
+        '«El matrimonio es un contrato entre dos desconocidos y un cura: tres partes, ningún interesado.»',
+        '«La virginidad es un sello que sólo beneficia a quien lo compra.»'
+      ]
+    },
+    {
+      palabras: ['placer', 'que es el placer', 'como se goza', 'el gusto'],
+      respuestas: [
+        '«El placer es una técnica antes que un estado. Se aprende, se corrige, se afina.»',
+        '«Gozar sin saber por qué es de aficionados. Gozar sabiendo es de gente seria.»'
+      ]
+    },
+    {
+      palabras: ['por que instruir a una doncella', 'para que sirve esto', 'que se aprende aqui'],
+      respuestas: [
+        '«Porque una doncella instruida deja de pedir permiso a su propio cuerpo.»',
+        '«Se aprende a no confundir la costumbre con la naturaleza. Es poco y es todo.»'
+      ]
+    }
+  ]
 }
 
    
