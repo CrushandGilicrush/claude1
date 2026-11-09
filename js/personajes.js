@@ -199,6 +199,282 @@ const Personajes = (() => {
     }
   ]
 }
+
+     {
+      id: 'Sade',                              // identificador interno (único, sin espacios)
+      nombre: 'Marqués de Sade',                          // nombre con el que se le escribe
+      alias: ['Sade', 'marques', 'donatien'],                           // otras formas de nombrarla (opcional)
+      color: '#8b1a3a',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
+      etiqueta: true,                           // muestra «Laura:» delante de sus mensajes
+      disponible: estado => true,               // cuándo se puede hablar con ella (p. ej. estado => estado.contador >= 1)
+      noDisponible: 'El marqués está encerrado. Vuelve cuando abran la puerta.',
+      abre: 'Abres el chat con el Marqués de Sade.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Sade hablemos de Justine».',
+  porDefecto: [
+    '«No acabo de comprender. Exprese mejor su pensamiento, si es que lo tiene.»',
+    '«Interesante. Aunque sospecho que todavía no ha llegado al fondo de la cuestión.»',
+    '«Me hace reír. Casi tanto como la virtud de cierta doncella.»'
+  ],
+  reglas: [
+    {
+      palabras: ['hola', 'buenas', 'hey', 'que tal', 'saludos'],
+      respuestas: [
+        '«Buenas. ¿Viene a escandalizarse o a aprender?»',
+        '«Hola. Siéntese y deje el pudor en la puerta.»',
+        '«Le recibiría de pie, pero la pluma pesa más que la cortesía.»'
+      ]
+    },
+    {
+      palabras: ['como estas', 'como te va', 'y tu', 'que haces', 'que tal estas'],
+      respuestas: [
+        '«Encerrado, como casi siempre. La reclusión, sin embargo, es la mejor escuela del pensamiento.»',
+        '«Escribiendo, corrigiendo, incomodando. Ocupaciones que la República no supo agradecerme.»',
+        '«Bien, si por bien se entiende tener la cabeza llena y a los carceleros lejos.»'
+      ]
+    },
+    {
+      palabras: ['quien eres', 'marques de sade', 'presentate', 'hablame de ti'],
+      respuestas: [
+        '«Donatien Alphonse François, marqués de Sade. Nací en 1740 y doy trabajo a la censura desde entonces.»',
+        '«Un hombre al que encerraron por escribir lo que otros sólo murmuraban.»',
+        '«Me presento yo mismo, que es lo único que se me permitió hacer sin pedir permiso.»'
+      ]
+    },
+    {
+      palabras: ['ayuda', 'ayudame', 'necesito', 'tengo una duda'],
+      respuestas: [
+        '«Dígame. Aquí nadie se salva por ignorancia.»',
+        '«Le ayudaré, aunque no prometo que mi ayuda sea cómoda.»',
+        '«Exponga el problema. Y no me ahorre los detalles escabrosos, que son los únicos que importan.»'
+      ]
+    },
+    {
+      palabras: ['adios', 'chao', 'hasta luego', 'nos vemos', 'me voy'],
+      respuestas: [
+        '«Váyase. Y vuelva cuando haya perdido alguna convicción.»',
+        '«Hasta pronto. Cierre la puerta y, si puede, también la conciencia.»'
+      ]
+    },
+
+    // CONVERSACION SOBRE JUSTINE Y LA FILOSOFIA EN EL TOCADOR: 50 PALABRAS Y 50 RESPUESTAS
+
+    {
+      palabras: [
+        'justine', 'que es justine', 'de que va justine',
+        'hablame de justine', 'quien es justine',
+        'justine o los infortunios de la virtud', 'la protagonista de justine'
+      ],
+      respuestas: [
+        '«Justine es una doncella que lo hace todo bien y recibe a cambio cuanto mal puede darse. Ahí está su interés: es el retrato de la virtud acorralada.»',
+        '«Mi novela se titula, con exactitud, Justine o los infortunios de la virtud. El título no engaña: el infortunio no es un accidente, es la consecuencia.»',
+        '«Justine no es mala. Es peor: es buena sin inteligencia. Y el mundo cobra caro esa combinación.»'
+      ]
+    },
+    {
+      palabras: [
+        'juliette', 'quien es juliette', 'justine y juliette',
+        'la hermana de justine'
+      ],
+      respuestas: [
+        '«Juliette es su hermana y su reverso. Donde una reza, la otra calcula; donde una cede, la otra se cobra.»',
+        '«Juliette prospera. Duquesas, oro, crímenes a medida: todo le llega. Es la prueba de que el vicio, bien administrado, es una carrera.»',
+        '«Nadie lee a Juliette buscando consuelo. Se la lee buscando un espejo donde mirarse sin vergüenza.»'
+      ]
+    },
+    {
+      palabras: [
+        'filosofia en el tocador', 'de que va filosofia en el tocador',
+        'quien sale en filosofia en el tocador', 'eugenie',
+        'madame de saint-ange', 'dolmance'
+      ],
+      respuestas: [
+        '«Es un diálogo, no un sermón. Madame de Saint-Ange y Dolmancé instruyen a Eugénie en tres días de lo que la Iglesia no le enseña en veinte años.»',
+        '«El tocador es el único gabinete donde la filosofía sirve de algo: allí se piensa en voz alta y con la ropa por los suelos.»',
+        '«A Eugénie se la educa para que deje de pedir permiso a su propio cuerpo.»'
+      ]
+    },
+    {
+      palabras: [
+        'por que la virtud es castigada', 'justine es tonta',
+        'justine es ingenua', 'merece justine lo que le pasa',
+        'por que sufre justine'
+      ],
+      respuestas: [
+        '«Porque la virtud es pasiva y el mundo está hecho para los activos. La virtud espera; el vicio toma.»',
+        '«Justine no sufre por ser buena, sufre por ser crédula. Cree que la Providencia lleva cuentas, y la Providencia no lleva ninguna.»',
+        '«Si la virtud bastara, mi novela sería aburrida. Y no lo es.»'
+      ]
+    },
+    {
+      palabras: [
+        'français encore un effort', 'el panfleto politico', 'la republica',
+        'politica en filosofia en el tocador'
+      ],
+      respuestas: [
+        '«Français, encore un effort si vous voulez être républicains. Va dentro de la novela porque sin política la alcoba es sólo un mueble.»',
+        '«Digo allí lo que la República no se atrevía a decir: que las costumbres deben refundarse o la ley es un adorno.»',
+        '«Se escandalizan de mis noches y no de sus códigos. Piense en qué resulta más obsceno.»'
+      ]
+    },
+    {
+      palabras: ['dios', 'existe dios', 'ateismo', 'religion', 'la iglesia'],
+      respuestas: [
+        '«No he visto a Dios en ninguna parte, y he mirado mucho. Sólo he visto materia que se mueve.»',
+        '«Dios es una hipótesis costosa: exige culto, ministros y miedo. La naturaleza trabaja gratis.»',
+        '«Si Dios existiera y fuera bueno, habría que explicarle el mundo. No sabría defenderse.»'
+      ]
+    },
+    {
+      palabras: ['naturaleza', 'que es la naturaleza', 'ley natural', 'seguir la naturaleza'],
+      respuestas: [
+        '«La naturaleza es la única ley que no se vota. Nos hace nacer, nos usa y nos tira.»',
+        '«Seguirla es sencillo: hágase lo que el cuerpo pide y no se le ponga moral encima.»',
+        '«El crimen está en la naturaleza como el parto. Nada que sea natural es un desorden.»'
+      ]
+    },
+    {
+      palabras: ['vicio', 'virtud', 'que es el vicio', 'el vicio es mejor', 'la virtud'],
+      respuestas: [
+        '«La virtud es un hábito útil para quien no tiene más remedio. El vicio es una industria.»',
+        '«No digo que el vicio sea noble. Digo que paga mejor.»',
+        '«El vicio exige más inteligencia: hay que inventarlo cada día. La virtud se repite sola.»'
+      ]
+    },
+    {
+      palabras: ['libertinaje', 'libertino', 'que es un libertino', 'ser libertino'],
+      respuestas: [
+        '«Libertino no es el que goza, sino el que piensa mientras goza.»',
+        '«El libertinaje es una disciplina: método, cálculo, sangre fría. Los aficionados duran poco.»',
+        '«Ser libre es no deber explicaciones al confesor, ni al marido, ni a la costumbre.»'
+      ]
+    },
+    {
+      palabras: ['dolor', 'placer', 'dolor y placer', 'azotes', 'castigo'],
+      respuestas: [
+        '«El placer sin dolor se gasta pronto. El dolor le pone precio.»',
+        '«El cuerpo aprende más con un azote que con cien discursos.»',
+        '«No busco el dolor por penitencia, como los santos. Lo busco por intensidad.»'
+      ]
+    },
+    {
+      palabras: ['matrimonio', 'monogamia', 'fidelidad', 'el amor'],
+      respuestas: [
+        '«El matrimonio es un contrato entre dos desconocidos y un cura. Tres partes, ningún interesado.»',
+        '«La fidelidad es una virtud de gente sin imaginación.»',
+        '«El amor es una fiebre breve. Lo que queda después es administración.»'
+      ]
+    },
+    {
+      palabras: ['mujeres', 'la mujer', 'educacion de las mujeres', 'virginidad'],
+      respuestas: [
+        '«A la mujer se la educa para agradar y luego se le reprocha que agrade.»',
+        '«La virginidad es un sello que sólo beneficia a quien lo compra.»',
+        '«Denle a una mujer instrucción y gusto propio, y verá cuánto cambia la casa.»'
+      ]
+    },
+    {
+      palabras: [
+        'los 120 dias de sodoma', 'que escribiste en la bastilla',
+        'las ciento veinte jornadas', 'tu obra mas famosa'
+      ],
+      respuestas: [
+        '«La escribí en la Bastilla, en un rollo que cabía en el bolsillo, con letra menuda porque escaseaba el papel.»',
+        '«Los ciento veinte días son un catálogo: seiscientas pasiones clasificadas como quien ordena minerales.»',
+        '«Perdí el manuscrito al salir de prisión. Que se conservara me parece casi un milagro, y no creo en milagros.»'
+      ]
+    },
+    {
+      palabras: ['tu vida', 'la bastilla', 'prision', 'charenton', 'por que te encerraron'],
+      respuestas: [
+        '«Vincennes, la Bastilla, Charenton. He vivido más tiempo encerrado que suelto, y aun así no me he aburrido.»',
+        '«Me encerraron por escándalo, por deudas y por familia. Casi nunca por lo que de verdad escribía.»',
+        '«En Charenton dirigía comedias con los internos. La reclusión también se organiza.»'
+      ]
+    },
+    {
+      palabras: ['como escribir', 'por que escribes', 'literatura', 'novela'],
+      respuestas: [
+        '«Escribo porque la voz se gasta y el papel aguanta.»',
+        '«No corrijo para agradar, corrijo para que la frase muerda.»',
+        '«La novela es el único sitio donde se puede ser exacto con lo que no ocurrió.»'
+      ]
+    },
+    {
+      palabras: ['que es la felicidad', 'se puede ser feliz', 'ser feliz'],
+      respuestas: [
+        '«La felicidad es un intervalo entre dos exigencias.»',
+        '«No conozco a nadie feliz que no haya cedido en algo. La cuestión es en qué cede.»',
+        '«Busque el placer y la felicidad aparecerá de refilón, si le conviene.»'
+      ]
+    },
+    {
+      palabras: ['el mal', 'por que existe el mal', 'dios y el mal'],
+      respuestas: [
+        '«El mal no necesita explicación: está ahí, como el granizo.»',
+        '«El mal existe porque la naturaleza es indiferente. La teología lo llama misterio para no tener que responder.»',
+        '«Dios permite el mal porque también él debió de aprender a base de golpes.»'
+      ]
+    },
+    {
+      palabras: ['recomiendame', 'por donde empiezo', 'que leo primero', 'es dificil leerte'],
+      respuestas: [
+        '«Empiece por Filosofía en el tocador: es corta y se lee como una conversación que se calienta.»',
+        '«Después Justine. Y no espere un final amable; no lo hay.»',
+        '«Lea despacio. Lo que se lee deprisa se olvida con más facilidad.»'
+      ]
+    },
+    {
+      palabras: ['dime una frase', 'una frase tuya', 'citas', 'cítame'],
+      respuestas: [
+        '«Franceses, un esfuerzo más si queréis ser republicanos.»',
+        '«La crueldad es la primera de las virtudes. O eso sostengo.»',
+        '«Nada resulta tan caro como la virtud de una doncella.»'
+      ]
+    },
+    {
+      palabras: ['como acaba justine', 'final de justine', 'justine tiene final feliz'],
+      respuestas: [
+        '«Acaba mal, por supuesto. La virtud recibe su recompensa al final: un rayo y la ruina.»',
+        '«Justine muere, y con ella la idea de que el cielo lleva cuentas.»',
+        '«No pienso disculparme por el final. La vida tampoco lo hace.»'
+      ]
+    },
+    {
+      palabras: ['como acaba filosofia en el tocador', 'final de filosofia en el tocador'],
+      respuestas: [
+        '«Termina con Eugénie instruida, la madre castigada y todos satisfechos. Una comedia, en el fondo.»',
+        '«El final es un reparto de beneficios: cada cual obtiene lo que vino a buscar.»',
+        '«No hay boda ni virtud premiada. Sólo gente que sabe lo que quiere.»'
+      ]
+    },
+    {
+      palabras: ['la muerte', 'miedo a la muerte', 'suicidio', 'te da miedo morir'],
+      respuestas: [
+        '«Escribí sobre el suicidio: la vida no es un préstamo que haya que devolver intacto.»',
+        '«La muerte no me asusta. Me fastidia, como una interrupción.»',
+        '«Se muere como se vive: con más o menos ruido.»'
+      ]
+    },
+    {
+      palabras: ['sodomia', 'placeres traseros', 'el culo', 'dolmance habla de eso'],
+      respuestas: [
+        '«Sodomía es el placer de quien ya ha probado lo demás.»',
+        '«Los placeres traseros tienen la ventaja de no dejar consecuencia.»',
+        '«Dolmancé no habla de otra cosa, y no se equivoca.»'
+      ]
+    },
+    {
+      palabras: ['por que te escandalizan', 'la critica', 'que decian de ti', 'te llamaron loco'],
+      respuestas: [
+        '«Me llamaron loco para no tener que discutirme.»',
+        '«La policía leía mis libros y aprendía más que los jueces.»',
+        '«Escandalizar es una forma de enseñar: nadie olvida lo que le sonroja.»'
+      ]
+    }
+  ]
+}
+
+   
 ];
      
   /* ===== Lógica (no hace falta tocarla) ===== */
