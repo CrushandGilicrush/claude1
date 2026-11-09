@@ -230,7 +230,7 @@ const Ordenes = (() => {
   }
 
   return {
-    siguiente, cumple, examinarCaldera, subirTemperatura, ajustar, apoyarMano,
+    siguiente, cumple,    radiadorCaliente: () => e.bloqueada, examinarCaldera, subirTemperatura, ajustar, apoyarMano,
     abrirCongelador, grabarVideo, pararVideo, cortarVideo, cubitoBoca,
     examinarNevera, responder, morderCalabacin,
     abrirCajon, examinarCajon, escribirBrazo,
