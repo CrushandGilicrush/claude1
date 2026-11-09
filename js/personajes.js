@@ -198,7 +198,7 @@ const Personajes = (() => {
         ]
     }
   ]
-}
+},
 
      {
       id: 'Sade',                              // identificador interno (único, sin espacios)
