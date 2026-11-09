@@ -128,10 +128,11 @@ const Dialogos = {
     'como has obtenido fotos privadas mias',
     'como has conseguido mis fotos privadas',
     'de donde has conseguido mis fotos personales',
+     'como las conseguiste',
     'como has conseguido mis imagenes privadas'
   ],
   respuestas: [
-    '¿Crees que te lo voy a decir?'
+    '¿Crees realmente que te lo voy a decir? Lo único que te importa es que las tengo'
   ]
 },
      {
