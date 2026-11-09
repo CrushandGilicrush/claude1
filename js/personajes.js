@@ -32,7 +32,7 @@ const Personajes = (() => {
       {
       id: 'Hawking',                              // identificador interno (único, sin espacios)
       nombre: 'Stephen Hawking',                          // nombre con el que se le escribe
-      alias: ['Hawk'],                           // otras formas de nombrarla (opcional)
+      alias: ['Hawking'],                           // otras formas de nombrarla (opcional)
       color: '#06faa7',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
       etiqueta: true,                           // muestra «Laura:» delante de sus mensajes
       disponible: estado => true,               // cuándo se puede hablar con ella (p. ej. estado => estado.contador >= 1)
