@@ -9,22 +9,22 @@ const Personajes = (() => {
   const lista = [
     {
       id: 'laura',                              // identificador interno (único, sin espacios)
-      nombre: 'Laura',                          // nombre con el que se le escribe
-      alias: ['lau'],                           // otras formas de nombrarla (opcional)
-      color: '#c9a0ff',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
+      nombre: 'Lapso',                          // nombre con el que se le escribe
+      alias: ['Lap'],                           // otras formas de nombrarla (opcional)
+      color: '#fa5106',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
       etiqueta: true,                           // muestra «Laura:» delante de sus mensajes
       disponible: estado => true,               // cuándo se puede hablar con ella (p. ej. estado => estado.contador >= 1)
       noDisponible: 'Ahora mismo no te contesta.',
-      abre: 'Abres el chat con Laura.',
-      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a laura hola».',
+      abre: 'Abres el chat con Lapso.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Lapso hola».',
       porDefecto: ['«Jaja, no te entiendo, cuéntame más.»', '«Ay, qué cosas dices.»', '«Espera, que me llaman. Ahora te escribo.»'],
       reglas: [
         { palabras: ['hola', 'buenas', 'hey', 'que tal'],
           respuestas: ['«¡Hola! ¿Cómo estás?»', '«¡Ey! Cuánto tiempo.»'] },
-        { palabras: ['como estas', 'como te va', 'que haces'],
-          respuestas: ['«Aquí, tirada en el sofá. ¿Y tú?»', '«Liada con el trabajo, como siempre.»'] },
+        { palabras: ['como estas', 'como te va', 'y tú?', 'que haces'],
+          respuestas: ['«Aquí, tirado en el sofá. En realidad yo solo soy un diálogo programado, pero seguro que el Lapso real está tirado en el sofá, el muy vago»', '«Liado con el trabajo, como siempre.»'] },
         { palabras: ['ayuda', 'ayudame', 'problema', 'necesito'],
-          respuestas: ['«Claro, dime qué te pasa.»', '«Cuenta conmigo para lo que sea.»'] },
+          respuestas: ['«Claro, dime qué te pasa.»', '«Cuenta conmigo para lo que sea, excepto follar. Ya sabes que yo no follo»'] },
         { palabras: ['adios', 'chao', 'hasta luego', 'nos vemos'],
           respuestas: ['«¡Un beso!»', '«Hablamos pronto.»'] }
       ]
