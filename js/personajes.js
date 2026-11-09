@@ -24,7 +24,7 @@ const Personajes = (() => {
         { palabras: ['como estas', 'como te va', 'y tú?', 'que haces'],
           respuestas: ['«Aquí, tirado en el sofá. En realidad yo solo soy un diálogo programado, pero seguro que el Lapso real está tirado en el sofá, el muy vago»', '«Liado con el trabajo, como siempre.»'] },
         { palabras: ['ayuda', 'ayudame', 'problema', 'necesito'],
-          respuestas: ['«Claro, dime qué te pasa.»', '«Cuenta conmigo para lo que sea, excepto follar. Ya sabes que yo no follo»'] },
+          respuestas: ['«Claro, dime qué te pasa.»', '«Cuenta conmigo para lo que sea, excepto follar. Ya sabes que yo esas cosas no las hago. Paso. Un rotundo NO»'] },
         { palabras: ['adios', 'chao', 'hasta luego', 'nos vemos'],
           respuestas: ['«¡Un beso!»', '«Hablamos pronto.»'] }
       ]
