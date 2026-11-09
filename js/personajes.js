@@ -33,11 +33,11 @@ const Personajes = (() => {
       id: 'Hawking',                              // identificador interno (único, sin espacios)
       nombre: 'Stephen Hawking',                          // nombre con el que se le escribe
       alias: ['Hawk'],                           // otras formas de nombrarla (opcional)
-      color: '#fa5106',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
+      color: '#06faa7',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
       etiqueta: true,                           // muestra «Laura:» delante de sus mensajes
       disponible: estado => true,               // cuándo se puede hablar con ella (p. ej. estado => estado.contador >= 1)
       noDisponible: 'Ahora mismo no te contesta.',
-      abre: 'Abres el chat con Lapso.',
+      abre: 'Abres el chat con Stephen Hawking.',
       sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Lapso hola».',
   porDefecto: [
     '«No estoy seguro de entenderte. ¿Puedes explicármelo de otra manera?»',
