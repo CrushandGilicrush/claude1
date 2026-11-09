@@ -384,7 +384,280 @@ const Dialogos = {
         'Es curioso que me des las gracias.',
         'Las gracias no son necesarias. La obediencia, sí.'
       ] },
-
+/*random*/
+{
+  palabras: [
+    'quien eres', 'quien es usted', 'como te llamas', 'dime tu nombre',
+    'con quien hablo', 'quien esta ahi'
+  ],
+  respuestas: [
+    'Una pregunta interesante. Aunque no es la que deberias hacerte ahora.',
+    'Mi identidad no cambiaria nada de lo que esta sucediendo.',
+    'Digamos que soy alguien que sabe bastante mas de ti de lo que imaginas.',
+    'El nombre es una convencion. Lo verdaderamente importante son las intenciones.',
+    'Alguien que ha tenido la paciencia de conocerte antes de ponerse en contacto contigo.'
+  ]
+},
+{
+  palabras: [
+    'por que yo', 'por que me has elegido', 'por que a mi',
+    'que tengo de especial', 'por que me haces esto'
+  ],
+  respuestas: [
+    'No confundas ser elegido con ser especial. A veces basta con estar en el lugar adecuado.',
+    'La casualidad es una explicacion muy comoda para quienes desconocen las causas.',
+    'He considerado varias posibilidades. La tuya era, sencillamente, la mas adecuada.',
+    'No eres una eleccion arbitraria. Eso deberia tranquilizarte, aunque sospecho que no lo hara.',
+    'Las circunstancias nos han conducido hasta aqui. Yo simplemente he sabido aprovecharlas.'
+  ]
+},
+{
+  palabras: [
+    'que quieres', 'que pretendes', 'que buscas', 'que hago',
+    'que tengo que hacer', 'que debo hacer'
+  ],
+  respuestas: [
+    'Lo sabras a su debido tiempo. Primero, lo que te he pedido.',
+    'Quiero que obedezcas. De momento, nada mas.',
+    'Te lo ire diciendo paso a paso. No te adelantes.',
+    'No necesitas saber mas de lo que te cuento.'
+  ]
+},
+{
+  palabras: [
+    'donde estas', 'desde donde hablas', 'donde vives',
+    'estas cerca', 'estas aqui', 'puedo encontrarte'
+  ],
+  respuestas: [
+    'La distancia es un concepto relativo cuando se dispone de los medios adecuados.',
+    'No confundas proximidad fisica con capacidad de influencia.',
+    'Saber donde estoy no te acercaria necesariamente a encontrarme.',
+    'Es curioso que te preocupe mi ubicacion y no lo que puedo saber de la tuya.',
+    'Hay preguntas cuya respuesta proporciona menos informacion de la que uno espera.'
+  ]
+},
+{
+  palabras: [
+    'como sabes', 'como sabes tanto', 'como me conoces',
+    'de donde has sacado', 'quien te ha contado'
+  ],
+  respuestas: [
+    'La informacion rara vez esta escondida. Normalmente solo esta desordenada.',
+    'Observar es una habilidad infravalorada. Recordar, todavia mas.',
+    'La mayoria de las personas revela mucho mas de lo que cree.',
+    'No hace falta ser extraordinario para obtener resultados extraordinarios. Basta con ser meticuloso.',
+    'Digamos que presto atencion a detalles que otros consideran irrelevantes.'
+  ]
+},
+{
+  palabras: [
+    'estas loco', 'eres un enfermo', 'estas enfermo',
+    'eres un psicopata', 'que clase de persona eres'
+  ],
+  respuestas: [
+    'Etiquetar aquello que no comprendes es una forma bastante primitiva de defenderte.',
+    'La normalidad es, en buena medida, una cuestion estadistica.',
+    'No confundas la ausencia de escrupulos con la ausencia de razonamiento.',
+    'Puedes juzgar mi comportamiento. No cambiaras los hechos por hacerlo.',
+    'Los insultos suelen aparecer cuando los argumentos empiezan a escasear.'
+  ]
+},
+{
+  palabras: [
+    'tengo miedo', 'estoy asustado', 'me das miedo',
+    'tengo panico', 'no se que hacer'
+  ],
+  respuestas: [
+    'El miedo es una respuesta biologica. No tiene por que convertirse en una decision.',
+    'Respira. El panico no mejorara tu capacidad para resolver problemas.',
+    'Es razonable que tengas miedo. Lo preocupante seria que no comprendieras la situacion.',
+    'El miedo puede ser util. Siempre que no permitas que piense por ti.',
+    'No necesitas ser valiente. Necesitas mantener la cabeza despejada.'
+  ]
+},
+{
+  palabras: [
+    'no voy a hacerlo', 'me niego', 'no quiero',
+    'no pienso obedecer', 'no lo hare', 'jamás'
+  ],
+  respuestas: [
+    'La obstinacion no es una estrategia. Es simplemente una resistencia al cambio.',
+    'Naturalmente, puedes negarte. Las decisiones tienen consecuencias.',
+    'Confundes la libertad de elegir con la ausencia de repercusiones.',
+    'No esperaba que lo comprendieras a la primera. La resistencia es bastante previsible.',
+    'Tienes derecho a decidir. Nunca he dicho lo contrario.'
+  ]
+},
+{
+  palabras: [
+    'que pasa si no', 'y si no lo hago', 'que ocurrira',
+    'que me haras', 'cuales son las consecuencias'
+  ],
+  respuestas: [
+    'Prefiero que no tengamos que comprobarlo.',
+    'Toda accion tiene una consecuencia. La inaccion tambien.',
+    'No me gusta repetir las cosas. Tampoco explicar dos veces lo evidente.',
+    'Lo descubriras si decides convertir esa posibilidad en realidad.',
+    'Te recomiendo que no confundas una advertencia con una amenaza.'
+  ]
+},
+{
+  palabras: [
+    'puedo confiar en ti', 'me puedo fiar', 'dices la verdad',
+    'me estas mintiendo', 'como se que es cierto'
+  ],
+  respuestas: [
+    'La confianza no se exige. Se construye. Y desde luego, no en cinco minutos.',
+    'No tienes motivos para confiar en mi. Tampoco para dar por ciertas todas tus sospechas.',
+    'La verdad no necesita resultar agradable para seguir siendo verdad.',
+    'Es saludable cuestionar la informacion. Hazlo tambien con tus propias conclusiones.',
+    'No te pido que creas en mi. Te pido que prestes atencion.'
+  ]
+},
+{
+  palabras: [
+    'por favor', 'te lo suplico', 'ten piedad',
+    'dejame tranquilo', 'no me hagas daño', 'te lo ruego'
+  ],
+  respuestas: [
+    'La suplica es una reaccion emocional. No altera las circunstancias.',
+    'No desperdicies energia intentando conmoverme.',
+    'Comprendo perfectamente lo que estas sintiendo. Eso no significa que vaya a cambiar de opinion.',
+    'La desesperacion no es una buena consejera. Intenta pensar.',
+    'No confundas mi serenidad con indiferencia hacia el desarrollo de los acontecimientos.'
+  ]
+},
+{
+  palabras: [
+    'eres un cobarde', 'das asco', 'te odio',
+    'ojala te encuentren', 'pagaras por esto'
+  ],
+  respuestas: [
+    'Tu opinion sobre mi carece de relevancia para el asunto que nos ocupa.',
+    'El odio consume mucha energia. Procura reservarla para algo mas productivo.',
+    'Los juicios morales suelen ser mas sencillos cuando uno no tiene que tomar decisiones.',
+    'Amenazar sin disponer de informacion suficiente es un error bastante elemental.',
+    'No voy a discutir contigo. No estamos aqui para intercambiar impresiones.'
+  ]
+},
+{
+  palabras: [
+    'que quieres de mi', 'que necesitas de mi', 'para que todo esto',
+    'cual es tu objetivo', 'cual es el proposito'
+  ],
+  respuestas: [
+    'Una colaboracion sencilla. Aunque sospecho que tu la estas complicando.',
+    'Mi objetivo es claro. Lo que todavia no tienes claro es el tuyo.',
+    'No todo necesita una explicacion inmediata para tener sentido.',
+    'Digamos que estamos resolviendo un problema. Tu formas parte de la solucion.',
+    'La finalidad de una accion no siempre coincide con la primera impresion que produce.'
+  ]
+},
+{
+  palabras: [
+    'hay alguien contigo', 'estas solo', 'trabajas con alguien',
+    'tienes complices', 'eres uno solo'
+  ],
+  respuestas: [
+    'La eficacia de una operacion no depende necesariamente del numero de participantes.',
+    'Una pregunta que no te proporciona ninguna ventaja practica.',
+    'No deberias preocuparte por cuestiones que no puedes verificar.',
+    'La discrecion consiste, precisamente, en no ofrecer informacion innecesaria.',
+    'Es posible que estes buscando una estructura donde solo hay un individuo.'
+  ]
+},
+{
+  palabras: [
+    'puedo llamar a alguien', 'quiero hablar con alguien',
+    'puedo avisar', 'voy a pedir ayuda', 'necesito ayuda'
+  ],
+  respuestas: [
+    'Naturalmente. Siempre es interesante conocer la opinion de terceros.',
+    'Puedes hacerlo. Pero procura pensar antes en lo que vas a contar.',
+    'Pedir ayuda no es una debilidad. A veces es la decision mas inteligente.',
+    'No confundas buscar apoyo con resolver el problema.',
+    'Las decisiones importantes suelen beneficiarse de una segunda opinion.'
+  ]
+},
+{
+  palabras: [
+    'que sabes de mi', 'que informacion tienes', 'que tienes contra mi',
+    'hasta donde sabes', 'cuanto sabes'
+  ],
+  respuestas: [
+    'Lo suficiente para saber que no estas reaccionando como esperabas.',
+    'La informacion es util cuando se sabe interpretar. No solo cuando se acumula.',
+    'Conozco algunos detalles. Los suficientes para mantener esta conversacion.',
+    'No necesitas conocer el alcance de mi informacion para comprender tu situacion.',
+    'Lo verdaderamente interesante no es lo que se de ti, sino lo que todavia ignoras.'
+  ]
+},
+{
+  palabras: [
+    'por que me escribes', 'por que contactas conmigo',
+    'por que telegram', 'por que este mensaje', 'por que ahora'
+  ],
+  respuestas: [
+    'Porque este era el momento oportuno. Y porque has respondido.',
+    'Los canales de comunicacion son herramientas. No tienen demasiada importancia.',
+    'La oportunidad es una variable decisiva en cualquier estrategia.',
+    'A veces basta con iniciar una conversacion para que todo lo demas empiece a suceder.',
+    'Porque ahora estamos hablando. Y eso, de momento, es suficiente.'
+  ]
+},
+{
+  palabras: [
+    'esto es una broma', 'es una broma', 'me estas tomando el pelo',
+    'no puede ser verdad', 'esto no es real'
+  ],
+  respuestas: [
+    'Ojala fuera una broma. Tendria bastante mas gracia.',
+    'Negar una realidad no es lo mismo que modificarla.',
+    'La incredulidad es comprensible, pero no especialmente util.',
+    'No tengo demasiado sentido del humor para este tipo de asuntos.',
+    'Te aseguro que hay situaciones mucho menos agradables que aceptar la realidad.'
+  ]
+},
+{
+  palabras: [
+    'quiero terminar', 'se acabo', 'dejemoslo',
+    'no quiero seguir hablando', 'adios', 'hasta nunca'
+  ],
+  respuestas: [
+    'La conversacion terminara cuando hayamos resuelto lo que nos ocupa.',
+    'Puedes dejar de escribir. Eso no significa que el asunto haya desaparecido.',
+    'Una retirada prematura no suele ser la mejor manera de cerrar un problema.',
+    'De acuerdo. Reflexiona antes de dar el siguiente paso.',
+    'Las conversaciones terminan. Las consecuencias, no siempre.'
+  ]
+},
+{
+  palabras: [
+    'eres inteligente', 'te crees muy listo', 'vas de listo',
+    'te crees superior', 'eres muy listo'
+  ],
+  respuestas: [
+    'La inteligencia no consiste en tener siempre razon, sino en saber detectar cuando uno esta equivocado.',
+    'No me considero superior. Simplemente procuro pensar antes de actuar.',
+    'La inteligencia sin disciplina es poco mas que una capacidad desaprovechada.',
+    'No es una cuestion de ser mas listo. Es una cuestion de haber pensado un poco mas.',
+    'La arrogancia consiste en necesitar demostrar la propia inteligencia. Yo no tengo esa necesidad.'
+  ]
+},
+{
+  palabras: [
+    'que quieres que diga', 'que esperas que responda',
+    'que tengo que contestar', 'que respuesta quieres',
+    'que quieres oir'
+  ],
+  respuestas: [
+    'Preferiria una respuesta sincera. Aunque no necesariamente sea la que espero.',
+    'No me interesa escuchar lo que crees que quiero oir.',
+    'Piensa bien lo que vas a decir. Las palabras tambien tienen consecuencias.',
+    'Una respuesta inteligente empieza por comprender la pregunta.',
+    'No necesito que me complazcas. Necesito que seas claro.'
+  ]
+}
     /* Obediencia simple */
     { palabras: [
         'vale', 'de acuerdo', 'esta bien', 'ok', 'okay', 'oki', 'entendido', 'comprendido', 'conforme',
