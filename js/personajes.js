@@ -39,7 +39,6 @@ const Personajes = (() => {
       noDisponible: 'Ahora mismo no te contesta.',
       abre: 'Abres el chat con Lapso.',
       sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Lapso hola».',
-     {
   porDefecto: [
     '«No estoy seguro de entenderte. ¿Puedes explicármelo de otra manera?»',
     '«Interesante reflexión. Aunque sospecho que todavía hay mucho que descubrir.»',
@@ -196,13 +195,11 @@ const Personajes = (() => {
         '«Considerando la inmensidad del universo, parece razonable preguntarse si estamos solos. Pero todavía no tenemos pruebas concluyentes de vida extraterrestre.»',
         '«La existencia de vida inteligente en otros lugares es posible. Sin embargo, las enormes distancias cósmicas dificultan cualquier contacto.»',
         '«Sería extraordinario encontrar vida fuera de la Tierra. Cambiaría nuestra comprensión de nuestro lugar en el universo.»'
-      ]
+        ]
     }
   ]
-} }
-      ]
-    }
-  ];
+}
+];
      
   /* ===== Lógica (no hace falta tocarla) ===== */
   const turnos = {};
