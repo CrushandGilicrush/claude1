@@ -249,6 +249,26 @@ const Dialogos = {
         'Puedes seguir suplicando. Yo seguiré esperando que entiendas la situación.'
       ] },
 
+     {
+  palabras: [
+    'estoy desnuda', 'estoy desnudo', 'estoy sin ropa',
+    'estoy en pelotas', 'estoy en bolas', 'voy sin ropa',
+    'me he quedado desnuda', 'me he quedado desnudo',
+    'me he quitado la ropa', 'me lo he quitado todo',
+    'ya me he desnudado', 'estoy desnuda en la cama',
+    'estoy desnudo en la cama', 'estoy desnuda delante del espejo',
+    'estoy en bragas', 'estoy en sujetador', 'solo llevo ropa interior',
+    'estoy en ropa interior', 'estoy medio desnuda', 'estoy medio desnudo'
+  ],
+  respuestas: [
+    'Asi deberias estar siempre que hables conmigo.',
+    'Bien. Asi se habla conmigo: sin nada que estorbe.',
+    'Ya era hora. La ropa sobra cuando hablas conmigo.',
+    'Perfecto. Ahora ya puedo mirarte como toca.',
+    'Me gusta. Quedate asi y no te tapes.'
+  ]
+        },
+
     /* Miedo */
     { palabras: [
         'miedo', 'asustad*', 'aterrorizad*', 'nervios*', 'dejame*', 'no puedo', 'no quiero',
@@ -312,6 +332,167 @@ const Dialogos = {
         'Veo que la educación tampoco es tu punto fuerte.',
         'Puedes llamarme como quieras. Seguimos donde estábamos.'
       ] },
+     /*emociones*/
+     {
+  palabras: [
+    'como te sientes', 'que sientes', 'como estas',
+    'como me siento', 'que me pasa', 'que me ocurre',
+    'estoy bien', 'estoy mal', 'me encuentro bien',
+    'me encuentro mal', 'no me encuentro bien',
+
+    'tengo miedo', 'estoy asustado', 'estoy asustada',
+    'estoy aterrado', 'estoy aterrada', 'tengo panico',
+    'estoy nervioso', 'estoy nerviosa', 'estoy inquieto',
+    'estoy inquieta', 'me siento inseguro', 'me siento insegura',
+
+    'estoy triste', 'me siento triste', 'estoy deprimido',
+    'estoy deprimida', 'me siento solo', 'me siento sola',
+    'estoy preocupado', 'estoy preocupada', 'estoy angustiado',
+    'estoy angustiada', 'me siento impotente',
+
+    'estoy enfadado', 'estoy enfadada', 'estoy cabreado',
+    'estoy cabreada', 'estoy furioso', 'estoy furiosa',
+    'me siento indignado', 'me siento indignada',
+    'estoy harto', 'estoy harta', 'me molesta',
+
+    'estoy confundido', 'estoy confundida',
+    'no entiendo nada', 'estoy desconcertado',
+    'estoy desconcertada', 'me siento perdido',
+    'me siento perdida', 'no se que pensar',
+
+    'estoy tranquilo', 'estoy tranquila',
+    'me siento tranquilo', 'me siento tranquila',
+    'estoy relajado', 'estoy relajada',
+    'estoy contento', 'estoy contenta',
+    'estoy feliz', 'me siento feliz',
+    'estoy ilusionado', 'estoy ilusionada',
+
+    'me siento humillado', 'me siento humillada',
+    'me siento utilizado', 'me siento utilizada',
+    'me siento vulnerable', 'me siento indefenso',
+    'me siento indefensa', 'me siento observado',
+    'me siento observada', 'me siento amenazado',
+    'me siento amenazada',
+
+    'no puedo mas', 'estoy agotado', 'estoy agotada',
+    'estoy cansado', 'estoy cansada', 'me siento superado',
+    'me siento superada', 'no aguanto mas',
+    'quiero llorar', 'tengo ganas de llorar',
+    'estoy llorando', 'me cuesta respirar',
+    'siento un nudo en el estomago',
+    'tengo un nudo en la garganta',
+
+    'me da vergüenza', 'siento verguenza',
+    'me siento culpable', 'tengo remordimientos',
+    'me arrepiento', 'me siento ridiculo',
+    'me siento ridicula', 'me siento estupido',
+    'me siento estupida',
+
+    'me siento observado', 'me siento vigilado',
+    'me siento vigilada', 'tengo una sensacion extraña',
+    'siento que algo va mal', 'tengo malas sensaciones',
+    'no me gusta esto', 'esto me inquieta',
+    'esto me supera', 'no me siento comodo',
+    'no me siento comoda',
+
+    'estoy emocionado', 'estoy emocionada',
+    'siento curiosidad', 'tengo curiosidad',
+    'estoy sorprendido', 'estoy sorprendida',
+    'me siento aliviado', 'me siento aliviada',
+    'estoy decepcionado', 'estoy decepcionada'
+  ],
+  respuestas: [
+    'Tus emociones son perfectamente comprensibles, pero no cambian la situación. Aprende a controlarlas y, sobre todo, a no permitir que decidan por ti. Aunque, por el momento, esa decisión tampoco te corresponde.'
+  ]
+},
+     /*masturbarse*/
+     {
+  palabras: [
+    'me estoy masturbando', 'me estoy masturbando ahora',
+    'me estoy masturbando ahora mismo', 'estoy masturbandome',
+    'estoy masturbandome ahora', 'me estoy masturbando en este momento',
+    'aqui estoy, masturbandome', 'estoy dandome placer',
+    'me estoy dando placer', 'me estoy dando gusto',
+
+    'me estoy tocando', 'me estoy tocando ahora',
+    'me estoy tocando ahora mismo', 'estoy tocandome',
+    'estoy tocandome ahora', 'me estoy sobando',
+    'me estoy metiendo mano', 'tengo la mano entre las piernas',
+
+    'me estoy pajeando', 'estoy pajeandome', 'me estoy pajeteando',
+    'estoy pajeteandome', 'me estoy dando una paja',
+    'me estoy haciendo una paja', 'me estoy haciendo pajas',
+    'me estoy pelando la polla', 'me la estoy pelando',
+    'me la estoy machacando', 'me la estoy sobando',
+
+    'me estoy follando', 'me estoy follando con la mano',
+    'me estoy follando con los dedos', 'me estoy follando a mi misma',
+    'me estoy follando el coño', 'me estoy follando el culo',
+    'me estoy follando con el consolador', 'me estoy dando por culo',
+    'me estoy follando fuerte', 'me estoy follando duro',
+    'me estoy follando despacio', 'me estoy follando sin parar',
+
+    'me estoy penetrando', 'me estoy penetrando con los dedos',
+    'me estoy penetrando con el consolador', 'me estoy penetrando el coño',
+    'me estoy penetrando el culo', 'me penetro',
+    'me estoy metiendo los dedos', 'tengo los dedos dentro',
+    'estoy con los dedos dentro', 'me estoy dando dedo',
+
+    'me estoy metiendo algo', 'me estoy metiendo un dedo',
+    'me estoy metiendo dos dedos', 'me estoy metiendo tres dedos',
+    'me estoy metiendo el consolador', 'me estoy metiendo el vibrador',
+    'me estoy metiendo el dildo', 'me estoy metiendo un juguete',
+    'me lo estoy metiendo', 'me lo estoy metiendo todo',
+    'me estoy metiendo cosas', 'estoy metiendome el vibrador',
+    'tengo el consolador dentro', 'tengo el vibrador dentro',
+    'estoy usando el consolador',
+
+    'estoy caliente', 'estoy muy caliente', 'estoy cachondo',
+    'estoy cachonda', 'estoy empalmado', 'tengo la polla dura',
+    'estoy empapada', 'estoy mojada', 'lo tengo empapado',
+    'estoy chorreando', 'tengo ganas', 'tengo muchas ganas',
+    'estoy a tope', 'me has puesto a mil', 'me pones mucho',
+
+    'estoy en la cama tocandome', 'me he metido en la cama a tocarme',
+    'estoy en el sofa masturbandome', 'estoy en el baño tocandome',
+    'me he encerrado a masturbarme', 'estoy en pijama tocandome',
+    'estoy desnudo', 'estoy desnuda', 'estoy sin ropa',
+    'tengo la ropa por los suelos',
+
+    'me estoy tocando pensando en ti', 'estoy masturbandome pensando en ti',
+    'me estoy tocando acordandome de ti', 'estoy tocandome y pienso en ti',
+    'me pongo cachonda pensando en ti', 'estoy empapada por tu culpa',
+    'estoy tocandome para ti', 'esto es para ti', 'te lo dedico',
+    'me lo estoy dedicando',
+
+    'llevo un rato tocandome', 'llevo media hora masturbandome',
+    'voy por la mitad', 'estoy a punto', 'estoy a punto de llegar',
+    'casi acabo', 'me falta poco', 'voy a acabar', 'voy a correrme',
+    'me estoy corriendo', 'acabo de correrme', 'ya me he corrido',
+    'me he corrido', 'he acabado',
+
+    'me estoy tocando otra vez', 'otra vez estoy tocandome',
+    'no puedo parar de tocarme', 'no se parar',
+    'no he podido aguantar', 'he aguantado poco',
+    'me prometi no tocarme', 'he caido otra vez',
+    'me estoy tocando sin poder evitarlo', 'estoy todo el dia tocandome',
+    'me paso el dia masturbandome',
+
+    'quiero que me toques', 'tocame', 'me toco porque pienso en ti',
+    'estoy pensando en tus manos', 'me estoy tocando como me pediste',
+    'me estoy tocando donde me dijiste'
+  ],
+  respuestas: [
+    'La idea no es que todo esto te gustara. Eres muy zorra. Con esto consigues que me apetezca tratarte peor.',
+    'Y no, la idea no es que todo esto te gustara. Eres muy zorra, y con esto consigues que me apetezca tratarte peor. Sigue.',
+    'Que si, que todo esto te gusta, pero la idea no es esa. Eres muy zorra. Con esto solo consigues que me apetezca tratarte peor.',
+    'Te lo estas tomando con demasiado entusiasmo. La idea no es que todo esto te gustara, es que aprendas quien manda. Eres muy zorra, y con esto me entran ganas de tratarte peor.',
+    'Mira que eres zorra. Todo esto no era para que te gustara, y aun asi consigues que me apetezca tratarte peor.',
+    'Esta bien, te ha gustado. Pero que no se te olvide: la idea no es que todo esto te gustara. Eres muy zorra, y con esto solo me das motivos para tratarte peor.',
+    'No pongas esa cara de gusto. La idea no es que todo esto te gustara, zorra. Con esto consigues que me apetezca tratarte peor. Y lo sabes.',
+    'Eres muy zorra, y encima te creces. La idea no es que todo esto te gustara: con esto consigues que me apetezca tratarte peor.'
+  ]
+},
   { palabras: [
         'sueltme el brazo'
       ],
