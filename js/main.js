@@ -212,6 +212,7 @@ const Juego = (() => {
     if (estado.terminado || !entrada.trim()) return;
     UI.log(entrada, 'usuario');
     const cmd = norm(entrada);
+       if (Extras.comando(cmd)) return;
     if (estado.esperandoCodigo) return comprobarCodigo(cmd);
     const ajuste = cmd.match(/^([+-])\s*(\d+)\s*[º°]?\s*c?$/);
     if (ajuste) return Ordenes.ajustar(ajuste[1], parseInt(ajuste[2], 10));
@@ -233,7 +234,7 @@ const Juego = (() => {
     if (verbo === 'leer' || verbo === 'lee') return leer(sinArticulo(arg));
     if (verbo === 'abrir' || verbo === 'encender') return abrir(arg);
     if (['escribir', 'escribirme', 'pintar', 'anotar'].includes(verbo) && /brazo/.test(arg)) return Ordenes.escribirBrazo();
-    if (['escribir', 'decir', 'responder', 'contestar', 'preguntar', 'hablar'].includes(verbo)) return Ordenes.responder(cmd) || escribir(arg);
+    if (['escribir', 'decir', 'responder', 'contestar', 'preguntar', 'hablar'].includes(verbo))   return Personajes.manejar(arg) || Ordenes.responder(cmd) || escribir(arg);
     if (verbo === 'cerrar' && estado.dispositivo) return mostrarSala();
     if (/^desnud|^desvest/.test(verbo) || (/^quit/.test(verbo) && /ropa/.test(arg))) return desnudarse();
     if (/^llam/.test(verbo)) return llamar(cmd);
@@ -243,7 +244,7 @@ const Juego = (() => {
     if (['enviar', 'mandar', 'subir'].includes(verbo) && /^foto/.test(sujeto)) return Ordenes.enviarFoto();
     if (['enviar', 'mandar', 'subir'].includes(verbo) && /^video/.test(sujeto)) return Ordenes.enviarVideo();
     if (comandoTexto(verbo, arg)) return;
-    if (Ordenes.responder(cmd)) return;
+       if (Personajes.manejar(cmd) || Ordenes.responder(cmd)) return;
     if (estado.app === 'telegram' && estado.desbloqueado && estado.mensajeLeido) return escribir(cmd);   // texto libre en Telegram = mensaje
     UI.log('No entiendo ese comando.');
   }
