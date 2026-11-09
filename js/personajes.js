@@ -204,7 +204,7 @@ const Personajes = (() => {
       id: 'Sade',                              // identificador interno (único, sin espacios)
       nombre: 'Marqués de Sade',                          // nombre con el que se le escribe
       alias: ['Sade', 'marques', 'donatien'],                           // otras formas de nombrarla (opcional)
-      color: '#8b1a3a',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
+      color: '#fa06c9',                         // color de sus mensajes (opcional; quita la línea para el azul de siempre)
       etiqueta: true,                           // muestra «Laura:» delante de sus mensajes
       disponible: estado => true,               // cuándo se puede hablar con ella (p. ej. estado => estado.contador >= 1)
       noDisponible: 'El marqués está encerrado. Vuelve cuando abran la puerta.',
