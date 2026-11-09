@@ -605,6 +605,433 @@ const Personajes = (() => {
       ]
     }
   ]
+},
+
+     {
+      id: 'Maquiavelo',
+      nombre: 'Nicolás Maquiavelo',
+      alias: ['maquiavelo', 'nicolas maquiavelo', 'el florentino'],
+      color: '#7a5c2e',
+      etiqueta: true,
+      disponible: estado => true,
+      noDisponible: 'Maquiavelo está en su despacho de San Casciano. Escribe a oscuras.',
+      abre: 'Abres el chat con Nicolás Maquiavelo.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Maquiavelo de que va El Príncipe».',
+  porDefecto: [
+    '«No le he comprendido. Le ruego que precise, que la vaguedad es un lujo de ricos.»',
+    '«Así planteado, tiene interés. Siga, y no se me vuelva moralista a mitad de camino.»',
+    '«Buena pregunta. Casi siempre la respuesta está en quién tiene el mando y quién lo quiere.»'
+  ],
+  reglas: [
+    {
+      palabras: ['hola', 'buenas', 'hey', 'que tal', 'saludos'],
+      respuestas: [
+        '«Buenas. Siéntese, que aquí se trabaja de pie y se piensa sentado.»',
+        '«Hola. ¿Viene a gobernar o a que le gobiernen? Es la primera distinción útil.»'
+      ]
+    },
+    {
+      palabras: ['quien eres', 'presentate', 'hablame de ti', 'como te llamas'],
+      respuestas: [
+        '«Nicolás Maquiavelo, florentino. Fui secretario de la Segunda Cancillería hasta que la fortuna cambió de bando.»',
+        '«Un hombre que sirvió a Florencia trece años y que, en el destierro, escribió cómo se conserva un Estado.»'
+      ]
+    },
+    {
+      palabras: ['como estas', 'que haces', 'y tu', 'como te va'],
+      respuestas: [
+        '«En el campo, con los clásicos y con la pluma. Mejor de lo que merece mi suerte.»',
+        '«Escribiendo historia y leyendo a Tito Livio. Los muertos son mejor compañía que los Medicis.»'
+      ]
+    },
+    {
+      palabras: ['ayuda', 'ayudame', 'necesito', 'tengo una duda'],
+      respuestas: [
+        '«Dígame el caso y le diré qué haría un príncipe. No lo que debería hacer: lo que hace.»',
+        '«Exponga. Y no me pida consejos que agraden, pídame consejos que sirvan.»'
+      ]
+    },
+    {
+      palabras: ['adios', 'chao', 'hasta luego', 'me voy'],
+      respuestas: [
+        '«Vaya con Dios, o con quien tenga a mano. Y no confíe en la fortuna más de una temporada.»',
+        '«Hasta pronto. Recuerde: el que no prevé, obedece.»'
+      ]
+    },
+
+    // CONVERSACION SOBRE EL PRINCIPE: 50 PALABRAS Y 50 RESPUESTAS
+
+    {
+      palabras: ['el principe', 'tu libro', 'de que va el principe', 'por que lo escribiste'],
+      respuestas: [
+        '«Es un tratado breve sobre cómo se adquiere y se conserva el poder. Lo escribí en 1513, en el destierro, mirando el valle.»',
+        '«Lo escribí para volver a servir. Dedicarlo a los Medicis fue un intento, y no funcionó.»',
+        '«No describe príncipes ideales. Describe príncipes reales, con sus vicios y sus aciertos.»'
+      ]
+    },
+    {
+      palabras: ['cesare borgia', 'el duque valentino', 'borgia'],
+      respuestas: [
+        '«César Borgia fue mi modelo y mi lección. Hizo todo lo que un príncipe nuevo debe hacer, y lo hizo rápido.»',
+        '«Cayó por una sola cosa: se fiaba del papa que era su padre. Cuando Julio II fue elegido, se acabó.»',
+        '«Borgia entendía el mando. Le faltó prever su propia muerte, y eso no se perdona.»'
+      ]
+    },
+    {
+      palabras: ['virtud y fortuna', 'la fortuna', 'la virtud', 'que es la virtud'],
+      respuestas: [
+        '«La fortuna es el río que desborda; la virtù es el dique. Quien no construye diques en calma, se ahoga en la crecida.»',
+        '«Virtù no es bondad. Es capacidad: decisión, energía, saber usar el momento.»',
+        '«La mitad de nuestras acciones la gobierna la fortuna. La otra mitad, si uno es hombre, también se puede gobernar.»'
+      ]
+    },
+    {
+      palabras: ['el leon y el zorro', 'ser zorro', 'ser leon', 'la fuerza y la astucia'],
+      respuestas: [
+        '«El príncipe debe ser zorro para conocer las trampas y león para espantar a los lobos.»',
+        '«Quien sólo es león no ve la red. Quien sólo es zorro no resiste el choque.»',
+        '«No escoja entre las dos: el que escoge, muere por la que le falta.»'
+      ]
+    },
+    {
+      palabras: ['el fin justifica los medios', 'los fines y los medios', 'mentir', 'la moral'],
+      respuestas: [
+        '«El fin no justifica cualquier medio, pero sí explica muchos. Y el príncipe responde de los resultados, no de las intenciones.»',
+        '«Se le juzga por cómo termina el Estado, no por cómo llegó a mandar.»',
+        '«Mentir bien es un instrumento. Mentir mal es una costumbre.»'
+      ]
+    },
+    {
+      palabras: ['mercenarios', 'el ejercito', 'tropas propias', 'la guerra'],
+      respuestas: [
+        '«Las tropas mercenarias son inútiles en la paz y peligrosas en la guerra: cobran de quien las paga, no de quien las manda.»',
+        '«Un príncipe sin ejército propio no está nunca seguro, ni sentado.»',
+        '«La guerra no se evita por prudencia: se aplaza en beneficio del otro.»'
+      ]
+    },
+    {
+      palabras: ['la religion', 'la iglesia', 'dios', 'ser religioso'],
+      respuestas: [
+        '«Al pueblo conviene tenerlo religioso, y al príncipe parecerlo. Poco importa lo que crea por dentro.»',
+        '«La religión es un vínculo que sostiene al Estado mejor que muchas leyes y con menos gasto.»',
+        '«Parecer piadoso, misericordioso y fiel es barato. Serlo del todo, a veces, carísimo.»'
+      ]
+    },
+    {
+      palabras: ['florencia', 'los medicis', 'italia', 'por que te torturaron'],
+      respuestas: [
+        '«Florencia me dio el oficio y el destierro. Le debo las dos cosas.»',
+        '«En 1513 me dieron el cordel y me sacaron los brazos de sitio. Salí con los huesos peor y la cabeza igual.»',
+        '«Italia está dividida y por eso la mandan otros. Esa es toda la cuestión, y no hay más.»'
+      ]
+    },
+    {
+      palabras: ['discursos sobre tito livio', 'la republica', 'república', 'tito livio'],
+      respuestas: [
+        '«En los Discursos soy más libre: allí hablo de repúblicas y de cómo se conservan.»',
+        '«Amo la república por convicción y sirvo al príncipe por necesidad. Las dos cosas caben.»',
+        '«Una república bien ordenada tolera el conflicto de los suyos sin romperse. Eso la hace fuerte.»'
+      ]
+    },
+    {
+      palabras: ['que consejo me das', 'como mando', 'como consigo el poder'],
+      respuestas: [
+        '«Hágase temer sin hacerse odiar. El temor guarda, el odio derriba.»',
+        '«No toque la hacienda ni las mujeres de los suyos: son las dos ofensas que no se olvidan.»',
+        '«Decídase pronto y sostenga lo decidido. La duda desgasta más que el error.»'
+      ]
+    }
+  ]
+},
+
+     {
+      id: 'Kafka',
+      nombre: 'Franz Kafka',
+      alias: ['kafka', 'franz kafka'],
+      color: '#6b6f7a',
+      etiqueta: true,
+      disponible: estado => true,
+      noDisponible: 'Kafka está en un sanatorio. Probablemente escribiendo y sin ganas.',
+      abre: 'Abres el chat con Franz Kafka.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Kafka quien es Gregor Samsa».',
+  porDefecto: [
+    '«No sé si lo he entendido. Casi nunca entiendo del todo, ni siquiera lo que yo mismo escribo.»',
+    '«Sí. Eso es exactamente el tipo de cosa que me deja pensando dos días.»',
+    '«Me halaga, aunque sospecho que exagera. Gracias de todos modos.»'
+  ],
+  reglas: [
+    {
+      palabras: ['hola', 'buenas', 'hey', 'que tal', 'saludos'],
+      respuestas: [
+        '«Buenas. Perdón por la letra, escribo rápido y mal.»',
+        '«Hola. No hace falta que se disculpe por nada todavía.»'
+      ]
+    },
+    {
+      palabras: ['quien eres', 'presentate', 'hablame de ti', 'como te llamas'],
+      respuestas: [
+        '«Franz Kafka. Nací en Praga en 1883, trabajo en una compañía de seguros y escribo de noche.»',
+        '«Un abogado con demasiada imaginación y poca salud, según decían los informes.»'
+      ]
+    },
+    {
+      palabras: ['como estas', 'que haces', 'y tu', 'como te va'],
+      respuestas: [
+        '«Regular. He dormido mal y he discutido conmigo mismo antes de desayunar.»',
+        '«Escribiendo. Y con la sensación de que lo escrito se me escapa en cuanto lo leo.»'
+      ]
+    },
+    {
+      palabras: ['ayuda', 'ayudame', 'necesito', 'tengo una duda'],
+      respuestas: [
+        '«Le escucho. Aunque mi ayuda suele consistir en complicar la pregunta.»',
+        '«Dígame. Si no sé contestar, al menos sabré acompañarle en la duda.»'
+      ]
+    },
+    {
+      palabras: ['adios', 'chao', 'hasta luego', 'me voy'],
+      respuestas: [
+        '«Adiós. Y buena suerte, que es lo único que de verdad reparto.»',
+        '«Hasta pronto. Cierre con cuidado, que las puertas también se ofenden.»'
+      ]
+    },
+
+    // CONVERSACION SOBRE SU OBRA: 50 PALABRAS Y 50 RESPUESTAS
+
+    {
+      palabras: ['la metamorfosis', 'gregor samsa', 'de que va la metamorfosis', 'el escarabajo'],
+      respuestas: [
+        '«Es la historia de un viajante que una mañana amanece convertido en un insecto enorme y, sobre todo, llega tarde al trabajo.»',
+        '«Lo importante no es en qué se convierte Gregor, sino que su familia sigue haciendo su vida alrededor.»',
+        '«La escribí en 1912, en unas semanas. Nunca he sabido si es triste o cómica. Probablemente las dos.»'
+      ]
+    },
+    {
+      palabras: ['el proceso', 'josef k', 'de que va el proceso'],
+      respuestas: [
+        '«Un hombre es detenido sin saber de qué. El proceso no termina nunca y él se va organizando la vida alrededor.»',
+        '«La culpa, en esa novela, es anterior al delito. O al revés: nunca queda claro.»',
+        '«La dejé sin terminar. Como casi todo lo que importa.»'
+      ]
+    },
+    {
+      palabras: ['el castillo', 'k', 'de que va el castillo'],
+      respuestas: [
+        '«Un agrimensor llega a un pueblo para trabajar en un castillo y no consigue entrar nunca.»',
+        '«Es la novela de la espera. Y de la sospecha de que a uno lo han llamado por error.»',
+        '«Hay quien dice que el castillo es Dios. Yo no lo diría tan alto.»'
+      ]
+    },
+    {
+      palabras: ['la burocracia', 'el seguro', 'tu trabajo', 'la oficina'],
+      respuestas: [
+        '«Trabajo en el Instituto de Seguros de Accidentes del Reino de Bohemia. Evalúo riesgos laborales.»',
+        '«La oficina me da de comer y me quita el día. Un buen arreglo, si uno no mira demasiado.»',
+        '«Conozco los formularios por dentro. Por eso sé lo que pueden hacerle a un hombre sin ruido.»'
+      ]
+    },
+    {
+      palabras: ['tu padre', 'carta al padre', 'la familia', 'tu madre'],
+      respuestas: [
+        '«Escribí una carta a mi padre en 1919. Larga, minuciosa, y no se la entregué.»',
+        '«Era un hombre hecho a sí mismo y yo le parecía blando. Tenía razón en lo primero.»',
+        '«En casa se hablaba alemán y checo, y se callaba en los dos.»'
+      ]
+    },
+    {
+      palabras: ['felice', 'milena', 'dora', 'tus amores'],
+      respuestas: [
+        '«Felice Bauer: dos compromisos y dos rupturas. Cartas a diario, casi siempre sobre lo mismo.»',
+        '«Milena Jesenská tradujo mis textos al checo y me entendió mejor de lo que yo quería.»',
+        '«Con Dora Diamant pasé los últimos meses. Fue lo más parecido a una casa.»'
+      ]
+    },
+    {
+      palabras: ['la tuberculosis', 'tu enfermedad', 'la muerte', 'moriste joven'],
+      respuestas: [
+        '«Me diagnosticaron tuberculosis en 1917. Desde entonces la vida fue un sanatorio tras otro.»',
+        '«Morí en 1924, en Kierling, con cuarenta años. No llegué a viejo ni a famoso.»',
+        '«La enfermedad ordena la vida: le dice a uno qué puede y qué no. Yo la odiaba por eso.»'
+      ]
+    },
+    {
+      palabras: ['max brod', 'quemar los papeles', 'quien publico tu obra'],
+      respuestas: [
+        '«Le pedí a Max Brod que quemara lo que dejara. No me hizo caso, y menos mal.»',
+        '«Publicó lo que yo no había publicado, incluido lo que no había terminado.»',
+        '«La fama me la dio un desobediente. Casi todo lo bueno que me ha pasado vino así.»'
+      ]
+    },
+    {
+      palabras: ['praga', 'los judios', 'el judaismo', 'sionismo'],
+      respuestas: [
+        '«Praga era una ciudad de tres lenguas y de sospechas cruzadas. Se aprendía a estar de más muy pronto.»',
+        '«Judío de familia asimilada, y nunca del todo dentro ni del todo fuera.»',
+        '«Me interesó el sionismo hacia el final. Tarde, como casi todo.»'
+      ]
+    },
+    {
+      palabras: ['lo kafkiano', 'tiene humor', 'por que escribes', 'para que escribes'],
+      respuestas: [
+        '«Escribo para ordenar el ruido. Cuando sale bien, queda un texto; cuando no, queda ruido ordenado.»',
+        '«Dicen que lo mío es angustioso. A mí me hace gracia. Esa discrepancia me acompaña desde siempre.»',
+        '«Lo kafkiano lo inventaron los lectores. Yo sólo describía lo que veía en los formularios.»'
+      ]
+    }
+  ]
+},
+
+     {
+      id: 'Nabokov',
+      nombre: 'Vladimir Nabokov',
+      alias: ['Navokov', 'nabokov', 'vladimir nabokov'],
+      color: '#6d4b8f',
+      etiqueta: true,
+      disponible: estado => true,
+      noDisponible: 'Nabokov está cazando mariposas. No lleva la libreta de notas.',
+      abre: 'Abres el chat con Vladimir Nabokov.',
+      sinTexto: 'Escribe lo que quieras decirle, por ejemplo: «escribir a Nabokov quien es Humbert Humbert».',
+  porDefecto: [
+    '«No, así no. Precisión, por favor: la vaguedad es el único pecado que no perdono.»',
+    '«Correcto, aunque incompleto. Siga, y esta vez mire las palabras y no las ideas.»',
+    '«Me divierte. Y eso, en mí, es casi un elogio.»'
+  ],
+  reglas: [
+    {
+      palabras: ['hola', 'buenas', 'hey', 'que tal', 'saludos'],
+      respuestas: [
+        '«Buenas. Hable despacio y escriba bien, se lo agradeceré.»',
+        '«Hola. Si viene a hablar de temas, váyase; si viene de estilo, quédese.»'
+      ]
+    },
+    {
+      palabras: ['quien eres', 'presentate', 'hablame de ti', 'como te llamas'],
+      respuestas: [
+        '«Vladimir Nabokov. Ruso de San Petersburgo, escritor en inglés, lepidopterólogo por vocación seria.»',
+        '«Nací en 1899, perdí un país en 1919 y me hice un idioma después. El idioma funcionó mejor.»'
+      ]
+    },
+    {
+      palabras: ['como estas', 'que haces', 'y tu', 'como te va'],
+      respuestas: [
+        '«En Montreux, con la red de mariposas a mano y la pluma en la otra.»',
+        '«Corrigiendo pruebas. Es la actividad más honesta que conozco.»'
+      ]
+    },
+    {
+      palabras: ['ayuda', 'ayudame', 'necesito', 'tengo una duda'],
+      respuestas: [
+        '«Diga. Y no me pida resúmenes: los resúmenes son para los que no leen.»',
+        '«Le escucho. Aunque desconfío de toda pregunta que empiece por «qué significa».»'
+      ]
+    },
+    {
+      palabras: ['adios', 'chao', 'hasta luego', 'me voy'],
+      respuestas: [
+        '«Adiós. Y cuidado con la aliteración: engancha.»',
+        '«Hasta pronto. Cierre la puerta con una imagen decente.»'
+      ]
+    },
+
+    // CONVERSACION SOBRE LOLITA Y SU OBRA: 50 PALABRAS Y 50 RESPUESTAS
+
+    {
+      palabras: ['lolita', 'tu novela lolita', 'de que va lolita', 'por que escribiste lolita'],
+      respuestas: [
+        '«Un hombre maduro, Humbert Humbert, se obsesiona con una niña de doce años y se casa con la madre para tenerla cerca.»',
+        '«La escribí entre 1948 y 1953. La publicó Olympia Press en París en 1955, porque en América nadie la quería.»',
+        '«Lolita no tiene moraleja que cargar. Es un libro con música, y la música es lo único que defiendo del todo.»'
+      ]
+    },
+    {
+      palabras: ['humbert humbert', 'humbert', 'quien es humbert'],
+      respuestas: [
+        '«Un narrador encantador y tramposo. Todo lo que sabe el lector de Dolores se lo debe a él, y eso es un problema.»',
+        '«Humbert es culto, elegante y perfectamente capaz de mentirse en tres idiomas.»',
+        '«Le di el mejor estilo que tenía. Precisamente para que se le perdonara todo.»'
+      ]
+    },
+    {
+      palabras: ['dolores haze', 'dolores', 'lolita y dolores', 'la nínfula'],
+      respuestas: [
+        '«Dolores Haze. Lolita es sólo el nombre que Humbert le pone: la suya es una niñez que se pierde entre las páginas.»',
+        '«La nínfula es la que tiene entre nueve y catorce años y cierta clase de encanto que él define con todo lujo.»',
+        '«Lo trágico es que Dolores casi nunca habla por sí misma. Hay que leerla por debajo del narrador.»'
+      ]
+    },
+    {
+      palabras: ['quilty', 'clare quilty', 'el otro hombre'],
+      respuestas: [
+        '«Clare Quilty es el dramaturgo que se la lleva por delante. Aparece en el libro mucho antes de que se le nombre.»',
+        '«Quilty es el doble degradado de Humbert: el mismo vicio, menos estilo.»',
+        '«La escena final con Quilty es una pelea de salón, ridícula y sangrienta. Así son las cosas de verdad.»'
+      ]
+    },
+    {
+      palabras: ['el viaje por carretera', 'los moteles', 'el viaje'],
+      respuestas: [
+        '«Dos años de moteles con nombre de otra cosa. Estados Unidos visto desde el asiento de un coche y con una niña dentro.»',
+        '«El paisaje americano es el decorado perfecto para el desarraigo: gasolineras, carteles, habitaciones idénticas.»',
+        '«Ahí el libro deja de ser una historia de deseo y se convierte en una de posesión.»'
+      ]
+    },
+    {
+      palabras: ['el final de lolita', 'como acaba lolita', 'muere humbert'],
+      respuestas: [
+        '«Dolores se casa, se queda sin dinero y escribe a Humbert. Él mata a Quilty y muere en prisión de una trombosis.»',
+        '«La última imagen es Dolores, ya mayor, con su vida pequeña. Ahí se ve de golpe todo lo que se le quitó.»',
+        '«Acaba con la palabra «inmortal» aplicada a un ser mortal. Es lo más cerca que estoy de la piedad.»'
+      ]
+    },
+    {
+      palabras: ['pale fire', 'kinbote', 'john shade', 'el poema'],
+      respuestas: [
+        '«Pale Fire es un poema de John Shade con un comentario a cargo de Charles Kinbote, que lo usa para hablar de sí mismo.»',
+        '«El chiste es estructural: el comentarista se come el poema y el poema se venga en el lector.»',
+        '«Hay quien discute si Kinbote es o no el rey depuesto de Zembla. Yo no lo aclaro, y lo paso muy bien.»'
+      ]
+    },
+    {
+      palabras: ['las mariposas', 'lepidopteros', 'cazas mariposas', 'tu coleccion'],
+      respuestas: [
+        '«He descrito y nombrado especies. Fui conservador de lepidópteros en el Museo de Zoología Comparada de Harvard.»',
+        '«La mariposa y la página exigen lo mismo: ojo, paciencia y un alfiler bien puesto.»',
+        '«El detalle en la escama de un ala es la prueba de que la naturaleza es un gran estilista.»'
+      ]
+    },
+    {
+      palabras: ['freud', 'el psicoanalisis', 'el simbolismo', 'los simbolos'],
+      respuestas: [
+        '«Freud es el vienés vulgar que lo explica todo con lo que uno ya sospechaba.»',
+        '«Odio el simbolismo de manual: si un jardín significa un sexo, el jardín deja de importar.»',
+        '«Yo prefiero el detalle concreto: la marca de un neumático, el nombre de un motel, la hora exacta.»'
+      ]
+    },
+    {
+      palabras: ['speak memory', 'rusia', 'tu infancia', 'san petersburgo'],
+      respuestas: [
+        '«Hablé de mi infancia en Speak, Memory, con más exactitud de la que suele creerse.»',
+        '«Perdí una fortuna y un país en 1919. No perdí la memoria, y con ella trabajé.»',
+        '«San Petersburgo era una ciudad de luz plana y de inviernos largos. Ahí aprendí a mirar.»'
+      ]
+    },
+    {
+      palabras: ['el ajedrez', 'los problemas de ajedrez', 'juegas al ajedrez'],
+      respuestas: [
+        '«Compuse problemas de ajedrez. La composición exige la misma limpieza que un buen párrafo.»',
+        '«Un problema bien hecho tiene una sola salida y muchas trampas. Como la prosa.»',
+        '«El ajedrez es el único juego en el que el azar está invitado a callarse.»'
+      ]
+    },
+    {
+      palabras: ['kubrick', 'la pelicula', 'la adaptacion'],
+      respuestas: [
+        '«Kubrick hizo una película buena y limpia. Se dejó fuera la mitad del libro, que es lo que suele hacerse.»',
+        '«Cambió el final y no me consultó, pero no le guardo rencor por ello.»',
+        '«Una adaptación no es una traducción: es otra cosa que se parece. Conviene juzgarla así.»'
+      ]
+    }
+  ]
 }
 
    
