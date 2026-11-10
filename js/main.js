@@ -220,6 +220,7 @@ const Juego = (() => {
     if (/\b(life|telegram)\b|red social/.test(cmd)) return abrirApp(cmd);
     const [verbo, ...resto] = cmd.split(' ');
     const arg = resto.join(' ');
+        if (['abrir', 'mirar', 'ver', 'examinar'].includes(verbo) && /mensaje/.test(arg)) return leerMensaje();
     if (verbo === 'ir') return ir(arg);
     if (['examinar', 'ver', 'mirar'].includes(verbo)) return examinar(arg);
     if (verbo === 'subir' && /temperatura|caldera|calefaccion/.test(arg)) return Ordenes.subirTemperatura();
