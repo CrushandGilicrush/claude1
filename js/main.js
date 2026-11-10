@@ -196,13 +196,17 @@ const Juego = (() => {
   }
 
   /* Comandos de texto: globales o ligados a una estancia y un objeto. */
-  function comandoTexto(verbo, arg) {
-    const c = Datos.comandosTexto.find(c => c.verbos.includes(verbo) && (!c.objetos || c.objetos.includes(sinArticulo(arg))));
+    function comandoTexto(verbo, arg) {
+    const frase = (verbo + ' ' + arg).trim();
+    const c = Datos.comandosTexto.find(c => {
+      const v = c.verbos.map(norm).find(v => frase === v || frase.startsWith(v + ' '));
+      if (v === undefined) return false;
+      return !c.objetos || c.objetos.map(norm).includes(sinArticulo(frase.slice(v.length).trim()));
+    });
     if (!c) return false;
     UI.log(c.estancia && c.estancia !== estado.estancia ? c.fuera : c.texto);
     return true;
   }
-
   function ayuda() {
     UI.log('Comandos: «ir a [estancia]», «examinar [objeto]», «coger [objeto]», «leer [objeto]», «encender móvil», «encender ordenador», «mirar red social», «abrir telegram», «escribir [mensaje]», «hacer foto [objeto]», «enviar foto», «cerrar», «llamar a la policía».');
   }
