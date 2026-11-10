@@ -108,7 +108,7 @@ const Datos = {
     { verbos: ['bostezar', 'bosteza'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
     { verbos: ['bostezar', 'bosteza', 'bostezas'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
 { verbos: ['reir', 'reirse', 'reirme', 'sonreir'], texto: 'Se te escapa una risa. No parece que hayas entendido todavía la gravedad de la situación.' },
-{ verbos: ['usar', 'sacar'], inventario: 'satisfyer', objetos: ['satisfyer'],texto: 'Funciona como el primer día. Te corres poco después.', fuera: 'No hay ningún satisfyer por aquí.' },
+{ verbos: ['usar', 'sacar'], inventario: 'satisfyer', objetos: ['satisfyer'],texto: 'Funciona como el primer día. Te corres poco después.','El satisfyer es tu mejor amigo',  fuera: 'No hay ningún satisfyer por aquí.' },
    
 { verbos: ['llorar', 'llorarme', 'sollozar', 'gimotear'], texto: 'Las lágrimas empiezan a recorrer tus mejillas. Procura recomponerte; todavía no hemos terminado.' },
 { verbos: ['gritar', 'chillar', 'vociferar', 'berrear'], texto: 'Lanzas un grito al aire. El ruido no cambia absolutamente nada.' },
