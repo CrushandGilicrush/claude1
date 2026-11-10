@@ -89,7 +89,7 @@ const Datos = {
     habitacion: { nombre: 'Habitación', imagen: 'img/habitacion2.png', desc: 'Tu espacio privado. Contiene la cama, el armario, un espejo y una cómoda con cajón.' },
     despacho: { nombre: 'Despacho', imagen: 'img/despacho.png', desc: 'Zona de trabajo con un ordenador de sobremesa, escritorio, juegos de mesa y un cuadro.' },
     cocina: { nombre: 'Cocina', imagen: 'img/cocina1.png', desc: 'Equipada con cocina, cafetera, nevera y una caldera con panel digital.' },
-    bano: { nombre: 'Baño', imagen: 'img/baño.png', desc: 'Dispone de inodoro, lavabo, ducha y un pequeño mueble.' },
+    bano: { nombre: 'el baño', imagen: 'img/baño.png', desc: 'Se trata de una estancia pequeña pero confortable, iluminada por una luz tenue que apenas consigue disipar las sombras de los rincones. A un lado se encuentra el inodoro, junto al lavabo, cuya superficie de porcelana conserva algunas marcas de uso. Sobre él, un espejo refleja la estancia con claridad. Bajo este, pergado a la pared hay un mueble de baño con varios compartimentos donde se guardan los productos de higiene y otros objetos cotidianos. Al fondo, la ducha, protegida por una mampara de cristal, permanece silenciosa. ' },
     terraza: { nombre: 'Terraza', imagen: 'img/terraza.png', desc: 'Espacio exterior con macetas y una tumbona cómoda.' }
   },
   /* Descripciones provisionales de «examinar»: reescribir a gusto. */
@@ -182,10 +182,10 @@ const Datos = {
 { verbos: ['lavarse', 'lavar'], estancia: 'bano', texto: 'Abres el grifo, te enjabonas las manos y las aclaras cuidadosamente.', fuera: 'No tienes ningún lavabo a mano.' },
 { verbos: ['cepillarse', 'cepillar', 'lavarse'], estancia: 'bano', objetos: ['dientes', 'cepillo dientes'], texto: 'Coges el cepillo de dientes y te los limpias durante un par de minutos.', fuera: 'No tienes ningún cepillo de dientes por aquí.' },
 { verbos: ['peinarse', 'peinar'], estancia: 'bano', texto: 'Te pasas el peine por el cabello intentando poner un poco de orden.', fuera: 'No encuentras ningún peine por aquí.' },
-{ verbos: ['abrir', 'destapar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Abres el grifo. El agua empieza a correr por el lavabo.', fuera: 'No ves ningún grifo por aquí.' },
-{ verbos: ['cerrar', 'cortar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Cierras el grifo y el agua deja de correr.', fuera: 'No ves ningún grifo por aquí.' },
-{ verbos: ['secarse', 'secar'], estancia: 'bano', texto: 'Coges la toalla y te secas cuidadosamente.', fuera: 'No encuentras ninguna toalla por aquí.' },
-    { verbos: ['limpiar', 'limpia'], estancia: 'bano', objetos: ['inodoro', 'taza', 'wc'], texto: 'Te pones de rodillas y limpias el borde de la taza.', fuera: 'No ves ningún inodoro por aquí.' }
+{ verbos: ['abrir', 'destapar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Abres el grifo. El agua empieza a correr por el lavabo, deslizándose sin prisa hacia el desagüe. Te quedas observándola mientras desaparece, incapaz de retener ni una sola gota. Piensas que la vida se parece bastante a ese pequeño espectáculo: los minutos se escurren ante tus ojos, uno detrás de otro, y tú permaneces inmóvil, contemplando cómo se pierden. Quizá algún día comprendas que el tiempo, como el agua, no regresa una vez que se ha ido. ', fuera: 'No ves ningún grifo por aquí.' },
+{ verbos: ['cerrar', 'cortar'], estancia: 'bano', objetos: ['grifo', 'grifos'], texto: 'Cierras el grifo y el agua deja de correr. ', fuera: 'No ves ningún grifo por aquí.' },
+{ verbos: ['secarse', 'secar'], estancia: 'bano', texto: 'Coges la toalla y te secas cuidadosamente', fuera: 'No encuentras ninguna toalla por aquí.' },
+    { verbos: ['limpiar', 'limpia'], estancia: 'bano', objetos: ['inodoro', 'taza', 'wc'], texto: 'Te pones de rodillas y limpias el borde de la taza con la lengua. Ojalá hubiera alguien que te sujetara la cabeza para que no pudieras levantarla. Sigue limpiando...', fuera: 'No ves ningún inodoro por aquí.' }
   ],
   /* Puzzle de ajedrez. `soluciones`: jugadas ganadoras en minúsculas, «origen destino». */
   ajedrez: {
