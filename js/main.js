@@ -6,7 +6,7 @@ const Juego = (() => {
     desnuda: false, cafeHecho: false, cafeTomado: false, mensajeLeido: false, cuadroVisto: false, contactado: false
   };
   const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
-  const sinArticulo = t => t.replace(/^(a|al|la|el|los|las|un|una|de|del)\s+/, '').replace(/^(a|al|la|el|de|del)\s+/, '');
+   const sinArticulo = t => t.replace(/^(en|sobre|contra|a|al|la|el|los|las|un|una|de|del)\s+/, '').replace(/^(a|al|la|el|los|las|un|una|de|del)\s+/, '');
   const T = (clave, datos = {}) => Datos.textos[clave].replace(/\{(\w+)\}/g, (_, k) => datos[k] !== undefined ? datos[k] : Datos[k]);
 
   /* ---------- Estancias y objetos ---------- */
