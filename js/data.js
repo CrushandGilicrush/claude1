@@ -75,7 +75,7 @@ const Datos = {
     recuerdaRotulador: '«Te he pedido que te escribas una frase en el brazo con un rotulador y me mandes una foto. Hazlo bien.»',
     recuerdaGenerico: '«Eso no es lo que te he pedido.»',
     recuerdaDesnudarse: '«Te he dicho que te desnudaras. Hazlo y vuelve a mandármela.»',
-    desnudarse: 'Con las manos temblorosas, te quitas la ropa.',
+    desnudarse: 'Con las manos temblorosas, te quitas toda la ropa. Estás completamente desnuda, vulnerable.',
     yaDesnuda: 'Ya estás desnuda.',
     policiaSinMotivo: 'No ha pasado nada que merezca llamar a la policía.'
   },
