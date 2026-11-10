@@ -111,8 +111,73 @@ const Datos = {
     { verbos: ['encender', 'enciende'], estancia: 'cocina', objetos: ['cafetera'], texto: 'Ya está encendida.', fuera: 'No ves ninguna cafetera por aquí.' },
     //baño
     { verbos: ['mirarse', 'mirar', 'observar'], estancia: 'bano', objetos: ['espejo'], texto: 'Te observas detenidamente en el espejo. Tu reflejo te devuelve una mirada algo cansada.', fuera: 'No ves ningún espejo por aquí.' },
-{ verbos: ['mear', 'orinar', 'hacer pis'], estancia: 'bano', texto: 'Levantas la tapa y haces pis. Después tiras de la cadena.', fuera: 'No hay ningún inodoro por aquí.' },
-{ verbos: ['cagar', 'defecar', 'hacer caca'], estancia: 'bano', texto: 'Te sientas en el inodoro y haces tus necesidades. Después tiras de la cadena.', fuera: 'No hay ningún inodoro por aquí.' },
+// MEAR SIN OBJETO
+{
+  verbos: ['mear', 'orinar', 'hacer pis', 'hacer pipi', 'echar una meada', 'miccionar'],
+  estancia: 'bano',
+  objetos: [],
+  texto: 'Te acercas al inodoro, levantas la tapa y haces pis. Hmmmm... qué bien te sientes. Después tiras de la cadena. ',
+  fuera: 'No hay ningún inodoro por aquí.'
+},
+
+// CAGAR SIN OBJETO
+{
+  verbos: ['cagar', 'defecar', 'hacer caca', 'hacer de vientre', 'echar un zurullo', 'hacer popo'],
+  estancia: 'bano',
+  objetos: [],
+  texto: 'Te sientas en el inodoro y haces tus necesidades. Después tiras de la cadena. Todo correcto. Te sientes mejor. Y hasta aquí la descripción de lo que acabas de hacer. ',
+  fuera: 'No hay ningún inodoro por aquí.'
+},
+
+// MEAR EN OBJETOS CONCRETOS
+{
+  verbos: ['mear', 'orinar', 'hacer pis', 'hacer pipi', 'echar una meada', 'miccionar'],
+  estancia: 'bano',
+  objetos: ['ducha'],
+  texto: 'Aunque no es el lugar apropiado para ello, decides mear en la ducha. Cosas peores has hecho.',
+  fuera: 'No hay ninguna ducha por aquí.'
+},
+
+{
+  verbos: ['mear', 'orinar', 'hacer pis', 'hacer pipi', 'echar una meada', 'miccionar'],
+  estancia: 'bano',
+  objetos: ['lavabo'],
+  texto: 'Decides mear en el lavabo. No parece una decisión especialmente acerta. Alguien debería obligarte a limpiarlo con la lengua, cerda.',
+  fuera: 'No hay ningún lavabo por aquí.'
+},
+
+{
+  verbos: ['mear', 'orinar', 'hacer pis', 'hacer pipi', 'echar una meada', 'miccionar'],
+  estancia: 'bano',
+  objetos: ['suelo'],
+  texto: 'Sin preocuparte demasiado por las consecuencias, decides mear directamente en el suelo del baño. Alguien debería obligarte a limpiarlo con la lengua, cerda.',
+  fuera: 'No hay ningún suelo por aquí.'
+},
+
+// CAGAR EN OBJETOS CONCRETOS
+{
+  verbos: ['cagar', 'defecar', 'hacer caca', 'hacer de vientre', 'echar un zurullo', 'hacer popo'],
+  estancia: 'bano',
+  objetos: ['ducha'],
+  texto: 'Decides hacer tus necesidades en la ducha. A ti, y solo a ti, se le podrìa ocurrir hacer algo así. No tienes remedio.',
+  fuera: 'No hay ninguna ducha por aquí.'
+},
+
+{
+  verbos: ['cagar', 'defecar', 'hacer caca', 'hacer de vientre', 'echar un zurullo', 'hacer popo'],
+  estancia: 'bano',
+  objetos: ['lavabo'],
+  texto: '¿De verdad quieres cagar en el lavabo? Estás fatal...',
+  fuera: 'No hay ningún lavabo por aquí.'
+},
+
+{
+  verbos: ['cagar', 'defecar', 'hacer caca', 'hacer de vientre', 'echar un zurullo', 'hacer popo'],
+  estancia: 'bano',
+  objetos: ['suelo'],
+  texto: 'Te agachas y haces tus necesidades directamente en el suelo del baño. La escena es bastante desagradable.',
+  fuera: 'No hay ningún suelo por aquí.'
+},
 { verbos: ['ducharse', 'duchar', 'bañarse'], estancia: 'bano', texto: 'Abres el grifo y te das una ducha. El agua caliente te ayuda a relajarte durante unos minutos.', fuera: 'No ves ninguna ducha por aquí.' },
 { verbos: ['lavarse', 'lavar'], estancia: 'bano', texto: 'Abres el grifo, te enjabonas las manos y las aclaras cuidadosamente.', fuera: 'No tienes ningún lavabo a mano.' },
 { verbos: ['cepillarse', 'cepillar', 'lavarse'], estancia: 'bano', objetos: ['dientes', 'cepillo dientes'], texto: 'Coges el cepillo de dientes y te los limpias durante un par de minutos.', fuera: 'No tienes ningún cepillo de dientes por aquí.' },
