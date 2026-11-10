@@ -108,8 +108,8 @@ const Datos = {
     { verbos: ['bostezar', 'bosteza'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
     { verbos: ['bostezar', 'bosteza', 'bostezas'], texto: 'Te llevas la mano a la boca y bostezas. Esta situación, más que inquietarte, te da sueño.' },
 { verbos: ['reir', 'reirse', 'reirme', 'sonreir'], texto: 'Se te escapa una risa. No parece que hayas entendido todavía la gravedad de la situación.' },
-{ verbos: ['usar'], estancia: 'bano', objetos: ['satisfyer'],texto: 'Funciona como el primer día. Te corres poco después.', fuera: 'No hay ningún satisfyer por aquí.' },
-
+{ verbos: ['usar', 'sacar'], inventario: 'satisfyer', objetos: ['satisfyer'],texto: 'Funciona como el primer día. Te corres poco después.', fuera: 'No hay ningún satisfyer por aquí.' },
+   
 { verbos: ['llorar', 'llorarme', 'sollozar', 'gimotear'], texto: 'Las lágrimas empiezan a recorrer tus mejillas. Procura recomponerte; todavía no hemos terminado.' },
 { verbos: ['gritar', 'chillar', 'vociferar', 'berrear'], texto: 'Lanzas un grito al aire. El ruido no cambia absolutamente nada.' },
 { verbos: ['susurrar', 'murmurar', 'musitar'], texto: 'Murmuras algo entre dientes. Si tienes algo que decir, quizá deberías hacerlo con más convicción.' },
@@ -258,7 +258,8 @@ const Datos = {
     { item: 'calabacín', nombres: /calabac/, estancia: 'cocina',
       texto: 'Coges un calabacín de la nevera.', yaTienes: 'Ya tienes el calabacín.' },
     { item: 'rotulador', nombres: /rotulador/, estancia: 'habitacion', requiere: 'cajon',
-      bloqueado: 'El cajón está cerrado con llave.', texto: 'Coges el rotulador del cajón.', yaTienes: 'Ya tienes el rotulador.' }
+      bloqueado: 'El cajón está cerrado con llave.', texto: 'Coges el rotulador del cajón.', yaTienes: 'Ya tienes el rotulador.' },
+      { item: 'satisfyer', nombres: /satisfyer/, estancia: 'bano', texto: 'Coges el satisfyer.', yaTienes: 'Ya tienes el satisfyer.' },
   ],
   verduras: ['huevos', 'leche', 'queso', 'una bandeja de pollo', 'zanahorias', 'judías verdes', 'tomates', 'un calabacín', 'pimientos'],
   /* Un final por cada valor del contador (0-4) y el de las consecuencias (5). */
