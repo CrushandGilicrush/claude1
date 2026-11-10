@@ -245,7 +245,7 @@ const Datos = {
     yaResuelto: 'Ya has ganado esta partida.'
   },
   /* Imágenes de objetos: se muestran en el visor al examinarlos («cerrar» vuelve a la estancia). */
-  imagenesObjetos: { caldera: 'img/contador.png', cuadro: 'img/cuadro.png', libro: 'img/libro.png' },
+  imagenesObjetos: { caldera: 'img/contador.png', cuadro: 'img/cuadro.png', inodoro: 'img/inodoro.png', libro: 'img/libro.png' },
   /* Objetos que se pueden coger («coger [objeto]»). */
   cogibles: [
     { item: 'libro', nombres: /libro|perversion|emily/, estancia: 'salon',
