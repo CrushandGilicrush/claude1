@@ -163,7 +163,6 @@ const Datos = {
 {
   verbos: ['mear', 'orinar', 'hacer pis', 'hacer pipi', 'echar una meada', 'miccionar'],
   estancia: 'bano',
-  objetos: [],
   texto: 'Te acercas al inodoro, levantas la tapa y haces pis. Hmmmm... qué bien te sientes. Después tiras de la cadena. ',
   fuera: 'No hay ningún inodoro por aquí.'
 },
@@ -172,7 +171,6 @@ const Datos = {
 {
   verbos: ['cagar', 'defecar', 'hacer caca', 'hacer de vientre', 'echar un zurullo', 'hacer popo'],
   estancia: 'bano',
-  objetos: [],
   texto: 'Te sientas en el inodoro y haces tus necesidades. Después tiras de la cadena. Todo correcto. Te sientes mejor. Y hasta aquí la descripción de lo que acabas de hacer. ',
   fuera: 'No hay ningún inodoro por aquí.'
 },
