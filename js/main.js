@@ -196,15 +196,22 @@ const Juego = (() => {
   }
 
   /* Comandos de texto: globales o ligados a una estancia y un objeto. */
-    function comandoTexto(verbo, arg) {
+     function comandoTexto(verbo, arg) {
     const frase = (verbo + ' ' + arg).trim();
-    const c = Datos.comandosTexto.find(c => {
+    let mejor = null, puntos = 0;
+    for (const c of Datos.comandosTexto) {
       const v = c.verbos.map(norm).find(v => frase === v || frase.startsWith(v + ' '));
-      if (v === undefined) return false;
-      return !c.objetos || c.objetos.map(norm).includes(sinArticulo(frase.slice(v.length).trim()));
-    });
-    if (!c) return false;
-    UI.log(c.estancia && c.estancia !== estado.estancia ? c.fuera : c.texto);
+      if (v === undefined) continue;
+      const objeto = sinArticulo(frase.slice(v.length).trim());
+      let p;
+      if (!c.objetos) p = 1;                                    // sin objetos: vale para cualquiera
+      else if (c.objetos.map(norm).includes(objeto)) p = 2;     // objeto exacto: gana a la genérica
+      else continue;
+      if (c.estancia === estado.estancia) p += 4;               // se prefiere la entrada de esta estancia
+      if (p > puntos) { mejor = c; puntos = p; }
+    }
+    if (!mejor) return false;
+    UI.log(mejor.estancia && mejor.estancia !== estado.estancia ? mejor.fuera : mejor.texto);
     return true;
   }
   function ayuda() {
