@@ -153,7 +153,7 @@ const Datos = {
 { verbos: ['cascarsela', 'cascársela', 'cascarmela', 'cascármela', 'pelarsela', 'pelársela', 'pelarmela', 'pelármela'], texto: 'Decides aliviar tensiones por tu cuenta. No parece que tengas demasiada prisa por continuar.' },
 { verbos: ['excitarse', 'excitarme', 'calentarse', 'calentarme'], texto: 'Te dejas llevar por tus pensamientos y empiezas a excitarte. Parece que tu imaginación trabaja a pleno rendimiento.' },
 { verbos: ['lavarse', 'lavarme', 'asearse', 'asearme', 'ducharse', 'ducharme'], texto: 'Decides asearte. Una buena higiene siempre es recomendable, incluso en las circunstancias más extrañas.' },
-{ verbos: ['escuchar', 'escucharme', 'prestar atencion', 'prestar atención'], texto: 'Agudizas el oído y prestas atención. Por fin parece que has decidido escuchar en lugar de hacer lo que te viene en gana.' }
+{ verbos: ['escuchar', 'escucharme', 'prestar atencion', 'prestar atención'], texto: 'Agudizas el oído y prestas atención. Por fin parece que has decidido escuchar en lugar de hacer lo que te viene en gana.' },
     { verbos: ['gritar', 'grita'], texto: 'Gritas de impotencia, pero nadie parece oírte (o quizá sí).' },
     { verbos: ['encender', 'enciende'], estancia: 'cocina', objetos: ['cafetera'], texto: 'Enciendes la cafetera', fuera: 'No ves ninguna cafetera por aquí.' },
     { verbos: ['encender', 'enciende'], estancia: 'cocina', objetos: ['cafetera'], texto: 'Ya está encendida.', fuera: 'No ves ninguna cafetera por aquí.' },
