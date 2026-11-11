@@ -184,7 +184,7 @@ const Personajes = (() => {
         '«La radiación de Hawking plantea una pregunta extraordinaria: ¿qué ocurre con la información de aquello que cae en un agujero negro?»'
       ]
     },
-     [
+     
   { "palabras": ["hola", "buenas", "qué tal", "hey"],
     "respuestas": ["«Hola. Ahora mismo te atraviesan billones de neutrinos solares y ni lo notas.»"] },
 
