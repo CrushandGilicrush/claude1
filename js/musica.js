@@ -12,8 +12,11 @@ const Musica = (() => {
   const lista = [
 
      { titulo: 'Memories of blue', archivo: 'audio/memories.mp3' },
+      { titulo: 'emisora 1', archivo: 'audio/1.mp3' },
       { titulo: 'El rey', archivo: 'audio/Copiapega.mp3' },
-     { titulo: 'Tiempo', archivo: 'audio/lapso1.mp3' }
+      { titulo: 'emisora 2', archivo: 'audio2s.mp3' },
+     { titulo: 'Tiempo', archivo: 'audio/lapso1.mp3' },
+      { titulo: 'emisora 3', archivo: 'audio/3.mp3' }
   ];
   const ajustes = {
     volumenSalon: 0.8,                // volumen en el salón (0 a 1)
