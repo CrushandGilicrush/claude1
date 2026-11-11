@@ -82,7 +82,7 @@ const Datos = {
   imagenSala: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80",
   imagenes: { movil: 'img/movil.svg', ordenador: 'img/ordenador.svg', life: 'img/mensaje.png', telegram: 'img/obedece.png' },
   intro: [
-    ['narrativo', 'Despierta. Está amaneciendo,  pero cuesta renunciar al calor de la manta. Te gusta remolonear. Has planeado procrastinar todo el día, pero antes de volcarte a tan dura tarea, quieres echar un vistazo a life y ver qué se cuece por ahí. Pero primero vas a tener que levantarte, y antes de ir a lo que tú llamas despacho y abrir el ordenador, quieres tomarte un café.']
+    ['narrativo', 'Despierta; está amaneciendo. Lo sé: cuesta renunciar al calor de la manta, y se está tan bien en la cama... Y con lo que te gusta remolonear. Has planeado procrastinar todo el día, pero debes hacer cosas. Venga, levanta, prepara un café y, antes de hacer nada, echas un vistazo a fetlife, a ver qué se mueve por ahí. antes de volcarte a tan dura tarea, quieres echar un vistazo a life y ver qué se cuece por ahí.']
   ],
   estancias: {
     salon: { nombre: 'Salón', imagen: 'img/salon.png', desc: 'Estancia principal. Hay un sofá, una biblioteca, radiadores y un mueble antiguo.' },
