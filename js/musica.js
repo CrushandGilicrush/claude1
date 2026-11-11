@@ -12,6 +12,7 @@ const Musica = (() => {
   const lista = [
 
      { titulo: 'fetlife', archivo: 'audio/lapso.mp3' },
+      { titulo: 'El rey del copia-pega', archivo: 'audio/Copiapega.mp3' },
      { titulo: 'Tiempo', archivo: 'audio/lapso1.mp3' }
   ];
   const ajustes = {
