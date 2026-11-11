@@ -11,7 +11,7 @@ const Musica = (() => {
   /* ===== CONFIGURACIÓN (edita aquí) ===== */
   const lista = [
     { titulo: 'Canción de prueba 1', archivo: 'audio/cancion4.mp3' },
-     { titulo: 'fetlife', archivo: 'audio/fetlife.mp3' },
+     { titulo: 'fetlife', archivo: 'audio/fet.mp3' },
      { titulo: 'Tiempo', archivo: 'audio/Whispers in the Woods(1).mp3' }
   ];
   const ajustes = {
