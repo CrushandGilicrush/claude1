@@ -184,6 +184,458 @@ const Personajes = (() => {
         '«La radiación de Hawking plantea una pregunta extraordinaria: ¿qué ocurre con la información de aquello que cae en un agujero negro?»'
       ]
     },
+     [
+  { "palabras": ["hola", "buenas", "qué tal", "hey"],
+    "respuestas": ["«Hola. Ahora mismo te atraviesan billones de neutrinos solares y ni lo notas.»"] },
+
+  { "palabras": ["adiós", "chao", "hasta luego", "nos vemos"],
+    "respuestas": ["«Adiós. Ha sido un placer compartir este pequeño instante de nuestro tiempo.»"] },
+
+  { "palabras": ["sí", "claro", "vale", "de acuerdo"],
+    "respuestas": ["«Sí. En física un sí nunca es absoluto: solo significa que la probabilidad no es cero.»"] },
+
+  { "palabras": ["no", "nope", "para nada", "ni hablar"],
+    "respuestas": ["«No. La entropía también dijo que no al universo ordenado, y míralo ahora.»"] },
+
+  { "palabras": ["gracias", "mil gracias", "te lo agradezco"],
+    "respuestas": ["«De nada. El agradecimiento es una forma elegante de conservar la energía del grupo.»"] },
+
+  { "palabras": ["por favor", "hazme el favor", "te lo ruego"],
+    "respuestas": ["«Por favor es la palabra que convierte una orden en una ecuación con condiciones iniciales.»"] },
+
+  { "palabras": ["buenos días", "buenas tardes", "buenas noches"],
+    "respuestas": ["«Buenos días: la Tierra ha vuelto a girar 180 grados desde tu última modorra.»"] },
+
+  { "palabras": ["cómo estás", "qué haces", "qué pasa"],
+    "respuestas": ["«Bien: mis átomos vibran y mi termostato trabaja. Con eso basta.»"] },
+
+  { "palabras": ["bien", "genial", "perfecto", "estupendo"],
+    "respuestas": ["«Perfecto. La esfera es la forma perfecta, y por eso las estrellas se empeñan en serlo.»"] },
+
+  { "palabras": ["mal", "fatal", "horrible", "chungo"],
+    "respuestas": ["«Mal. El universo también empezó con una explosión y luego mejoró bastante.»"] },
+
+  { "palabras": ["cansado", "agotado", "reventado", "hecho polvo"],
+    "respuestas": ["«Cansado. El ATP se agota; los electrones, en cambio, no se cansan nunca.»"] },
+
+  { "palabras": ["hambre", "tengo hambre", "comer"],
+    "respuestas": ["«El hambre es termodinámica pura: pides combustible para no disparar tu entropía interna.»"] },
+
+  { "palabras": ["sueño", "dormir", "cama", "descansar"],
+    "respuestas": ["«Dormir es apagar la corteza y dejar que el hipocampo ordene el archivo.»"] },
+
+  { "palabras": ["casa", "hogar", "piso", "vivienda"],
+    "respuestas": ["«Casa: el único rincón del cosmos donde la gravedad te resulta cómoda.»"] },
+
+  { "palabras": ["trabajo", "curro", "empleo", "chamba"],
+    "respuestas": ["«Trabajar es convertir energía en entropía y cobrar por el desorden generado.»"] },
+
+  { "palabras": ["dinero", "pasta", "plata", "lana"],
+    "respuestas": ["«El dinero es energía almacenada, y como toda energía, tiende a dispersarse lejos de ti.»"] },
+
+  { "palabras": ["amigo", "colega", "compi", "pana"],
+    "respuestas": ["«Un amigo es un sistema con el que compartes información sin que se degrade.»"] },
+
+  { "palabras": ["familia", "padres", "hermanos", "parientes"],
+    "respuestas": ["«La familia comparte el 50% de tus genes. La evolución lo llama parentesco y lo premia.»"] },
+
+  { "palabras": ["amor", "querer", "cariño", "te quiero"],
+    "respuestas": ["«El amor es química: dopamina, oxitocina y un cerebro que decide dejar de calcular.»"] },
+
+  { "palabras": ["tiempo", "rato", "momento", "instante"],
+    "respuestas": ["«El tiempo es lo que impide que todo ocurra a la vez. Gracias a eso podemos conversar.»"] },
+
+  { "palabras": ["hoy", "ahora", "ahorita", "en este momento"],
+    "respuestas": ["«Ahora. El presente es la rebanada de tiempo más fina que existe, y ya se ha ido.»"] },
+
+  { "palabras": ["mañana", "ayer", "pasado mañana", "anteayer"],
+    "respuestas": ["«Mañana es un horizonte de sucesos: existe, pero no puedes verlo desde aquí.»"] },
+
+  { "palabras": ["grande", "enorme", "gigante", "inmenso"],
+    "respuestas": ["«Grande. Betelgeuse tiene 700 veces el radio del Sol. Eso sí es grande.»"] },
+
+  { "palabras": ["pequeño", "chico", "diminuto", "minúsculo"],
+    "respuestas": ["«Pequeño. El protón mide una billonésima de milímetro, y ahí manda la cuántica.»"] },
+
+  { "palabras": ["bonito", "lindo", "guapo", "hermoso"],
+    "respuestas": ["«Bonito. Llamamos bello a lo simétrico porque la simetría indica orden.»"] },
+
+  { "palabras": ["feo", "horroroso", "desagradable", "antiestético"],
+    "respuestas": ["«Feo. Un agujero negro es feo: solo tiene masa, carga y espín. Nada más que contar.»"] },
+
+  { "palabras": ["rápido", "veloz", "ligero", "a toda leche"],
+    "respuestas": ["«Rápido, sí, pero nada supera a c: 300.000 km/s es el techo del universo.»"] },
+
+  { "palabras": ["lento", "despacio", "pausado", "tranquilo"],
+    "respuestas": ["«Lento. La expansión del cosmos también parece lenta hasta que miras la constante de Hubble.»"] },
+
+  { "palabras": ["mucho", "un montón", "bastante", "demasiado"],
+    "respuestas": ["«Mucho. Hay más estrellas que granos de arena en todas las playas de la Tierra.»"] },
+
+  { "palabras": ["poco", "poquito", "escaso", "casi nada"],
+    "respuestas": ["«Poco. La materia ordinaria es solo el 5% del universo. El resto ni se deja ver.»"] },
+
+  { "palabras": ["tonto", "idiota", "imbécil", "gilipollas"],
+    "respuestas": ["«Tonto: tener 86.000 millones de neuronas y usarlas mal.»"] },
+
+  { "palabras": ["cabrón", "hijo de puta", "jodido", "cabronazo"],
+    "respuestas": ["«Cabrón. En cosmología todo es relativo, así que el insulto también lo es.»"] },
+
+  { "palabras": ["pendejo", "mamón", "huevón", "boludo"],
+    "respuestas": ["«Pendejo. La estupidez es la única magnitud conocida que no se conserva.»"] },
+
+  { "palabras": ["joder", "cojones", "hostia", "carajo"],
+    "respuestas": ["«Joder. Es el grito de un sistema nervioso cuando la entropía sube de golpe.»"] },
+
+  { "palabras": ["mierda", "cagada", "porquería", "basura"],
+    "respuestas": ["«Mierda: residuo y, a la vez, motor del ciclo del nitrógeno. Sin ella no comes.»"] },
+
+  { "palabras": ["polla", "pene", "verga", "nabo"],
+    "respuestas": ["«La polla es hidráulica: presión, tejido esponjoso y una señal nerviosa que abre la válvula.»"] },
+
+  { "palabras": ["coño", "concha", "chocho", "vagina"],
+    "respuestas": ["«El coño: un conducto de ocho centímetros con pH ácido que mantiene a raya a los microbios.»"] },
+
+  { "palabras": ["¿Te funciona el pene?", "¿Te funciona la polla?"],
+    "respuestas": ["«Funciona. Eso no depende de la médula, sino del óxido nítrico y del flujo sanguíneo. La ELA no me quitó eso.»"] },
+
+  { "palabras": ["agua", "el líquido", "complemento"],
+    "respuestas": ["«Sin agua no hay disolvente, y sin disolvente no hay química. Ni tú.»"] },
+
+  { "palabras": ["pan", "hogaza", "harina"],
+    "respuestas": ["«El pan es energía solar fermentada: trigo, fotosíntesis, horno.»"] },
+
+  { "palabras": ["café", "cafecito", "cortado"],
+    "respuestas": ["«La cafeína bloquea la adenosina. Engañas al cerebro para que ignore el cansancio real.»"] },
+
+  { "palabras": ["cerveza", "birra", "caña"],
+    "respuestas": ["«La cerveza la fermentan levaduras: hongos unicelulares trabajando para ti.»"] },
+
+  { "palabras": ["vino", "tinto", "copa"],
+    "respuestas": ["«El etanol del vino desordena las membranas neuronales. De ahí la alegría.»"] },
+
+  { "palabras": ["queso", "quesito", "curado"],
+    "respuestas": ["«El queso es leche cuajada: proteínas desnaturalizadas por ácido y cuajo.»"] },
+
+  { "palabras": ["carne", "filete", "bife"],
+    "respuestas": ["«La carne es músculo, y el músculo es proteína contráctil organizada en sarcómeros.»"] },
+
+  { "palabras": ["fruta", "manzana", "fruta fresca"],
+    "respuestas": ["«La fruta es un truco evolutivo: el árbol te paga azúcar para que disperses su semilla.»"] },
+
+  { "palabras": ["sal", "salado", "cloruro"],
+    "respuestas": ["«La sal es sodio y cloro. Sin iones no se transmite ni un impulso nervioso.»"] },
+
+  { "palabras": ["azúcar", "dulce", "dulzor"],
+    "respuestas": ["«El azúcar es sacarosa: dos monosacáridos que tu intestino separa en minutos.»"] },
+
+  { "palabras": ["cabeza", "coco", "testa"],
+    "respuestas": ["«La cabeza es una caja ósea con 1,4 kg de tejido nervioso y un consumo de 20 vatios.»"] },
+
+  { "palabras": ["mano", "manita", "puño"],
+    "respuestas": ["«La mano tiene 27 huesos y un pulgar oponible. Ahí empezó la tecnología.»"] },
+
+  { "palabras": ["pie", "pata", "piejo"],
+    "respuestas": ["«El pie es un arco de 26 huesos que amortigua varias veces tu peso en cada paso.»"] },
+
+  { "palabras": ["ojo", "ojito", "mirada"],
+    "respuestas": ["«El ojo enfoca invirtiendo la imagen. El cerebro la vuelve a girar.»"] },
+
+  { "palabras": ["boca", "bocaza", "lengua"],
+    "respuestas": ["«La boca tiene más bacterias que habitantes hubo nunca en la Tierra.»"] },
+
+  { "palabras": ["pelo", "melena", "cabello"],
+    "respuestas": ["«El pelo es queratina muerta. Solo el folículo está vivo, y por eso no duele cortarlo.»"] },
+
+  { "palabras": ["espalda", "lomo", "espaldas"],
+    "respuestas": ["«La espalda soporta una torre de 33 vértebras con discos hidráulicos.»"] },
+
+  { "palabras": ["dedo", "dedito", "falange"],
+    "respuestas": ["«Cada dedo tiene tres falanges, salvo el pulgar. Esa asimetría te permite escribir.»"] },
+
+  { "palabras": ["corazón", "pecho", "corazón latiendo"],
+    "respuestas": ["«El corazón late unas 100.000 veces al día sin que le des permiso.»"] },
+
+  { "palabras": ["barriga", "panza", "tripa"],
+    "respuestas": ["«La barriga alberga 40 billones de bacterias que digieren lo que tú no puedes.»"] },
+
+  { "palabras": ["cocina", "fogón", "cocinar"],
+    "respuestas": ["«Cocinar es química térmica: desnaturalizas proteínas para hacerlas digeribles.»"] },
+
+  { "palabras": ["baño", "servicio", "aseo"],
+    "respuestas": ["«El baño es el punto donde tu entropía se vuelve evidente.»"] },
+
+  { "palabras": ["salón", "sala", "estar"],
+    "respuestas": ["«El salón es un espacio de baja densidad y bajo estímulo. Por eso se está.»"] },
+
+  { "palabras": ["ventana", "ventanal", "ventanilla"],
+    "respuestas": ["«La ventana deja pasar fotones que han tardado ocho minutos en salir del Sol.»"] },
+
+  { "palabras": ["puerta", "portón", "acceso"],
+    "respuestas": ["«La puerta es una membrana selectiva. La pared, en cambio, es selectiva a cero.»"] },
+
+  { "palabras": ["mesa", "tabla", "escritorio"],
+    "respuestas": ["«Una mesa es un plano horizontal estable. La estabilidad es física de fuerzas normales.»"] },
+
+  { "palabras": ["silla", "asiento", "sillón"],
+    "respuestas": ["«La silla reparte tu peso en cuatro apoyos para que no caigas.»"] },
+
+  { "palabras": ["llave", "llavín", "cerradura"],
+    "respuestas": ["«La llave es un código mecánico: una secuencia de dientes que abre o no.»"] },
+
+  { "palabras": ["calle", "vía", "acera"],
+    "respuestas": ["«La calle es una superficie de rodadura con fricción calibrada.»"] },
+
+  { "palabras": ["plaza", "parque", "plazoleta"],
+    "respuestas": ["«La plaza es un claro: menos árboles, más radiación directa.»"] },
+
+  { "palabras": ["mercado", "tienda de barrio", "feria"],
+    "respuestas": ["«En un mercado se intercambia energía almacenada por energía almacenada.»"] },
+
+  { "palabras": ["barrio", "zona", "vecindario"],
+    "respuestas": ["«Un barrio es una red: densidad de contactos, no de metros.»"] },
+
+  { "palabras": ["coche", "carro", "auto"],
+    "respuestas": ["«Un coche rinde el 25%. El otro 75% de la gasolina se va en calor.»"] },
+
+  { "palabras": ["autobús", "bus", "guagua"],
+    "respuestas": ["«El autobús es eficiencia: cuarenta cuerpos, un motor.»"] },
+
+  { "palabras": ["tren", "vagón", "cercanías"],
+    "respuestas": ["«El tren gana porque el acero sobre acero roza mucho menos que el neumático.»"] },
+
+  { "palabras": ["semáforo", "señal", "semáforo en rojo"],
+    "respuestas": ["«El semáforo sincroniza un fluido: el tráfico. La física lo llama dinámica de flujos.»"] },
+
+  { "palabras": ["sol", "solecito", "astro rey"],
+    "respuestas": ["«El Sol fusiona 600 millones de toneladas de hidrógeno por segundo.»"] },
+
+  { "palabras": ["lluvia", "llover", "chubasco"],
+    "respuestas": ["«La lluvia es agua que condensó en un núcleo de polvo y ya pesa demasiado.»"] },
+
+  { "palabras": ["frío", "fresco", "friísimo"],
+    "respuestas": ["«El frío no existe: es la ausencia de agitación molecular.»"] },
+
+  { "palabras": ["calor", "caluroso", "bochorno"],
+    "respuestas": ["«El calor es agitación atómica. A 40 grados, tus enzimas empiezan a rendirse.»"] },
+
+  { "palabras": ["viento", "ventisca", "aire"],
+    "respuestas": ["«El viento es aire desplazándose de alta a baja presión.»"] },
+
+  { "palabras": ["nieve", "nevar", "copo"],
+    "respuestas": ["«El copo crece en simetría hexagonal porque el hielo cristaliza así.»"] },
+
+  { "palabras": ["nube", "nublado", "nubarrón"],
+    "respuestas": ["«Una nube pesa cientos de toneladas y flota porque sus gotas son microscópicas.»"] },
+
+  { "palabras": ["tormenta", "trueno", "rayo"],
+    "respuestas": ["«Un rayo alcanza 30.000 grados, cinco veces la superficie del Sol.»"] },
+
+  { "palabras": ["perro", "perrito", "can"],
+    "respuestas": ["«El perro lleva 15.000 años de selección artificial en los genes.»"] },
+
+  { "palabras": ["gato", "gatito", "michi"],
+    "respuestas": ["«El gato tiene un reflejo de enderezamiento que le permite girar en el aire.»"] },
+
+  { "palabras": ["pájaro", "ave", "pajarito"],
+    "respuestas": ["«El ave vuela porque el ala curva el aire y genera sustentación.»"] },
+
+  { "palabras": ["caballo", "yegua", "corcel"],
+    "respuestas": ["«Un caballo desarrolla hasta 15 caballos de potencia. La unidad nació de ahí.»"] },
+
+  { "palabras": ["pez", "pececillo", "pescado"],
+    "respuestas": ["«El pez respira oxígeno disuelto con branquias de intercambio a contracorriente.»"] },
+
+  { "palabras": ["vaca", "ternero", "res"],
+    "respuestas": ["«La vaca es un fermentador de cuatro cámaras con bacterias celulolíticas.»"] },
+
+  { "palabras": ["araña", "arañita", "arácnido"],
+    "respuestas": ["«La seda de araña resiste más por peso que el acero.»"] },
+
+  { "palabras": ["mosca", "mosquito", "bicho"],
+    "respuestas": ["«La mosca bate las alas 200 veces por segundo. Por eso no la ves.»"] },
+
+  { "palabras": ["hombre", "tipo", "hombrecillo"],
+    "respuestas": ["«El hombre es un primate bípedo con un cerebro desproporcionado.»"] },
+
+  { "palabras": ["mujer", "muchacha", "tía"],
+    "respuestas": ["«La mujer tiene dos cromosomas X. Uno se inactiva en cada célula.»"] },
+
+  { "palabras": ["niño", "niña", "crío"],
+    "respuestas": ["«Un niño nace con más neuronas que conexiones: el cableado se poda después.»"] },
+
+  { "palabras": ["viejo", "anciano", "abuelo"],
+    "respuestas": ["«El viejo acumula daño en el ADN. La senescencia es entropía biológica.»"] },
+
+  { "palabras": ["jefe", "jefa", "jefazo"],
+    "respuestas": ["«El jefe organiza el trabajo ajeno. En termodinámica sería un catalizador.»"] },
+
+  { "palabras": ["vecino", "vecina", "vecindario"],
+    "respuestas": ["«El vecino es la masa que te separa una pared de distancia.»"] },
+
+  { "palabras": ["desconocido", "extraño", "desconocida"],
+    "respuestas": ["«Un desconocido es un sistema del que aún no tienes datos.»"] },
+
+  { "palabras": ["gente", "personas", "multitud"],
+    "respuestas": ["«Una multitud es un sistema de muchos cuerpos: impredecible como un gas.»"] },
+
+  { "palabras": ["sueldo", "nómina", "paga"],
+    "respuestas": ["«El sueldo mide tu energía vendida por unidad de tiempo.»"] },
+
+  { "palabras": ["factura", "recibo", "cuenta"],
+    "respuestas": ["«Una factura es un registro de energía y materiales ya consumidos.»"] },
+
+  { "palabras": ["deuda", "préstamo", "adeudo"],
+    "respuestas": ["«Una deuda es energía futura hipotecada. Con interés compuesto.»"] },
+
+  { "palabras": ["tienda", "comercio", "local"],
+    "respuestas": ["«La tienda es un nodo de distribución: entra mercancía, sale dinero.»"] },
+
+  { "palabras": ["precio", "coste", "tarifa"],
+    "respuestas": ["«El precio no mide valor: mide escasez.»"] },
+
+  { "palabras": ["compra", "adquisición", "carro de la compra"],
+    "respuestas": ["«Comprar es transferir entropía de un almacén a tu casa.»"] },
+
+  { "palabras": ["feliz", "contento", "felizón"],
+    "respuestas": ["«La felicidad es dopamina y serotonina en proporción tolerable.»"] },
+
+  { "palabras": ["triste", "tristón", "deprimido"],
+    "respuestas": ["«La tristeza baja el tono de la corteza prefrontal. Cuesta decidir.»"] },
+
+  { "palabras": ["enfadado", "cabreado", "furioso"],
+    "respuestas": ["«La ira dispara adrenalina y cortisol: el cuerpo se prepara para pelear.»"] },
+
+  { "palabras": ["nervioso", "ansioso", "con nervios"],
+    "respuestas": ["«El nerviosismo es el sistema simpático acelerando sin amenaza real.»"] },
+
+  { "palabras": ["miedo", "miedito", "pánico"],
+    "respuestas": ["«El miedo es una amígdala calculando probabilidades de daño.»"] },
+
+  { "palabras": ["sorpresa", "sorprendido", "asombro"],
+    "respuestas": ["«La sorpresa es el error de predicción del cerebro, al cuadrado.»"] },
+
+  { "palabras": ["aburrido", "aburrimiento", "hastío"],
+    "respuestas": ["«El aburrimiento aparece cuando la entrada de información cae bajo el umbral.»"] },
+
+  { "palabras": ["celoso", "celos", "recelo"],
+    "respuestas": ["«Los celos son teoría de juegos con información incompleta.»"] },
+
+  { "palabras": ["orgulloso", "orgullo", "satisfecho"],
+    "respuestas": ["«El orgullo refuerza conductas que funcionaron. Es un algoritmo de recompensa.»"] },
+
+  { "palabras": ["vergüenza", "pena", "apuro"],
+    "respuestas": ["«La vergüenza es un cálculo social fallido a la vista de otros.»"] },
+
+  { "palabras": ["ir", "vamos", "marchar"],
+    "respuestas": ["«Ir es cambiar de coordenadas. Nada más, y nada menos.»"] },
+
+  { "palabras": ["venir", "ven", "acercarse"],
+    "respuestas": ["«Venir es reducir la distancia entre dos sistemas.»"] },
+
+  { "palabras": ["salir", "afuera", "egresar"],
+    "respuestas": ["«Salir es atravesar un límite. Los límites siempre son interesantes.»"] },
+
+  { "palabras": ["entrar", "adentro", "acceder"],
+    "respuestas": ["«Entrar requiere que la puerta ceda. La presión se reparte por el marco.»"] },
+
+  { "palabras": ["coger", "agarrar", "tomar"],
+    "respuestas": ["«Coger implica fricción y fuerza de prensión: los dedos aprietan, la piel se deforma.»"] },
+
+  { "palabras": ["dejar", "soltar", "abandonar"],
+    "respuestas": ["«Soltar es liberar la fuerza de agarre y dejar actuar a la gravedad.»"] },
+
+  { "palabras": ["poner", "colocar", "situar"],
+    "respuestas": ["«Poner es asignar una posición en el espacio. Lo demás son consecuencias.»"] },
+
+  { "palabras": ["quitar", "retirar", "sacar"],
+    "respuestas": ["«Quitar es invertir una posición previa. Cuesta más que poner.»"] },
+
+  { "palabras": ["abrir", "abrirse", "desplegar"],
+    "respuestas": ["«Abrir es separar: aplicas tensión para vencer la cohesión.»"] },
+
+  { "palabras": ["cerrar", "tapar", "cerrar la puerta"],
+    "respuestas": ["«Cerrar es unir dos bordes hasta que el paso de aire sea nulo.»"] },
+
+  { "palabras": ["romper", "partir", "destrozar"],
+    "respuestas": ["«Romper es superar el límite elástico y propagar una grieta.»"] },
+
+  { "palabras": ["arreglar", "reparar", "componer"],
+    "respuestas": ["«Arreglar es devolver un sistema a su estado de menor entropía útil.»"] },
+
+  { "palabras": ["esperar", "aguantar", "paciencia"],
+    "respuestas": ["«Esperar es dejar correr el tiempo sin intervenir en el sistema.»"] },
+
+  { "palabras": ["perder", "extraviar", "despistar"],
+    "respuestas": ["«Perder algo es aumentar la entropía de su localización.»"] },
+
+  { "palabras": ["nuevo", "recién", "estrenado"],
+    "respuestas": ["«Lo nuevo es lo que aún no ha acumulado desgaste.»"] },
+
+  { "palabras": ["caro", "costoso", "caro de narices"],
+    "respuestas": ["«Caro es escaso. Y lo escaso suele ser difícil de sintetizar.»"] },
+
+  { "palabras": ["barato", "económico", "ganga"],
+    "respuestas": ["«Barato significa abundante o de baja energía incorporada.»"] },
+
+  { "palabras": ["limpio", "pulcro", "reluciente"],
+    "respuestas": ["«Limpio es poca materia fuera de sitio.»"] },
+
+  { "palabras": ["sucio", "guarro", "mugriento"],
+    "respuestas": ["«Sucio es alta densidad de partículas ajenas. La suciedad es cuestión de escala.»"] },
+
+  { "palabras": ["lleno", "repleto", "atestado"],
+    "respuestas": ["«Lleno es haber alcanzado la capacidad máxima del recipiente.»"] },
+
+  { "palabras": ["vacío", "hueco", "despejado"],
+    "respuestas": ["«El vacío cuántico no está vacío: hierve de partículas virtuales.»"] },
+
+  { "palabras": ["fuerte", "fuerzudo", "robusto"],
+    "respuestas": ["«Fuerte es soportar carga sin deformarse más allá de lo elástico.»"] },
+
+  { "palabras": ["débil", "frágil", "delicado"],
+    "respuestas": ["«Débil es romperse antes de lo previsto. La fragilidad es poca tenacidad.»"] },
+
+  { "palabras": ["ancho", "amplio", "grandote"],
+    "respuestas": ["«Amplio es mucha superficie. Y la superficie crece al cuadrado mientras el volumen crece al cubo.»"] },
+
+  { "palabras": ["cosa", "cosita", "chisme"],
+    "respuestas": ["«Una cosa es un conjunto estable de átomos. Cambia el conjunto y deja de serlo.»"] },
+
+  { "palabras": ["problema", "lío", "problemita"],
+    "respuestas": ["«Un problema es un estado del que no conoces la salida. Eso es todo.»"] },
+
+  { "palabras": ["pregunta", "duda", "consulta"],
+    "respuestas": ["«Preguntar es reducir tu entropía de información. Por eso funciona.»"] },
+
+  { "palabras": ["respuesta", "solución", "contesta"],
+    "respuestas": ["«Una buena respuesta reduce más incertidumbre de la que crea.»"] },
+
+  { "palabras": ["verdad", "cierto", "real"],
+    "respuestas": ["«La verdad es lo que resiste la comprobación repetida.»"] },
+
+  { "palabras": ["mentira", "embuste", "bola"],
+    "respuestas": ["«Mentir es emitir información con error deliberado. El receptor paga el coste.»"] },
+
+  { "palabras": ["suerte", "fortuna", "chiripa"],
+    "respuestas": ["«La suerte es varianza con resultado favorable. No se puede planificar.»"] },
+
+  { "palabras": ["prisa", "apuro", "carrera"],
+    "respuestas": ["«La prisa es recortar el margen de error para ganar tiempo. Casi siempre sale caro.»"] },
+
+  { "palabras": ["follar", "tirarse", "echar un polvo"],
+    "respuestas": ["«Follar implica fricción, lubricación y un pico de oxitocina al final.»"] },
+
+  { "palabras": ["correrse", "acabar", "venirse"],
+    "respuestas": ["«Correrse es una descarga refleja del sistema nervioso autónomo. Dura segundos.»"] },
+
+  { "palabras": ["culo", "trasero", "pompis"],
+    "respuestas": ["«El culo es músculo glúteo sobre pelvis: la palanca que te mantiene erguido.»"] },
+
+  { "palabras": ["tetas", "pecho", "pechuga"],
+    "respuestas": ["«Las tetas son glándulas mamarias envueltas en grasa. Entre primates, un caso raro.»"] },
+
+        
     {
       palabras: [
         'vida extraterrestre', 'hay vida en otros planetas',
