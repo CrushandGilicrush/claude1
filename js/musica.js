@@ -10,7 +10,9 @@
 const Musica = (() => {
   /* ===== CONFIGURACIÓN (edita aquí) ===== */
   const lista = [
-    { titulo: 'Canción de prueba 1', archivo: 'audio/cancion4.mp3' }
+    { titulo: 'Canción de prueba 1', archivo: 'audio/cancion4.mp3' },
+     { titulo: 'fetlife', archivo: 'audio/fetlife.mp3' },
+     { titulo: 'Tiempo', archivo: 'audio/Órbita de Tiempo.mp3' }
   ];
   const ajustes = {
     volumenSalon: 0.8,                // volumen en el salón (0 a 1)
