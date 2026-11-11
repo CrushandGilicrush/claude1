@@ -45,6 +45,7 @@ const Extras = (() => {
     const codigo = Object.keys(atajos).find(c => Juego.norm(c) === cmd);
     if (codigo) { atajos[codigo].accion(est); UI.log(atajos[codigo].texto); return true; }
     if (est.esperandoCodigo) return false;
+        if (typeof Musica !== 'undefined' && Musica.comando(cmd)) return true;   // equipo de música
     const [verbo, ...resto] = cmd.split(' ');
     const arg = resto.join(' ');
     if (!/radiador/.test(arg)) return false;
