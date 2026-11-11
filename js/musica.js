@@ -10,7 +10,7 @@
 const Musica = (() => {
   /* ===== CONFIGURACIÓN (edita aquí) ===== */
   const lista = [
-    { titulo: 'Canción de prueba 1', archivo: 'audio/cancion4.mp3' },
+
      { titulo: 'fetlife', archivo: 'audio/lapso.mp3' },
      { titulo: 'Tiempo', archivo: 'audio/lapso1.mp3' }
   ];
