@@ -11,7 +11,7 @@ const Musica = (() => {
   /* ===== CONFIGURACIÓN (edita aquí) ===== */
   const lista = [
 
-     { titulo: 'fetlife', archivo: 'audio/lapso.mp3' },
+     { titulo: 'Memories', archivo: 'audio/memmories.mp3' },
       { titulo: 'El rey', archivo: 'audio/Copiapega.mp3' },
      { titulo: 'Tiempo', archivo: 'audio/lapso1.mp3' }
   ];
