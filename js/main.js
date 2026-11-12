@@ -87,11 +87,16 @@ const Juego = (() => {
     estado.app = null;
     UI.vista(titulo(), Datos.imagenes[estado.dispositivo]);
     UI.log(T('enciende', { dispositivo: pc ? 'el ordenador' : 'el móvil' }));
+         function imagenApp(app) {
+       const im = Datos.imagenes;
+       if (app === 'life') return estado.mensajeLeido ? (im.lifeLeido || 'img/life-leido.svg') : (im.lifeNuevo || 'img/life-nuevo.svg');
+       return estado.contactado ? (im.telegramDesconocido || 'img/telegram-desconocido.svg') : im.telegram;
+     }
   }
 
   function mostrarApp(app, texto) {
     estado.app = app;
-    UI.vista(`${titulo()} · ${app === 'life' ? 'Life' : 'Telegram'}`, Datos.imagenes[app]);
+    UI.vista(`${titulo()} · ${app === 'life' ? 'Life' : 'Telegram'}`, imagenApp(app));
     UI.log(texto);
   }
 
@@ -123,6 +128,7 @@ const Juego = (() => {
   function leerMensaje() {
     if (estado.app !== 'life') return UI.log(T('sinMensaje'));
     estado.mensajeLeido = true;
+         UI.vista(`${titulo()} · Life`, imagenApp('life'));
     UI.log(T('mensajeIntro'));
     UI.log(T('mensaje'), 'dialogo');
   }
@@ -133,6 +139,7 @@ const Juego = (() => {
     if (!estado.mensajeLeido) return UI.log(T('escribirSinMensaje'));
     if (!estado.contactado) {
       estado.contactado = true;
+           UI.vista(`${titulo()} · Telegram`, imagenApp('telegram'));
       UI.log(T('escribirOk'));
       UI.dialogo(T('respuesta'));
       return Ordenes.siguiente();
