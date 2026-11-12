@@ -4,7 +4,7 @@
 const Ruleta = (() => {
   /* ===== CONFIGURACIÓN ===== */
   const config = {
-    personaje: 'laura',                 // id del personaje de personajes.js que propone el juego
+    personaje: 'lapso',                 // id del personaje de personajes.js que propone el juego
     palabras: ['ruleta', 'jugar', 'juego', 'apostar', 'echamos una partida'],   // palabras clave (sin acentos; * al final = variantes)
     intro: ['«¡Vale! Gira la ruleta y veremos qué te toca.»', '«¿Otra vez? Venga, gira.»'],   // lo que dice Laura antes (se alternan)
     repetible: true,                    // false = solo se puede jugar una vez
@@ -13,11 +13,11 @@ const Ruleta = (() => {
     numeros: true                       // muestra 1-5 sobre los sectores
   };
   const opciones = [
-    { texto: 'Primera opción: escribe aquí qué toca.', laura: '«¡Qué suerte!»' },
-    { texto: 'Segunda opción: escribe aquí qué toca.', laura: '«Hmm, no está mal.»' },
-    { texto: 'Tercera opción: escribe aquí qué toca.', laura: '«Vaya, ¡justo esa!»' },
-    { texto: 'Cuarta opción: escribe aquí qué toca.', laura: '«Qué mala pata...»' },
-    { texto: 'Quinta opción: escribe aquí qué toca.', laura: '«Eso no me lo esperaba.»' }
+    { texto: 'Primera opción: escribe aquí qué toca.', lapso: '«¡Qué suerte!»' },
+    { texto: 'Segunda opción: escribe aquí qué toca.', lapso: '«Hmm, no está mal.»' },
+    { texto: 'Tercera opción: escribe aquí qué toca.', lapso: '«Vaya, ¡justo esa!»' },
+    { texto: 'Cuarta opción: escribe aquí qué toca.', lapso: '«Qué mala pata...»' },
+    { texto: 'Quinta opción: escribe aquí qué toca.', lapso: '«Eso no me lo esperaba.»' }
     // Opcional en cada opción: peso: 2 (el doble de probable) y accion: estado => { ... }
   ];
   const colores = ['#15110f', '#8d0f14', '#7b0b10', '#15110f', '#8d0f14'];   // cuero de cada sector (como la foto)
