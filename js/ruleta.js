@@ -13,8 +13,8 @@ const Ruleta = (() => {
     numeros: true                       // muestra 1-5 sobre los sectores
   };
   const opciones = [
-    { texto: 'Dos pinzas, una por cada pezón. 30 minutos', lapso: '«Dos pinzas... podía haber sido peor. Te espero mientras vas a buscarlas y te las pones,»' },
-    { texto: 'De rodillas sobre arroz crudo, 2 minutos', lapso: '«Te estás planteando si hacerlo o no, pero jugar solo tiene sentido si cumples con las reglas, así que, hazlo.»' },
+    { texto: 'Ponte dos pinzas, una para cada pezón. 30 minutos', lapso: '«Dos pinzas... podía haber sido peor. Te espero mientras vas a buscarlas y te las pones,»' },
+    { texto: 'Ponte de rodillas sobre arroz crudo, 2 minutos', lapso: '«Te estás planteando si hacerlo o no, pero jugar solo tiene sentido si cumples con las reglas, así que, hazlo.»' },
     { texto: 'Escribe 50 veces: Esto me pasa por jugar con Lapso. Le haces una foto y la subes a fetlife', lapso: '«De todas las opciones, te ha tocado la peor. Ve a coger papel y boli.»' },
     { texto: 'Mastúrbate hasta que estés a las puertas del orgasmo y detente', lapso: '«Imagina estar atada todo el día y a las puertas del orgasmo cada media hora... Bueno, ¿vas a tentar otra vez a la suerte?» ' },
     { texto: 'Ponte cinta adhesiva en la boca, 1 hora', lapso: '«Al menos puedes escribir. ¿Se te han quitado las ganas de seguir jugando?»' }
