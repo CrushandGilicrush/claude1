@@ -1534,7 +1534,7 @@ const Personajes = (() => {
     est.chat = p.id;
     const mensaje = dest ? dest.resto : limpio;
     if (!mensaje) UI.log(dest ? (p.abre || `Abres el chat con ${p.nombre}.`) : p.sinTexto);
-    else responder(p, mensaje);
+       else if (!(typeof Ruleta !== 'undefined' && Ruleta.probar(p, mensaje))) responder(p, mensaje);
     return true;
   }
 
